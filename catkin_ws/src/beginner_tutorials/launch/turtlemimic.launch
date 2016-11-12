@@ -1,0 +1,20 @@
+<launch>
+ 	<!-- Start with two groups with a namespace tag of turtlesim1 and 			turtlesim2 with a turtlesim node with a name of sim.
+		this allows us to start 2 simulators w/out having name conflicts 		-->
+  <group ns="turtlesim1">
+    <node pkg="turtlesim" name="sim" type="turtlesim_node"/>
+  </group>
+
+  <group ns="turtlesim2">
+    <node pkg="turtlesim" name="sim" type="turtlesim_node"/>
+  </group>
+
+	<!-- Start w/ mimic node  w/ topics input & output renamed to turtlesim1 			and turtlesim2.
+		Renaming will cause turtlesim2 to mimic turtlesim1 
+	-->
+  <node pkg="turtlesim" name="mimic" type="mimic">
+    <remap from="input" to="turtlesim1/turtle1"/>
+    <remap from="output" to="turtlesim2/turtle1"/>
+  </node>
+
+</launch>
