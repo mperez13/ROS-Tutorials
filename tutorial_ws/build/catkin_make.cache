@@ -1,0 +1,2 @@
+
+-DCATKIN_DEVEL_PREFIX=/home/marifer/ROS-Tutorials/tutorial_ws/devel -DCMAKE_INSTALL_PREFIX=/home/marifer/ROS-Tutorials/tutorial_ws/install -G Unix Makefiles
