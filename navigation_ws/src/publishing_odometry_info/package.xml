@@ -47,6 +47,10 @@
   <run_depend>roscpp</run_depend>
   <run_depend>tf</run_depend>
 
+<!-- Depends Added for odometry_publisher.cpp -->
+<depend package="tf"/>
+<depend package="nav_msgs"/>
+<!-- ---------------------------------------- -->
 
   <!-- The export tag contains other, unspecified, tags -->
   <export>
