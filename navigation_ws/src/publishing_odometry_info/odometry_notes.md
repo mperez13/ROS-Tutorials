@@ -20,3 +20,13 @@ Link to Tutorial - (http://wiki.ros.org/navigation/Tutorials/RobotSetup/Odom)
   geometry_msgs/PoseWithCovariance pose
   geometry_msgs/TwistWithCovariance twist
   ```
+    - pose: corresponds to the estimated position of the robot in the odometric frame along w/ an optional covariance for the certainty of that pose estimate
+    - twist: corresponds to the robot's velocity in the child frame
+    
+##Using tf to Publish an Odometry Transform
+
+- any odometry source must publish info about the coordinate frame that it manages
+
+##Writing the Code
+
+Link to the code to [Publish Odometry Info] (ADD LINK) 
