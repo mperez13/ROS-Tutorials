@@ -37,4 +37,24 @@ Link to tutorial (http://wiki.ros.org/navigation/Tutorials/RobotSetup/Sensors
   float32[] ranges         # range data [m] (Note: values < range_min or > range_max should be discarded)
   float32[] intensities    # intensity data [device-specific units]
   ```
+#####Writing Code to Publish a LaserScan Message
 
+- Add Link to LaserScan Message Publisher
+
+###PointClouds
+
+- `sensor/PointCloud` message: used for storing and sharing data a number of points in the world
+- message (shown below) meant to support arrays of points in 3D along w/ any associated data stored as a channel
+  -ex: `PointCloud` can be sent over the wire w/ "intesity" channel that hold info about intensity value of each point in the cloud
+  ```
+  #This message holds a collection of 3d points, plus optional additional information about each point.
+  #Each Point32 should be interpreted as a 3d point in the frame given in the header
+  
+  Header header
+  geometry_msgs/Point32[] points  #Array of 3d points
+  ChannelFloat32[] channels       #Each channel should have the same number of elements as points array, and the data in each channel should correspond 1:1 with each point
+  ```
+
+#####Writing Code to Publish a PointCloud Message
+
+- Add Link to PointCloud Message Publisher
