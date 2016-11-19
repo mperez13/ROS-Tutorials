@@ -39,7 +39,7 @@ Link to tutorial (http://wiki.ros.org/navigation/Tutorials/RobotSetup/Sensors
   ```
 #####Writing Code to Publish a LaserScan Message
 
-- Code for [LaserScan Message Publisher](ROS-Tutorials/catkin_ws/robotSetup_SensorStreams/src/laser_scan_publisher.cpp) 
+- Code for [LaserScan Message Publisher](https://github.com/mperez13/ROS-Tutorials/blob/master/catkin_ws/robotSetup_SensorStreams/src/laser_scan_publisher.cpp) 
 
 ###PointClouds
 
