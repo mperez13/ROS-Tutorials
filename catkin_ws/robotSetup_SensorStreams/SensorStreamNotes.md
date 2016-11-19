@@ -57,4 +57,4 @@ Link to tutorial (http://wiki.ros.org/navigation/Tutorials/RobotSetup/Sensors
 
 #####Writing Code to Publish a PointCloud Message
 
-- Add Link to PointCloud Message Publisher
+- Code for [PointCloud Message Publisher](https://github.com/mperez13/ROS-Tutorials/blob/master/catkin_ws/robotSetup_SensorStreams/src/point_cloud_publisher.cpp)
