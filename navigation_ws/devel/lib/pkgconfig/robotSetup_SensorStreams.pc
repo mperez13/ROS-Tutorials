@@ -1,0 +1,8 @@
+prefix=/home/marifer/ROS-Tutorials/navigation_ws/devel
+
+Name: robotSetup_SensorStreams
+Description: Description of robotSetup_SensorStreams
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/marifer/ROS-Tutorials/navigation_ws/devel/lib 
+Requires: 
