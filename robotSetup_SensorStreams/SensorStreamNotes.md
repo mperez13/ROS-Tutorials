@@ -39,7 +39,7 @@ Link to tutorial (http://wiki.ros.org/navigation/Tutorials/RobotSetup/Sensors
   ```
 #####Writing Code to Publish a LaserScan Message
 
-- Code for [LaserScan Message Publisher](https://github.com/mperez13/ROS-Tutorials/blob/master/catkin_ws/robotSetup_SensorStreams/src/laser_scan_publisher.cpp) 
+- Code for [LaserScan Message Publisher](https://github.com/mperez13/ROS-Tutorials/blob/master/robotSetup_SensorStreams/src/laser_scan_publisher.cpp) 
 
 ###PointClouds
 
@@ -57,4 +57,4 @@ Link to tutorial (http://wiki.ros.org/navigation/Tutorials/RobotSetup/Sensors
 
 #####Writing Code to Publish a PointCloud Message
 
-- Code for [PointCloud Message Publisher](https://github.com/mperez13/ROS-Tutorials/blob/master/catkin_ws/robotSetup_SensorStreams/src/point_cloud_publisher.cpp)
+- Code for [PointCloud Message Publisher](https://github.com/mperez13/ROS-Tutorials/blob/master/robotSetup_SensorStreams/src/point_cloud_publisher.cpp)
