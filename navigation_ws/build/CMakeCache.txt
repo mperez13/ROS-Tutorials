@@ -305,7 +305,7 @@ gtest_force_shared_crt:BOOL=OFF
 gtest_main_LIB_DEPENDS:STATIC=general;-lpthread;general;gtest;
 
 //Path to a library.
-lib:FILEPATH=/opt/ros/kinetic/lib/libtf2.so
+lib:FILEPATH=/opt/ros/kinetic/lib/libxmlrpcpp.so
 
 //The directory containing a CMake configuration file for message_filters.
 message_filters_DIR:PATH=/opt/ros/kinetic/share/message_filters/cmake
@@ -321,6 +321,18 @@ robotSetup_SensorStreams_BINARY_DIR:STATIC=/home/marifer/ROS-Tutorials/navigatio
 
 //Value Computed by CMake
 robotSetup_SensorStreams_SOURCE_DIR:STATIC=/home/marifer/ROS-Tutorials/navigation_ws/src/robotSetup_SensorStreams
+
+//Value Computed by CMake
+robot_setup_sensor_streams_BINARY_DIR:STATIC=/home/marifer/ROS-Tutorials/navigation_ws/build/robot_setup_sensor_streams
+
+//Value Computed by CMake
+robot_setup_sensor_streams_SOURCE_DIR:STATIC=/home/marifer/ROS-Tutorials/navigation_ws/src/robot_setup_sensor_streams
+
+//Value Computed by CMake
+robot_setup_transformation_BINARY_DIR:STATIC=/home/marifer/ROS-Tutorials/navigation_ws/build/robot_setup_transformation
+
+//Value Computed by CMake
+robot_setup_transformation_SOURCE_DIR:STATIC=/home/marifer/ROS-Tutorials/navigation_ws/src/robot_setup_transformation
 
 //The directory containing a CMake configuration file for rosconsole.
 rosconsole_DIR:PATH=/opt/ros/kinetic/share/rosconsole/cmake
@@ -472,7 +484,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=3
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=4
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
