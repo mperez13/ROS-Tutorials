@@ -20,8 +20,8 @@ hg clone https://bitbucket.org/osrf/gazebo_models
   - has a `model.config` file that contains meta data about the model
   - also contains the SDF for the model and any materials, meshes, and plugins
 
-###sructure example:
-```
+####structure example:
+
 - Database
   - *database.config*: Meta data about the database (is populated automatically from CMakeLists.txt)
   - *model_1*: A directory for model_1
@@ -33,6 +33,45 @@ hg clone https://bitbucket.org/osrf/gazebo_models
       - *textures*: directory for image files (jpg, png, etc)
       - *scripts*: directory for OGRE material scripts
     - *plugins*: directory for plugin source and header files
+
+###Database Config
+
+- contains license info for models, a name for the database and a listt of all valid models
+- NOTE: only required for online repositories
+
+- format of this 'database.config':
+```
+<?xml version='1.0'?>
+<database>
+  <name>name_of_this_database</name>
+  <license>Creative Commons Attribution 3.0 Unported</license>
+  <models>
+    <uri>file://model_directory</uri>
+  </models>
+</database>
 ```
 
+###Model Config
+
+- format of this `model.config`:
+
+```
+<?xml version="1.0"?>
+
+<model>
+  <name>My Model Name</name>
+  <version>1.0</version>
+  <sdf version='1.5'>model.sdf</sdf> //not required for URDFs; multiple <sdf> elements may be used in order to support  multiple SDF versions
+
+  <author>
+    <name>My name</name>
+    <email>name@email.address</email>
+  </author>
+
+  <description>
+    A description of the model
+    Should include: 
+  </description>
+</model>
+```
  
