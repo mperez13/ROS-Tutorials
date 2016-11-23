@@ -19,8 +19,9 @@ hg clone https://bitbucket.org/osrf/gazebo_models
 - **model directory**: 
   - has a `model.config` file that contains meta data about the model
   - also contains the SDF for the model and any materials, meshes, and plugins
--sructure example:
-`
+
+###sructure example:
+```
 - Database
   - *database.config*: Meta data about the database (is populated automatically from CMakeLists.txt)
   - *model_1*: A directory for model_1
@@ -32,6 +33,6 @@ hg clone https://bitbucket.org/osrf/gazebo_models
       - *textures*: directory for image files (jpg, png, etc)
       - *scripts*: directory for OGRE material scripts
     - *plugins*: directory for plugin source and header files
-`
+```
 
  
