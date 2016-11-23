@@ -54,7 +54,7 @@ hg clone https://bitbucket.org/osrf/gazebo_models
 
 ###Model Config
 
-  #####format of this `model.config`:
+#####format of this `model.config`:
 
     ```
     <?xml version="1.0"?>
