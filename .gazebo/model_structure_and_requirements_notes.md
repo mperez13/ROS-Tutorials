@@ -39,56 +39,57 @@ hg clone https://bitbucket.org/osrf/gazebo_models
 - contains license info for models, a name for the database and a listt of all valid models
 - NOTE: only required for online repositories
 
-- format of this 'database.config':
-```
-<?xml version='1.0'?>
-<database>
-  <name>name_of_this_database</name>
-  <license>Creative Commons Attribution 3.0 Unported</license>
-  <models>
-    <uri>file://model_directory</uri>
-  </models>
-</database>
-```
+#####format of this 'database.config':
+
+    ```
+    <?xml version='1.0'?>
+    <database>
+      <name>name_of_this_database</name>
+      <license>Creative Commons Attribution 3.0 Unported</license>
+      <models>
+        <uri>file://model_directory</uri>
+      </models>
+    </database>
+    ```
 
 ###Model Config
 
-- format of this `model.config`:
+  #####format of this `model.config`:
 
-```
-<?xml version="1.0"?>
+    ```
+    <?xml version="1.0"?>
 
-<model>
-  <name>My Model Name</name>
-  <version>1.0</version>
-  <sdf version='1.5'>model.sdf</sdf> //not required for URDFs; multiple <sdf> elements may be used in order to support  multiple SDF versions
+    <model>
+      <name>My Model Name</name>
+      <version>1.0</version>
+      <sdf version='1.5'>model.sdf</sdf> //not required for URDFs; multiple <sdf> elements may be used in order to support  multiple SDF versions
 
-  <author>
-    <name>My name</name>
-    <email>name@email.address</email>
-  </author>
+      <author>
+        <name>My name</name>
+        <email>name@email.address</email>
+      </author>
 
-  <description>
-    A description of the model
-    Should include: 
-      - what the model is (e.g. robot, table, cup)
-      - What the plugins do (functionality of the model)
-  </description>
-  
-  <depend>
-    //This is optional
-    All the dependencies for this model.
-    This is typically other models.
-  </depend>
-  
-  <model>
-    //This is optional.
-    <uri>URI of the model dependency</<uri> //required
-    <version>version of the model</version> //required
-  </model>
-  
-</model>
-```
+      <description>
+        A description of the model
+        Should include: 
+          - what the model is (e.g. robot, table, cup)
+          - What the plugins do (functionality of the model)
+      </description>
+
+      <depend>
+        //This is optional
+        All the dependencies for this model.
+        This is typically other models.
+      </depend>
+
+      <model>
+        //This is optional.
+        <uri>URI of the model dependency</<uri> //required
+        <version>version of the model</version> //required
+      </model>
+
+    </model>
+    ```
 
 ###Model SDF
 
