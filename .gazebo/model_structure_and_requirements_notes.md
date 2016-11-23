@@ -71,7 +71,37 @@ hg clone https://bitbucket.org/osrf/gazebo_models
   <description>
     A description of the model
     Should include: 
+      - what the model is (e.g. robot, table, cup)
+      - What the plugins do (functionality of the model)
   </description>
+  
+  <depend>
+    //This is optional
+    All the dependencies for this model.
+    This is typically other models.
+  </depend>
+  
+  <model>
+    //This is optional.
+    <uri>URI of the model dependency</<uri> //required
+    <version>version of the model</version> //required
+  </model>
+  
 </model>
 ```
+
+###Model SDF
+
+- Each model requires 'model.sdf' file that contains the Simulator Description Format of the model.
+- for more info: [SDF website](http://sdformat.org/)
+
+###Model SDF.ERB
+
+- Standard SDF file containing ruby code embedded
+- used to programatically generate SDF files using [Embedded Ruby Code)(http://www.stuartellis.name/articles/erb/) templates
+- NOTE: ruby conversion should be done manually ('erb model.sdf.erb > model.sdf') and the final 'model.sdf' file must be uploaded together w/ 'model.sdf.erb' (this one only for reference)
+
+Example of 'sdf.erb' files: [gazebo_models repository](https://bitbucket.org/osrf/gazebo_models/src)
+
+An easy ERB file is the [flocking.world.erb](https://bitbucket.org/osrf/gazebo/src/b54961341ffb938a9f99c9976aed50a771c95216/worlds/flocking.world.erb?at=default&fileviewer=file-view-default) which uses a simple loop.
  
