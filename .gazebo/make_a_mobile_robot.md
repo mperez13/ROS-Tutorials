@@ -17,17 +17,16 @@ Link to Tutorial: http://gazebosim.org/tutorials?tut=build_robot
 
 - Create a rectangulat base w/ 2 wheels
 
-The first step: layout the basic shape of the model
-
-- make model `static`, which means it will be ignored by the physics engine; so model will stay in one place & allow us to properly align all the components
+###Step to make a mobile robot
 
 1. Make model static
+    1. make model `static`, which means it will be ignored by the physics engine; so model will stay in one place & allow us to properly align all the components
 2. Add rectangular base 
-    - have created a `box` w/ size `0.4 x 0.2 x 0.1` meters
-    - `collision` element specifies the shape used by the collision detection engine
-    - `visual` element specifies the shape used by the rendering engine
+    1. have created a `box` w/ size `0.4 x 0.2 x 0.1` meters
+    2. `collision` element specifies the shape used by the collision detection engine
+    3. `visual` element specifies the shape used by the rendering engine
     
-    1. for most cases 'collision' and 'visual' elements are the same
+    4. for most cases 'collision' and 'visual' elements are the same
         1. most common use for elements to be different is to have simplified  `collision` paired w/ `visual` element that uses a complex mesh, which would help performance 
 3. Add a caster to the robot
 4. Add Left Wheel
