@@ -10,6 +10,6 @@ Link to Tutorial: http://gazebosim.org/tutorials?tut=build_robot
     `mkdir -p ~/.gazebo/models/my_robot`
 2. Create a model config file: [model.config](https://github.com/mperez13/ROS-Tutorials/blob/master/.gazebo/models/my_robot/model.config)
     - file describes the robot w/ some extra meta data
-3. Create a '~/.gazebo/models/my_robot/model.sdf' file: [model.sdf]()
+3. Create a '~/.gazebo/models/my_robot/model.sdf' file: [model.sdf](https://github.com/mperez13/ROS-Tutorials/blob/master/.gazebo/models/my_robot/model.sdf)
     - file contains the necessary tags to instantiate model name `my_robot` using Gazebo linked against SDF version 1.4
 
