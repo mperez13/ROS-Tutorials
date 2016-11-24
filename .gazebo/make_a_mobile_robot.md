@@ -37,7 +37,8 @@ The first step: layout the basic shape of the model
     1. the 2 joints rotate about the y axis `<xyz>0 1 0</xyz>` & connect each wheel to the chassis
 8. Start Gazebo & insert model
     1. Drag right panel & under `Force` tab, increase force applied to each joint to about 0.1N-m.
-        1. robot should move around  
+        1. robot should move around 
+        
 ##Other Ideas to try
 
 - A quadruped that consists of torso with four cylindrical legs. Each leg is attached to the torso with a revolute joint.
