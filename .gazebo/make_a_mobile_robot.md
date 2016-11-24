@@ -11,5 +11,5 @@ Link to Tutorial: http://gazebosim.org/tutorials?tut=build_robot
 2. Create a model config file: [model.config]()
     - file describes the robot w/ some extra meta data
 3. Create a '~/.gazebo/models/my_robot/model.sdf' file: [model.sdf]()
-    - file contains the necessary tags to instantiate model name 'my_robot' using Gazebo linked against SDF version 1.4
+    - file contains the necessary tags to instantiate model name `my_robot` using Gazebo linked against SDF version 1.4
 
