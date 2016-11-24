@@ -33,5 +33,14 @@ The first step: layout the basic shape of the model
 4. Add Left Wheel
 5. Add right wheel
 6. Make the model dynamic by setting static to false
-7. 
+7. Add two hinges joints for the left and right wheel
+    1. the 2 joints rotate about the y axis `<xyz>0 1 0</xyz>` & connect each wheel to the chassis
+8. Start Gazebo & insert model
+    1. Drag right panel & under `Force` tab, increase force applied to each joint to about 0.1N-m.
+        1. robot should move around  
+##Other Ideas to try
+
+- A quadruped that consists of torso with four cylindrical legs. Each leg is attached to the torso with a revolute joint.
+- A six wheeled vehicle with a scoop front loading mechanism.
+
 
