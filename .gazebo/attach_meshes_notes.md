@@ -30,10 +30,16 @@ Link to Tutorial - http://gazebosim.org/tutorials/?tut=attach_meshes
 - At this point, our robot will look like a scaled down version of the Pioneer 2DX model through the GUI and to GPU based sensors such as camera, depth camera and GPU Lasers.
 - Since `<collision>` elements were not modified, box geometry will still be used by the physics engine for collision dynamics and by CPU based ray sensors.
 
-##Further Reading
+###Further Reading
 
 -[Import a mesh tutorial](http://gazebosim.org/tutorials/?tut=import_mesh)
 
+###Try later:
 
+1. Find and download a new mesh on [3D Warehouse](https://3dwarehouse.sketchup.com/). Make sure the mesh is in the Collada (.dae) format.
+2. Put the mesh in the `.../.gazebo/models/my_robot/meshes`, creating the `meshes` subdirectory if necessary
+3. Use your new mesh on the robot, either as a replacement for the chassis, or as an additional `<visual>`.
+
+Note: Materials (texture files such with extension like .png or .jpg), should be placed in `.../.gazebo/models/my_robot/materials/textures`
 
 
