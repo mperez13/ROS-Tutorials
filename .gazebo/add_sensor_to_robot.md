@@ -8,8 +8,9 @@ Link to Tutorial - http://gazebosim.org/tutorials/?tut=add_laser
 
 1. Open `My_Robot`'s model.sdf file
 2. Add the following directly before the \</model> tag at the end of your file.
+
     ```xhtml
-     <include>
+    <include>
       <uri>model://hokuyo</uri>
       <pose>0.2 0 0.2 0 0 0</pose>
     </include>
@@ -25,4 +26,4 @@ Link to Tutorial - http://gazebosim.org/tutorials/?tut=add_laser
       </axis>
     </joint>
     ```
-3. 
+3. Start a Gazebo and add the robot to simulation using the Insert tab on the GUI. The robot should have a laser attached. 
