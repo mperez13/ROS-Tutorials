@@ -4,7 +4,7 @@ Link to Tutorial - http://gazebosim.org/tutorials/?tut=attach_meshes
 
 **Description**: Meshes can add realism to a model both visually and for sensors. The most common use case for a mesh is to create a realistic looking visual.
 
-###To attach a Mesh as a Visual:
+##To attach a Mesh as a Visual:
 
 1. Open `model.sdf` file `.../.gazebo/models/my_robot/model.sdf` [model.sdf file](https://github.com/mperez13/ROS-Tutorials/blob/master/.gazebo/models/my_robot/model.sdf)
 2. Add a mesh to the chassis visual. Find the visual w/ 'name ='visual'`.
@@ -20,10 +20,20 @@ Link to Tutorial - http://gazebosim.org/tutorials/?tut=attach_meshes
         cd ~/.gazebo/models
         wget -q -R *index.html*,*.tar.gz --no-parent -r -x -nH http://models.gazebosim.org/pioneer2dx/
         ```
+        
 4. In Gazebo, drag `My Robot` model in the world. 
 5. The chassis is too big, so scale the visual.
 6. Modify the visual to have a scaling factor.
-7. 
-        
+7. Since the visual is little too low (along the z-axis), will need to raise it up by specifying a pose for the visual.
+
+
+- At this point, our robot will look like a scaled down version of the Pioneer 2DX model through the GUI and to GPU based sensors such as camera, depth camera and GPU Lasers.
+- Since `<collision>` elements were not modified, box geometry will still be used by the physics engine for collision dynamics and by CPU based ray sensors.
+
+##Further Reading
+
+-[Import a mesh tutorial](http://gazebosim.org/tutorials/?tut=import_mesh)
+
+
 
 
