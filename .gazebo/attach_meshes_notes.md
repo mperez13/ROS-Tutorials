@@ -13,6 +13,17 @@ Link to Tutorial - http://gazebosim.org/tutorials/?tut=attach_meshes
 3. Look in locally cached model database to see if `pioneer2dx` model is there
 
   ```ls -l .../.gazebo/models/pioneer2dx/meshes/chassis.dae```
-  1. If not you can make Gazebo pull the model from the [Model Database](https://bitbucket.org/osrf/gazebo_models) by spawning the `Pioneer 2DX` model at least once (under `Insert->http://gazebosim.org/models`)
+  1. If not you can make Gazebo pull the model from the [Model Database](https://bitbucket.org/osrf/gazebo_models) by spawning the `Pioneer 2DX` model at least once (under `Insert->http://gazebosim.org/models`) 
+    1. Or you can manually download:
+        
+        ```
+        cd ~/.gazebo/models
+        wget -q -R *index.html*,*.tar.gz --no-parent -r -x -nH http://models.gazebosim.org/pioneer2dx/
+        ```
+4. In Gazebo, drag `My Robot` model in the world. 
+5. The chassis is too big, so scale the visual.
+6. Modify the visual to have a scaling factor.
+7. 
+        
 
 
