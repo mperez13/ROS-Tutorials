@@ -26,4 +26,15 @@ Link to Tutorial - http://gazebosim.org/tutorials/?tut=add_laser
       </axis>
     </joint>
     ```
+- [hokuyo model's SDF](https://bitbucket.org/osrf/gazebo_models/src/6cd587c0a30e/hokuyo/model.sdf?at=default&fileviewer=file-view-default)
+- model name is `hokuyo`, so each link in the hokuyo model is prefaced w/ `hokuyo::`
+- Listing of the [model database](http://models.gazebosim.org/) uri used by these tutorials
+
 3. Start a Gazebo and add the robot to simulation using the Insert tab on the GUI. The robot should have a laser attached. 
+4. (Optional) Try adding a camera to the robot. Camera's model URI is `model://camera`, it should have been locally catches for you in:
+
+    ```
+    ls  .../.gazebo/models/camera/
+    ```
+
+
