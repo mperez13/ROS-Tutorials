@@ -10,6 +10,8 @@ Link to Tutorial - http://gazebosim.org/tutorials/?tut=attach_meshes
 2. Add a mesh to the chassis visual. Find the visual w/ 'name ='visual'`.
   1. A mesh can come as a file on disk or from another model.
   2. for this example, use a mesh from the poineer2dx model
-3. 
+3. Look in locally cached model database to see if `pioneer2dx` model is there
+```ls -l .../.gazebo/models/pioneer2dx/meshes/chassis.dae```
+  1. If not you can make Gazebo pull the model from the [Model Database](https://bitbucket.org/osrf/gazebo_models) by spawning the `Pioneer 2DX` model at least once (under `Insert->http://gazebosim.org/models`)
 
 
