@@ -66,3 +66,12 @@ Based on the Velodyne documentation, wll create a sensor that has:
         - `\<vertical>` component defines rays that fan out in a vertical plane
     - `\<range>` element defines properites of an individual beam
 
+- Velodyne sensor requires vertical rays, that then rotate
+  - we will simulated this as rotated horizontal fan
+- Velodyne specification indicates that the HDL-32 has 32 rays with a vertical field of view between +10.67 and -30.67 degrees
+
+1. Add ray sensor to the top link 
+2. Add `\<ray>` element, which defines `\<scan>` and `\<range>` elements.
+3. Start up simulation and should see the 32 sensor beams
+
+  
