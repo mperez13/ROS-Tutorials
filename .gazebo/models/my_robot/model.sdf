@@ -149,7 +149,7 @@
 	<include>
 		<!-- <uri> block tells Gazebo where to find the model inside its model database-->
 		<uri>model://hokuyo</uri>
-		<pose>0.2 .1 0.15 0 0 0</pose>
+		<pose>0.2 0.05 0.15 0 0 0</pose>
 	</include>
 	<joint name="hokuyo_joint" type="revolute">
 		<!-- <child> name in the joint is derived from the hokuyo model's SDF -->
