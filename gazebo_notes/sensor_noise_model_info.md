@@ -24,5 +24,25 @@ Link to tutorial - http://gazebosim.org/tutorials?tut=sensor_noise&cat=sensors
       gedit ~/.gazebo/models/noisy_laser/model.config
     ```
 2. Create a [model.sdf](https://github.com/mperez13/ROS-Tutorials/blob/master/.gazebo/models/noisy_laser/model.sdf)
+3. Insert a noisy laser and visualize it
+4. Select the topic `/gazebo/default/hokuyo/link/laser/scan`
+  - Laser View window that shows you the laser data.
+      ![image of noisy laser data](https://bitbucket.org/osrf/gazebo_tutorials/raw/default/sensor_noise/files/Noisy_laser_visualizer.png)
+  1. As you can see, scan is noisy. 
+    1. to adjust the noise, play w/ the mean & standard deviation values in `model.sdf`, where units are meters:
+    
+        ```
+          <noise>
+            <type>gaussian</type>
+            <mean>0.0</mean>
+            <stddev>0.01</stddev>
+          </noise>
+        ```
+        These are reasonable values for Hokuyo lasers.
+
+##Camera noise
+
+
+
 
 
