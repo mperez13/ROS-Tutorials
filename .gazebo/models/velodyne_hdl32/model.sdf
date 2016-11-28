@@ -35,7 +35,7 @@
 			<!-- visual is mostly a copy of the collision -->
 			<visual name="base_visual">
 				<!-- offset visual by 1/2 the base's height (not rotating mesh since its symmetrical) -->
-				<pose>0 0 -0.model_appearance_notes.md029335 0 0 0</pose>
+				<pose>0 0 -0.029335 0 0 0</pose>
 				<geometry>
 					<!-- URI should refer to the 3D mesh -->
 					<!-- "model:" URI scheme indicates that Gazebo model is being referenced. -->
