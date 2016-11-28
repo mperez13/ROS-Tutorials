@@ -74,7 +74,7 @@ Link to tutorial - http://gazebosim.org/tutorials?tut=sensor_noise&cat=sensors
 
 ##IMU noise
 
-- NEED TO FINISH TAKING NOTES
+NEED TO FINISH TAKING NOTES
 
 
 
