@@ -6,3 +6,5 @@ Link to tutorial - http://gazebosim.org/tutorials?cat=guided_i&tut=guided_i2
 - Velodyne has a [STEP file]()
 - Gazebo can only use STL or Collada files, so we'll have to convert this file & then add it to our model.
 
+1. Exported STEP file into [velodyne_base.dae](https://github.com/mperez13/ROS-Tutorials/blob/master/.gazebo/models/velodyne/meshes/velodyne_base.dae)
+2. Modify dae file in [Blender](https://www.blender.org/) to correct units and center mesh on the origin
