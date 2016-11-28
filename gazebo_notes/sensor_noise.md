@@ -10,4 +10,12 @@ Link to Tutorial - http://gazebosim.org/tutorials?cat=guided_i&tut=guided_i3
   - it is not perfect, but it serves as a good first-pass approximation of noise
   - generally easy to apply to data streams
   
-More info on [Gazebo's sensor noise model]()
+More info on [Gazebo's sensor noise model](https://github.com/mperez13/ROS-Tutorials/blob/master/gazebo_notes/sensor_noise_model_info.md)
+
+
+##Step 1: Visualize the sensor data
+
+1. Open Gazebo and insert Velodyne sensor
+2. Add a box in front of the laser beams
+  1. Select Box icon in toolbar on top
+3. 
