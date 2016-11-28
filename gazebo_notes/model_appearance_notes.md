@@ -66,4 +66,12 @@ Link to tutorial - http://gazebosim.org/tutorials?cat=guided_i&tut=guided_i2
     </geometry> 
   </visual>
   ```
+
+##Step 3: Textures
+
+- Velodyne website doesn't have texture files for download.
+
+- Ways you can add textures if you want to:
+  1. Define a texture within a collada file, using [texture mapping](https://en.wikipedia.org/wiki/Texture_mapping)
+  2. Define an [OGRE material script](http://www.ogre3d.org/docs/manual/manual_14.html) & attach it to the model using [SDF](http://sdformat.org/spec?ver=1.6&elem=material#material_script)
   
