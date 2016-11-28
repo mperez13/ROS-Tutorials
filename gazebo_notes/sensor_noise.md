@@ -18,4 +18,7 @@ More info on [Gazebo's sensor noise model](https://github.com/mperez13/ROS-Tutor
 1. Open Gazebo and insert Velodyne sensor
 2. Add a box in front of the laser beams
   1. Select Box icon in toolbar on top
-3. 
+3. Take a closer look at the sensor data through Gazebo's topic visualizer
+  1. Press Ctrl-t to open topic selector
+      Find `/gazebo/default/velodyne/top/sensor/scan` topic and select it
+  2. Press Okay to open a laser visualizer
