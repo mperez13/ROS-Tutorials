@@ -87,7 +87,15 @@
 
       <!-- visual is mostly a copy of collision -->
       <visual name="top_visual">
+        <!-- Lower mesh by 1/2(height) & rotate by 90* -->
+        <pose>0 0 -0.0376785 0 0 1.5707</pose>
         <geometry>
+          <!-- mesh tag indicates we will use 3D mesh as a visual -->
+          <mesh>
+            <!-- URI should refer to the 3D mesh -->
+            <!-- "model:" URI scheme indicates that Gazebo model is being referenced. -->
+            <uri>model://velodyne_hdl32/meshes/velodyne_top.dae</uri>
+          </mesh>
           <cylinder>
             <radius>0.04267</radius>
             <length>0.07357</length>

@@ -1,0 +1,167 @@
+<?xml version="1.0" ?>
+<sdf version="1.5">
+	<!-- Construct a base cylinder and a top cylinder -->
+	<model name="velodyne_hdl-32">
+
+		<!----------------------------Base Link ---------------------------------->
+		<link name="base">
+
+			<!-- Offset the base by half the length of the cylinder -->
+			<pose>0 0 0.029335 0 0 0</pose>
+
+			<!-- Inertia values for the base link -->
+			<inertial>
+				<mass>1.2</mass>
+				<inertia>
+					<ixx>0.001087473</ixx>
+					<iyy>0.001087473</iyy>
+					<izz>0.001092437</izz>
+					<ixy>0</ixy>
+					<ixz>0</ixz>
+					<iyz>0</iyz>
+				</inertia>
+			</inertial>
+
+			<collision name="base_collision">
+				<geometry>
+					<cylinder>
+						<!-- Radius and length provided by Velodyne -->
+						<radius>.04267</radius>
+						<length>.05867</length>
+					</cylinder>
+				</geometry>
+			</collision>
+
+			<!-- visual is mostly a copy of the collision -->
+			<visual name="base_visual">
+				<geometry>
+					<cylinder>
+						<radius>.04267</radius>
+						<length>.05867</length>
+					</cylinder>
+				</geometry>
+			</visual>
+		</link>
+		<!------------------------------------------------------------------------->
+
+		<!--------------------------------Top Link--------------------------------->
+		<link name="top">
+
+			<!-- vertically offset the top cylinder by length of bottom cylinder & 1/2 length of top cylinder -->
+			<pose>0 0 0.095455 0 0 0</pose>
+
+			<!-- Inertia values for the top link -->
+			<inertial>
+				<mass>0.1</mass>
+				<inertia>
+					<ixx>0.000090623</ixx>
+					<iyy>0.000090623</iyy>
+					<izz>0.000091036</izz>
+					<ixy>0</ixy>
+					<ixz>0</ixz>
+					<iyz>0</iyz>
+				</inertia>
+			</inertial>
+
+			<collision name="top_collision">
+				<geometry>
+					<cylinder>
+						<!-- Radius and length provided by Velodyne -->
+						<radius>0.04267</radius>
+						<length>0.07357</length>
+					</cylinder>
+				</geometry>
+			</collision>
+
+			<!-- visual is mostly a copy of collision -->
+			<visual name="top_visual">
+				<!-- Lower mesh by 1/2(height) & rotate by 90* -->
+				<pose>0 0 -0.0376785 0 0 1.5707</pose>
+				<geometry>
+					<!-- mesh tag indicates we will use 3D mesh as a visual -->
+					<mesh>
+						<!-- URI should refer to the 3D mesh -->
+						<!-- "model:" URI scheme indicates that Gazebo model is being referenced. -->
+						<uri>model://velodyne_hdl32/meshes/velodyne_top.dae</uri>
+					</mesh>
+					<cylinder>
+						<radius>0.04267</radius>
+						<length>0.07357</length>
+					</cylinder>
+				</geometry>
+			</visual>
+
+			<!-- Add ray sensor -->
+			<sensor type="ray" name="sensor">
+
+				<!-- position ray sensor base on the specification. rotate it by 90* around x-axis so <horizontal> rays become vertical-->
+				<pose>0 0 -0.004645 1.5707 0 0</pose>
+
+				<!-- Enable visualization to see rays in the GUI -->
+				<visualize>true</visualize>
+
+				<!-- set the update rate of the sensor -->
+				<update_rate>30</update_rate>
+
+				<ray>
+
+					<!-- scan element contains the horizontal & vertical beams -->
+					<scan>
+						<!-- horizontal beams -->
+						<horizontal>
+							<!-- Velodyne has 32 beams(samples) -->
+							<samples>32</samples>
+							<!-- Resolution is multiplied by samples to determine number of simulated beams vs interpolated beams. See: http://sdformat.org/spec?ver=1.6&elem=sensor#horizontal_resolution -->
+							<resolution>1</resolution>
+							<!-- Minimum angle in radians -->
+							<min_angle>-0.53529248</min_angle>
+							<!-- Maximum angle in radians -->
+							<max_angle>0.18622663</max_angle>
+						</horizontal>
+					</scan>
+					<!-- Range defines characteristics of an individual beam -->
+					<range>
+						<!-- Minimum distance of the beam -->
+						<min>0.05</min>
+						<!-- Maximum distance of the beam -->
+						<max>70</max>
+						<!-- Linear resolution of the beam -->
+						<resolution>0.02</resolution>
+					</range>
+				</ray>
+			</sensor>
+
+		</link> 
+		<!------------------------------------------------------------------------->
+
+		<!------------------------Add  revolute joint------------------------------>
+		<joint type="revolute" name="joint">
+
+			<!--position joint at the bottom of the top link -->
+			<pose>0 0 -0.036785 0 0 0</pose>
+
+			<!-- base link is the parent of the joint-->
+			<parent>base</parent>
+
+			<!-- top link is the child of the joint -->
+			<child>top</child>
+
+			<!-- axis defines the joint's degree of freedom -->
+			<axis>
+
+				<!-- revolve around the z-axis -->
+				<xyz>0 0 1</xyz>
+
+				<!-- Limit refers to the range of the joint-->
+				<limit>
+
+					<!-- use very large # to indicate a continuous revolution -->
+					<lower>-1000000000000000000</lower>
+					<upper>1000000000000000000</upper>
+				</limit>
+
+			</axis>
+		</joint>
+
+	</model>
+</sdf>
