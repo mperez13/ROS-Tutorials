@@ -22,3 +22,9 @@ More info on [Gazebo's sensor noise model](https://github.com/mperez13/ROS-Tutor
   1. Press Ctrl-t to open topic selector
       Find `/gazebo/default/velodyne/top/sensor/scan` topic and select it
   2. Press Okay to open a laser visualizer
+3. Notice the nice smooth lines of the output
+    ![Image of sensor data](https://bitbucket.org/osrf/gazebo_tutorials/raw/default/guided_i/files/velodyne_vis_no_noise.png)
+
+##Step 2: Add noise to the sensor
+
+
