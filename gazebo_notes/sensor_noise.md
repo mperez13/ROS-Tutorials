@@ -46,6 +46,7 @@ More info on [Gazebo's sensor noise model](https://github.com/mperez13/ROS-Tutor
 3. Open Visualizer and the output should look very noisy
     ![Image of busy sensor data](https://bitbucket.org/osrf/gazebo_tutorials/raw/default/guided_i/files/velodyne_noisy.png)
 4. Now reduce the noise to something reasonable
+
     ```
       <sensor type="ray" name="sensor">
         <pose>0 0 -0.004645 1.5707 0 0</pose>
