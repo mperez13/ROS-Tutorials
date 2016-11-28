@@ -35,5 +35,5 @@ Link to tutorial - http://gazebosim.org/tutorials?cat=guided_i&tut=guided_i2
   ```
   ~/.gazebo/models/velodyne_hdl132/meshes
   ```
-2. Modify
+2. Modify model's SDF to use `velodyne_top` mesh - 
   
