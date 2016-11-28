@@ -18,4 +18,56 @@ More info on [Gazebo's sensor noise model](https://github.com/mperez13/ROS-Tutor
 1. Open Gazebo and insert Velodyne sensor
 2. Add a box in front of the laser beams
   1. Select Box icon in toolbar on top
-3. 
+3. Take a closer look at the sensor data through Gazebo's topic visualizer
+  1. Press Ctrl-t to open topic selector
+      Find `/gazebo/default/velodyne/top/sensor/scan` topic and select it
+  2. Press Okay to open a laser visualizer
+3. Notice the nice smooth lines of the output
+    ![Image of sensor data](https://bitbucket.org/osrf/gazebo_tutorials/raw/default/guided_i/files/velodyne_vis_no_noise.png)
+
+##Step 2: Add noise to the sensor
+
+1. Add a \<noise> element as a child of \<ray> element.
+  1. This applies a large amount of noise to be readily visible.
+  
+    ```
+      <sensor type="ray" name="sensor">
+        <pose>0 0 -0.004645 1.5707 0 0</pose>
+        <visualize>true</visualize>
+        <ray>
+          <noise>
+            <!-- Use gaussian noise -->
+            <type>gaussian</type>
+            <mean>0.0</mean>
+            <stddev>0.1</stddev>
+          </noise>
+    ```
+2. Add sensor and a box in front of it
+3. Open Visualizer and the output should look very noisy
+    ![Image of busy sensor data](https://bitbucket.org/osrf/gazebo_tutorials/raw/default/guided_i/files/velodyne_noisy.png)
+4. Now reduce the noise to something reasonable
+
+    ```
+      <sensor type="ray" name="sensor">
+        <pose>0 0 -0.004645 1.5707 0 0</pose>
+        <visualize>true</visualize>
+        <ray>
+          <noise>
+            <!-- Use gaussian noise -->
+            <type>gaussian</type>
+            <mean>0.0</mean>
+            <stddev>0.02</stddev>
+          </noise>
+        </ray>
+    ```
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
