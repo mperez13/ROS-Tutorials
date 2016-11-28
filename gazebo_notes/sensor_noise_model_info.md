@@ -18,9 +18,11 @@ Link to tutorial - http://gazebosim.org/tutorials?tut=sensor_noise&cat=sensors
 
 #####To test the ray noise model:
 
-1. Create a [model config file]():
+1. Create a [model config file](https://github.com/mperez13/ROS-Tutorials/blob/master/.gazebo/models/noisy_laser/model.config):
     
     ```
       gedit ~/.gazebo/models/noisy_laser/model.config
     ```
+2. Create a [model.sdf](https://github.com/mperez13/ROS-Tutorials/blob/master/.gazebo/models/noisy_laser/model.sdf)
+
 
