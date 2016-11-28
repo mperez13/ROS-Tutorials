@@ -35,5 +35,35 @@ Link to tutorial - http://gazebosim.org/tutorials?cat=guided_i&tut=guided_i2
   ```
   ~/.gazebo/models/velodyne_hdl132/meshes
   ```
-2. Modify model's SDF to use `velodyne_top` mesh - 
+2. Modify model's SDF to use `velodyne_top` mesh - [model.sdf](https://github.com/mperez13/ROS-Tutorials/blob/master/.gazebo/models/velodyne_hdl32/model.sdf)
+
+  ```
+  <visual name="top_visual">
+    <pose>0 0 -0.0376785 0 0 1.5707</pose>
+    <geometry>
+      <mesh>
+        <!-- The URI should refer to the 3D mesh. The "model:" 
+           URI scheme indicates that the we are referencing a Gazebo
+           model. -->
+        <uri>model://velodyne_hdl32/meshes/velodyne_top.dae</uri>
+      </mesh>
+      ...
+    </geometry>
+  </visual>
+  ```
+3. Add `velodyne_base` mesh 
+  
+  ```
+  <visual name="base_visual">
+    <!-- Offset the visual by have the base's height. We are not rotating
+       mesh since symmetrical -->
+    <pose>0 0 -0.029335 0 0 0</pose>
+    <geometry>
+      <mesh>
+        <uri>model://velodyne_hdl32/meshes/velodyne_base.dae</uri>
+      </mesh>
+      ...
+    </geometry> 
+  </visual>
+  ```
   
