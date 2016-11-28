@@ -34,7 +34,15 @@
 
 			<!-- visual is mostly a copy of the collision -->
 			<visual name="base_visual">
+				<!-- offset visual by 1/2 the base's height (not rotating mesh since its symmetrical) -->
+				<pose>0 0 -0.model_appearance_notes.md029335 0 0 0</pose>
 				<geometry>
+					<!-- URI should refer to the 3D mesh -->
+					<!-- "model:" URI scheme indicates that Gazebo model is being referenced. -->
+					<mesh>
+						<uri>model://velodyne_hdl32/meshes/velodyne_base.dae</uri>
+					</mesh>
+
 					<cylinder>
 						<radius>.04267</radius>
 						<length>.05867</length>
