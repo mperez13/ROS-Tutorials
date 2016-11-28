@@ -27,4 +27,46 @@ More info on [Gazebo's sensor noise model](https://github.com/mperez13/ROS-Tutor
 
 ##Step 2: Add noise to the sensor
 
-
+1. Add a \<noise> element as a child of \<ray> element.
+  1. This applies a large amount of noise to be readily visible.
+  
+    ```
+      <sensor type="ray" name="sensor">
+        <pose>0 0 -0.004645 1.5707 0 0</pose>
+        <visualize>true</visualize>
+        <ray>
+          <noise>
+            <!-- Use gaussian noise -->
+            <type>gaussian</type>
+            <mean>0.0</mean>
+            <stddev>0.1</stddev>
+          </noise>
+    ```
+2. Add sensor and a box in front of it
+3. Open Visualizer and the output should look very noisy
+    ![Image of busy sensor data](https://bitbucket.org/osrf/gazebo_tutorials/raw/default/guided_i/files/velodyne_noisy.png)
+4. Now reduce the noise to something reasonable
+    ```
+      <sensor type="ray" name="sensor">
+        <pose>0 0 -0.004645 1.5707 0 0</pose>
+        <visualize>true</visualize>
+        <ray>
+          <noise>
+            <!-- Use gaussian noise -->
+            <type>gaussian</type>
+            <mean>0.0</mean>
+            <stddev>0.02</stddev>
+          </noise>
+        </ray>
+    ```
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
