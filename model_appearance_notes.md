@@ -22,6 +22,6 @@ Link to tutorial - http://gazebosim.org/tutorials?cat=guided_i&tut=guided_i2
   4. On right tab, click plus sign, Under `Dimesions` section, divide x,y,z components by 1000.
   5. In same tab, rotate model by 90 degrees around the X-axis
 3. Export the mesh as a Collada file 
-  - [velodyne_base.dae]()
+  - [velodyne_base.dae](https://github.com/mperez13/ROS-Tutorials/blob/master/.gazebo/models/velodyne/meshes/velodyne_base.dae)
 4. Export the mesh as a Collada file 
-  - [velodyne_top.dae]()
+  - [velodyne_top.dae](https://github.com/mperez13/ROS-Tutorials/blob/master/.gazebo/models/velodyne/meshes/velodyne_top.dae)
