@@ -149,11 +149,34 @@ Since our plugin is simple, it's easy to implement both simultaneously.
     #include <gazebo/msgs/msgs.hh>
     
     ```
-    
-    
-    
-    
-    
-    
 
-  
+##Test the message passing API
+
+1. Create new source file [vel.cc](https://github.com/mperez13/ROS-Tutorials/blob/master/velodyne_plugin/vel.cc) in your workspace
+2. Add following to `CMakeLists.txt` to build the new `vel` program.
+    ```
+    # Build the stand-alone test program
+    add_executable(vel vel.cc)
+
+    if (${gazebo_VERSION_MAJOR} LESS 6)
+      # These two
+      include(FindBoost)
+      find_package(Boost ${MIN_BOOST_VERSION} REQUIRED system filesystem regex)
+      target_link_libraries(vel ${GAZEBO_LIBRARIES} ${Boost_LIBRARIES})
+    else()
+      target_link_libraries(vel ${GAZEBO_LIBRARIES})
+    endif()
+    ```
+3. Compile and run simulation
+    ```
+    cd build
+    cmake ../
+    make
+    gazebo ../velodyne.world
+    ```
+4. In new terminal, go into build directory & run `vel` command. Make sure to set target velocity value.
+    
+    ```
+    cd ~/velodyne_plugin/build
+    ./vel 2
+    ```
