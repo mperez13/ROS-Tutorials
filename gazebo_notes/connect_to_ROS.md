@@ -119,6 +119,7 @@ These messages  will then be used to set the Velodyne's rotational speed.
 
   ```
   cd ~/velodyne_plugin/build
+  export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:~/velodyne_plugin/build
   gazebo ../worlds/velodyne.world
   ```
 2. In new terminal, use `rostopic` to send a velocity message
