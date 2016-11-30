@@ -1,0 +1,3 @@
+/home/marifer/ROS-Tutorials/velodyne_plugin/build/CMakeFiles/edit_cache.dir
+/home/marifer/ROS-Tutorials/velodyne_plugin/build/CMakeFiles/rebuild_cache.dir
+/home/marifer/ROS-Tutorials/velodyne_plugin/build/CMakeFiles/velodyne_plugin.dir
