@@ -24,10 +24,10 @@ Will need to modify our current plugin to include the ROS transport mechanism, l
   private: ros::Subscriber rosSub;
   
   // A ROS callbackqueue that helps process messages
-  private: ros::Callbackqueue rosQueue;
+  private: ros::CallbackQueue rosQueue;
   
   // A thread the keeps running the rosQueue
-  private: std::thread rosQueueThread;
+  private: boost::thread rosQueueThread;
   ```
 3. At end of `Load` function add:
 
@@ -74,11 +74,11 @@ Will need to modify our current plugin to include the ROS transport mechanism, l
 5. Modify `CMakeLists.txt` to look like:
   
   ```
-  cmake_minimum_required(VERSION 2.8 FATAL_ERROR)
-
-  find_package(roscpp REQUIRED)
-  find_package(std_msgs REQUIRED)
-  include_directories(${roscpp_INCLUDE_DIRS})
+  cmake_minimum_required(VERSION 2.8 FATAL_ERROR) 
+  
+  set (CMAKE_PREFIX_PATH /opt/ros/kinetic/share) 
+  find_package(roscpp REQUIRED) find_package(std_msgs REQUIRED) 
+  include_directories(${roscpp_INCLUDE_DIRS}) 
   include_directories(${std_msgs_INCLUDE_DIRS})
 
   # Find Gazebo
