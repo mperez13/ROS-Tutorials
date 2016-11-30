@@ -112,6 +112,21 @@ Will need to modify our current plugin to include the ROS transport mechanism, l
 
 ##Control Velodyne from ROS
 
+Now we can load Gazebo plugin as usual & it will listen on ROS topic for incoming float messages,
+These messages  will then be used to set the Velodyne's rotational speed.
+
+1. Start Gazebo
+
+  ```
+  cd ~/velodyne_plugin/build
+  gazebo ../worlds/velodyne.world
+  ```
+2. In new terminal, use `rostopic` to send a velocity message
+
+  ```
+  rostopic pub /my_velodyne/vel_cmd std_msgs/Float32 1.0
+  ```
+3. Change the last # of the above command to set different velocities.
 
 
 
