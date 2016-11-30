@@ -15,7 +15,7 @@ Link to tutorial - http://gazebosim.org/tutorials?cat=guided_i&tut=guided_i5
 
 ###Step 2: Create the plugin source file
 
-1. Create [velodyne_plugin.cc](https://github.com/mperez13/ROS-Tutorials/tree/mastervelodyne_plugin/velodyne_plugin.cc)
+1. Create [velodyne_plugin.cc](https://github.com/mperez13/ROS-Tutorials/tree/master/velodyne_plugin/velodyne_plugin.cc)
 
 ###Step 3: Create CMake build script
 
