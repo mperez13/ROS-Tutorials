@@ -74,7 +74,51 @@ Link to tutorial - http://gazebosim.org/tutorials?tut=sensor_noise&cat=sensors
 
 ##IMU noise
 
-NEED TO FINISH TAKING NOTES
+- For IMU sensor, we model 2 kinds of disturbance to angular rates & linear accelerations:
+  - noise
+  - bias
+- Angular rates & linear accelrations are considered seperately, which lead to 4 sets of parameters for the model:
+  - rate noise
+  - rate bias
+  - accel noise
+  - accel bias
+
+- Noise:
+  - is additive
+  - is sampled from a Gaussian distribution
+  - mean & standard deviation of the Gaussian distributions (one for rates & one for accels) can be set from which noise values will be sampled
+  - noise value is sampled imdependently for each component (x, y, z) of each sample & added to that component
+  
+- Bias:
+  - is additive
+  - is sampled once at the start of the simulation
+  - mean and the standard deviation of the Gaussian distributions (one for rates and one for accels) can be set from which bias values will be sampled
+  - will be sampled according to the provided parameters
+  - then with equal probability negated; the assumption is that the provided mean indicates the magnitude of the bias and that it's equal likely to be biased in either direction
+  - after that bias is a fixed value, added to each component (x, y, z) of each sample
+
+##### To test IMU noise model:
+
+1. Create [model config file](https://github.com/mperez13/ROS-Tutorials/tree/master/.gazebo/models/noisy_imu/model.config):
+  
+    ```
+    gedit ~/.gazebo/models/noisy_imu/moodel.config
+    ```
+2. Create [model.sdf](https://github.com/mperez13/ROS-Tutorials/tree/master/.gazebo/models/noisy_imu/model.sdf) file:
+
+    ```
+    gedit ~/.gazebo/models/noisy_imu/model.sdf
+    ```
+3. Start Gazebo and insert noisy IMU
+4. Visualize the noisy IMU. Click `Window->Topic Visualization` and select `/gazebo/default/imu/link/imu/imu`. Click `Okay`.
+  - You'll get a Text View window that shows you the IMU data
+
+It can be difficult to apprecite the niose on a high-rate sensor like an IMU. Should be able to see the effect of large non-zero means inthe noise and/or bias parameters.
+
+To adjust the noise, play w/ mean & standard deviation values in `model.sdf`.
+- Units:
+  - rate noise & rate bias are rad/s
+  - accel noise & accel bias are m/s^2 
 
 
 
