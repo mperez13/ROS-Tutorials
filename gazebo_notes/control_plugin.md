@@ -39,6 +39,8 @@ Link to tutorial - http://gazebosim.org/tutorials?cat=guided_i&tut=guided_i5
     ```
     - had an error when I ran `make`:
         ![Image of plugin error](https://github.com/mperez13/ROS-Tutorials/blob/master/gazebo_notes/images/plugin_error.png)
+        
+        - Fixed error by adding `#include <gazebo/physics/Model.hh>` to velodyne_plugin.cc
 2. Run the world. Make sure to run gazebo within the `build` directory so Gazebo can find the plugin library.
 
     ```
