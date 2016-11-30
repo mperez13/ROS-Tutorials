@@ -198,7 +198,15 @@ CMakeFiles/velodyne_plugin.dir/velodyne_plugin.cc.o
  /usr/include/gazebo-7/gazebo/msgs/world_stats.pb.h
  /usr/include/gazebo-7/gazebo/msgs/wrench.pb.h
  /usr/include/gazebo-7/gazebo/msgs/wrench_stamped.pb.h
+ /usr/include/gazebo-7/gazebo/physics/Base.hh
+ /usr/include/gazebo-7/gazebo/physics/CollisionState.hh
+ /usr/include/gazebo-7/gazebo/physics/Entity.hh
+ /usr/include/gazebo-7/gazebo/physics/JointState.hh
+ /usr/include/gazebo-7/gazebo/physics/LinkState.hh
+ /usr/include/gazebo-7/gazebo/physics/Model.hh
+ /usr/include/gazebo-7/gazebo/physics/ModelState.hh
  /usr/include/gazebo-7/gazebo/physics/PhysicsTypes.hh
+ /usr/include/gazebo-7/gazebo/physics/State.hh
  /usr/include/gazebo-7/gazebo/rendering/RenderTypes.hh
  /usr/include/gazebo-7/gazebo/sensors/SensorTypes.hh
  /usr/include/gazebo-7/gazebo/transport/CallbackHelper.hh

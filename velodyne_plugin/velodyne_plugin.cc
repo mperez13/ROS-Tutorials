@@ -2,6 +2,7 @@
 #define _VELODYNE_PLUGIN_HH_
 
 #include <gazebo/gazebo.hh>
+#include <gazebo/physics/Model.hh>
 
 namespace gazebo
 {
