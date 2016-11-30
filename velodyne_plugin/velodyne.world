@@ -18,6 +18,9 @@
 
       <!-- Attach the plugin to this model -->
       <plugin name="velodyne_control" filename="libvelodyne_plugin.so"/>
+
+      <!-- Plugin Configuration: Adds a velocity element to the <plugin> -->
+      <velocity>25</velocity>
     </model>
 
   </world>
