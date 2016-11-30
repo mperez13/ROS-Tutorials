@@ -11,21 +11,21 @@ Link to tutorial - http://gazebosim.org/tutorials?cat=guided_i&tut=guided_i5
 
 **Overview**: will craete the plugin in a new directory.  The contents of this directory will include the plugin source code, and CMake build script.
 
-###Step 1: Create a [velodyne_plugin](https://github.com/mperez13/ROS-Tutorials/velodyne_plugin) workspace
+###Step 1: Create a [velodyne_plugin](https://github.com/mperez13/ROS-Tutorials/tree/master/velodyne_plugin) workspace
 
 ###Step 2: Create the plugin source file
 
-1. Create [velodyne_plugin.cc](https://github.com/mperez13/ROS-Tutorials/velodyne_plugin/velodyne_plugin.cc)
+1. Create [velodyne_plugin.cc](https://github.com/mperez13/ROS-Tutorials/tree/mastervelodyne_plugin/velodyne_plugin.cc)
 
 ###Step 3: Create CMake build script
 
-1. Create [CMakeLists.txt](https://github.com/mperez13/ROS-Tutorials/velodyne_plugin/CMakeLists.txt) 
+1. Create [CMakeLists.txt](https://github.com/mperez13/ROS-Tutorials/tree/master/velodyne_plugin/CMakeLists.txt) 
 
 ###Step 4: Attach the plugin to the Velodyne sensor
 
 - use SDF's `\<inlcude>` capability to test out plugin w/out touching the main Velodyne SDF file
 
-1. Create a new world file inside your workspace: [velodyne.world](https://github.com/mperez13/ROS-Tutorials/velodyne_plugin/velodyne.world)
+1. Create a new world file inside your workspace: [velodyne.world](https://github.com/mperez13/ROS-Tutorials/tree/master/velodyne_plugin/velodyne.world)
 
 ###Step 5: Build and test
 
