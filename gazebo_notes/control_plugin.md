@@ -40,7 +40,7 @@ Link to tutorial - http://gazebosim.org/tutorials?cat=guided_i&tut=guided_i5
     - had an error when I ran `make`:
         ![Image of plugin error](https://github.com/mperez13/ROS-Tutorials/blob/master/gazebo_notes/images/plugin_error.png)
         
-        - Fixed error by adding `#include <gazebo/physics/Model.hh>` to velodyne_plugin.cc
+        - Fixed error by adding `#include <gazebo/physics/physics.hh>` to velodyne_plugin.cc
 2. Run the world. Make sure to run gazebo within the `build` directory so Gazebo can find the plugin library.
 
     ```
@@ -66,8 +66,6 @@ Link to tutorial - http://gazebosim.org/tutorials?cat=guided_i&tut=guided_i5
     gazebo ../velodyne.world
     ```
     The Velodyne should be spinning.
-    
-    **[Got an error; just continue, the rest of this tutorial will fix this problem]**
 
 ##Plugin Configuration
 
@@ -86,8 +84,6 @@ Link to tutorial - http://gazebosim.org/tutorials?cat=guided_i&tut=guided_i5
     gazebo ../velodyne.world
     ```
 Adjust `<velocity>` SDF value & restart simulation to see the effects.
-
-  **[Still getting an error, going to next step: Create an API]**
 
 ##Create an API
 
@@ -149,11 +145,34 @@ Since our plugin is simple, it's easy to implement both simultaneously.
     #include <gazebo/msgs/msgs.hh>
     
     ```
-    
-    
-    
-    
-    
-    
 
-  
+##Test the message passing API
+
+1. Create new source file [vel.cc](https://github.com/mperez13/ROS-Tutorials/blob/master/velodyne_plugin/vel.cc) in your workspace
+2. Add following to `CMakeLists.txt` to build the new `vel` program.
+    ```
+    # Build the stand-alone test program
+    add_executable(vel vel.cc)
+
+    if (${gazebo_VERSION_MAJOR} LESS 6)
+      # These two
+      include(FindBoost)
+      find_package(Boost ${MIN_BOOST_VERSION} REQUIRED system filesystem regex)
+      target_link_libraries(vel ${GAZEBO_LIBRARIES} ${Boost_LIBRARIES})
+    else()
+      target_link_libraries(vel ${GAZEBO_LIBRARIES})
+    endif()
+    ```
+3. Compile and run simulation
+    ```
+    cd build
+    cmake ../
+    make
+    gazebo ../velodyne.world
+    ```
+4. In new terminal, go into build directory & run `vel` command. Make sure to set target velocity value.
+    
+    ```
+    cd ~/velodyne_plugin/build
+    ./vel 2
+    ```
