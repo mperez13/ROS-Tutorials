@@ -152,6 +152,26 @@ Link to tutorial - http://gazebosim.org/tutorials?cat=guided_i&tut=guided_i5
       this->model->GetJointController()->SetVelocityTarget(this->joint->GetScopedName(), 10.0);
     }
     ```
+    
+    - Need to make sure to declare the variables[this was done later on in the tutorial]
+    
+      ```
+      // \brief A node used for transport
+      private: transport::NodePtr node;
+
+      // \brief A subscriber to a named topic.
+      private: transport::SubscriberPtr sub;
+
+      // \brief Pointer to the model
+      private: physics::ModelPtr model; 
+
+      // \brief Pointer to the joint
+      private: physics::JointPtr joint;
+
+      // \brief A PID controller for the joint
+      private: common::PID pid
+      ```
+    
 2. Recompile and run Gazebo
     
     ```
