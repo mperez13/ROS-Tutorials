@@ -2,11 +2,17 @@
 #define _VELODYNE_PLUGIN_HH_
 
 #include <gazebo/gazebo.hh>
-#include <gazebo/physics/Model.hh>
+#include <gazebo/physics/physics.hh>
 
 //Added for Create an API
 #include <gazebo/transport/transport.hh>
 #include <gazebo/msgs/msgs.hh>
+
+//header files to add ROS transport
+#include "ros/ros.h"
+#include "ros/callback_queue.h"
+#include "ros/subscribe_options.h"
+#include "std_msgs/Float32.h"
 
 namespace gazebo{
     //A plugin to control a Velodyne sensor.
@@ -59,7 +65,34 @@ namespace gazebo{
 			std::string topicName = "~/" + this->model->GetName() + "/vel_cmd";
 
 			/*subscribe to the topic & register a callback*/
-			this->sub = this->node->subscribe(topicName, &VelodynePlugin::OnMsg, this);
+			this->sub = this->node->Subscribe(topicName, &VelodynePlugin::OnMsg, this);
+
+			/*ADDED TO ADD ROS TRANSPORT*/
+			// Initialize ros, if it has not already bee initialized.
+			if (!ros::isInitialized())
+			{
+			  int argc = 0;
+			  char **argv = NULL;
+			  ros::init(argc, argv, "gazebo_client",
+			      ros::init_options::NoSigintHandler);
+			}
+
+			// Create our ROS node. This acts in a similar manner to
+			// the Gazebo node
+			this->rosNode.reset(new ros::NodeHandle("gazebo_client"));
+
+			// Create a named topic, and subscribe to it.
+			ros::SubscribeOptions so =
+			  ros::SubscribeOptions::create<std_msgs::Float32>(
+			      "/" + this->model->GetName() + "/vel_cmd",
+			      1,
+			      boost::bind(&VelodynePlugin::OnRosMsg, this, _1),
+			      ros::VoidPtr(), &this->rosQueue);
+			this->rosSub = this->rosNode->subscribe(so);
+
+			// Spin up the queue helper thread.
+			this->rosQueueThread =
+			  boost::thread(std::bind(&VelodynePlugin::QueueThread, this));
 
 			/*Set joint's target velocity (just for demonstration purposes)*/
 			//this->model->GetJointController()->SetVelocityTarget(this->joint->GetScopedName(), 10.0);
@@ -81,20 +114,48 @@ namespace gazebo{
 			this->SetVelocity(_msg->x());
 		}
 
+
+		/*Functions to ADD ROS TRANSPORT*/
+		// Handle an incoming message from ROS
+		// _msg: A float value that is used to set the velocity of the Velodyne
+		public: void OnRosMsg(const std_msgs::Float32ConstPtr &_msg){
+		  	this->SetVelocity(_msg->data);
+		}
+
+		// \brief ROS helper function that processes messages
+		private: void QueueThread(){
+		  	static const double timeout = 0.01;
+		  	while (this->rosNode->ok()){
+		    	this->rosQueue.callAvailable(ros::WallDuration(timeout));
+		  	}	
+		}
+
 		//A node used for transport
 		private: transport::NodePtr node;
 
 		// A subscriber to a named topic.
-   		private: transport::SubscriberPtr sub;
+		private: transport::SubscriberPtr sub;
 
 	    // Pointer to the model.
-	    private: physics::ModelPtr model;
+		private: physics::ModelPtr model;
 
 	    // Pointer to the joint.
-	    private: physics::JointPtr joint;
+		private: physics::JointPtr joint;
 
 	    // A PID controller for the joint.
-	    private: common::PID pid;
+		private: common::PID pid;
+
+	    // A node use for ROS transport
+		private: std::unique_ptr<ros::NodeHandle> rosNode;
+
+		// A ROS subscriber
+		private: ros::Subscriber rosSub;
+
+		// A ROS callbackqueue that helps process messages
+		private: ros::CallbackQueue rosQueue;
+
+		// A thread the keeps running the rosQueue
+		private: boost::thread rosQueueThread;
 
 	};
 
