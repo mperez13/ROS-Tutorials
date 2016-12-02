@@ -127,7 +127,7 @@ Link to tutorial - http://gazebosim.org/tutorials?cat=guided_i&tut=guided_i5
 
 1. Modify `Load` function in velodyne_plugin.cc 
 
-    ```
+    ```c++
     public: virtual void Load(physics::ModelPtr _model, sdf::ElementPtr _sdf){
       // Safety check
       if (_model->GetJointCount() == 0){
@@ -155,7 +155,7 @@ Link to tutorial - http://gazebosim.org/tutorials?cat=guided_i&tut=guided_i5
     
     - Need to make sure to declare the variables[this was done later on in the tutorial]
     
-      ```
+      ```c++
       // \brief A node used for transport
       private: transport::NodePtr node;
 
@@ -239,7 +239,7 @@ Since our plugin is simple, it's easy to implement both simultaneously.
     
     [velodyne_plugin.cc](https://github.com/mperez13/ROS-Tutorials/blob/master/velodyne_plugin/velodyne_plugin.cc)
     
-    ```
+    ```c++
     // \brief : Set the velocity of the Velodyne
     // \param[in] : _vel New target velocity
     public: void SetVelocity(const double &_vel){
@@ -252,7 +252,7 @@ Since our plugin is simple, it's easy to implement both simultaneously.
 2. Setup the message passing infrastructure.
   1. Add Node & subscriber to the plugin
   
-    ```
+    ```c++
     // \brief A node used for transport
     private: transport::NodePtr node;
 
@@ -261,7 +261,7 @@ Since our plugin is simple, it's easy to implement both simultaneously.
     ```
   2. Instantiate the Node & subscriber at the end of `Load` function
   
-    ```
+    ```c++
     // Create the node
     this->node = transport::NodePtr(new transport::Node());
     this->node->Init(this->model->GetWorld()->GetName());
@@ -274,7 +274,7 @@ Since our plugin is simple, it's easy to implement both simultaneously.
     ```
   3. Create the callback function that handles incoming messages
   
-    ```
+    ```c++
     // \brief Handle incoming message
     // \param[in] _msg Repurpose a vector3 message. This function will only use the x component.
     private: void OnMsg(ConstVector3dPtr &_msg){
@@ -283,14 +283,14 @@ Since our plugin is simple, it's easy to implement both simultaneously.
     ```
   4. Add 2 necessary headers to the plugin
     
-    ```
+    ```c++
     #include <gazebo/transport/transport.hh>
     #include <gazebo/msgs/msgs.hh>
     
     ```
 3. The complete plugin should look like this:
     
-    ```
+    ```c++
     #ifndef _VELODYNE_PLUGIN_HH_
     #define _VELODYNE_PLUGIN_HH_
 
@@ -380,7 +380,7 @@ Since our plugin is simple, it's easy to implement both simultaneously.
 
 1. Create new source file [vel.cc](https://github.com/mperez13/ROS-Tutorials/blob/master/velodyne_plugin/vel.cc) in your workspace
 
-    ```
+    ```c++
     #include <gazebo/gazebo_config.h>
     #include <gazebo/transport/transport.hh>
     #include <gazebo/msgs/msgs.hh>
