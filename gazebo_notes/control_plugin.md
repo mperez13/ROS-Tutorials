@@ -352,7 +352,13 @@ Since our plugin is simple, it's easy to implement both simultaneously.
         private: void OnMsg(ConstVector3dPtr &_msg){
           this->SetVelocity(_msg->x());
         }
-        
+        // \brief : Set the velocity of the Velodyne
+        // \param[in] : _vel New target velocity
+        public: void SetVelocity(const double &_vel){
+          // Set the joint's target velocity.
+          this->model->GetJointController()->SetVelocityTarget(
+              this->joint->GetScopedName(), _vel);
+        }
         // \brief A node used for transport
         private: transport::NodePtr node;
 
