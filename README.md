@@ -7,4 +7,7 @@ Code for ROS tutorials to be used for the Ground System of UAS
 - [.gazebo/models directory](https://github.com/mperez13/ROS-Tutorials/tree/master/.gazebo/models)
   - Some Gazebo models, including their .sdf and .config files
 
-####[List of Notes I took](https://github.com/mperez13/ROS-Tutorials/tree/master/NotesList.md)
+####List of Notes I took
+
+- [Gazebo Notes](https://github.com/mperez13/ROS-Tutorials/tree/master/NotesList.md)
+- [ROS Notes](https://github.com/mperez13/ROS-Tutorials/tree/master/ros_notes)
