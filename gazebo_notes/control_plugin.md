@@ -267,7 +267,7 @@ Since our plugin is simple, it's easy to implement both simultaneously.
     this->node->Init(this->model->GetWorld()->GetName());
 
     // Create a topic name
-    std::string topicname = "~/" + this->model->GetName() + "/vel_cmd";
+    std::string topicName = "~/" + this->model->GetName() + "/vel_cmd";
 
     // Subscribe to the topic, and register a callback
     this->sub = this->node->Subscribe(topicName, &VelodynePlugin::OnMsg, this);
