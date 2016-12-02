@@ -52,7 +52,7 @@ Will need to modify our current plugin to include the ROS transport mechanism, l
   this->rosSub = this->rosNode->subscribe(so);
 
   // Spin up the queue helper thread.
-  this->rosQueueThread = std::thread(std::bind(&VelodynePlugin::QueueThread, this));
+  this->rosQueueThread = boost::thread(std::bind(&VelodynePlugin::QueueThread, this));
   ```
 4. Notice from previous code we need 2 new functions: `onRosMsg` & `QueueThread`
 
