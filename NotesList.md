@@ -12,4 +12,5 @@
 |[Create SDF Model of the Velodyne Sensor](https://github.com/mperez13/ROS-Tutorials/blob/master/gazebo_notes/velodyne_gazebo.md)|Base on the Velodyne documentation, create basic .sdf file to model the sensor|
 |[Model Appearance](https://github.com/mperez13/ROS-Tutorials/blob/master/gazebo_notes/model_appearance_notes.md)|Improve the Velodyne model's appearance by creating meshes|
 |[Control Plugin](https://github.com/mperez13/ROS-Tutorials/blob/master/gazebo_notes/control_plugin.md)|Create a plugin in a new directory. The contents of this directory will include the plugin source code, and CMake build script|
-|[Connect to ROS](https://github.com/mperez13/ROS-Tutorials/blob/master/gazebo_notes/connect_to_ROS.md)|Use the plugin to connect to ROS. Plugin will be loaded as usual and will listen on ROS topic for incoming float messages, that will be used to set Velodyne's rotational speed| 
+|[Connect to ROS](https://github.com/mperez13/ROS-Tutorials/blob/master/gazebo_notes/connect_to_ROS.md)|Use the plugin to connect to ROS. Plugin will be loaded as usual and will listen on ROS topic for incoming float messages, that will be used to set Velodyne's rotational speed|
+|[Topic Subscription](https://github.com/mperez13/ROS-Tutorials/blob/master/gazebo_notes/topics_subscription.md)|Simple listener example involving Gazebo|
