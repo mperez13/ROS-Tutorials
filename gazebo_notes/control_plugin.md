@@ -448,6 +448,7 @@ Since our plugin is simple, it's easy to implement both simultaneously.
     endif()
     ```
 3. Compile and run simulation
+
     ```
     cd build
     cmake ../
@@ -460,3 +461,4 @@ Since our plugin is simple, it's easy to implement both simultaneously.
     cd ~/velodyne_plugin/build
     ./vel 2
     ```
+Next Tutorial - [Connect to ROS](https://github.com/mperez13/ROS-Tutorials/blob/master/gazebo_notes/connect_to_ROS.md)
