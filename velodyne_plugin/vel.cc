@@ -2,8 +2,8 @@
 #include <gazebo/transport/transport.hh>
 #include <gazebo/msgs/msgs.hh>
 
-// Gazebo's API has changed between major releases. These changes are
-// accounted for with #if..#endif blocks in this file.
+// Gazebo's API has changed between major releases (changes are accounted for with #if..#endif blocks in this file)
+//ADDED TO TEST THE MESSAGE PASSING API
 #if GAZEBO_MAJOR_VERSION < 6
 #include <gazebo/gazebo.hh>
 #else
@@ -11,8 +11,7 @@
 #endif
 
 /////////////////////////////////////////////////
-int main(int _argc, char **_argv)
-{
+int main(int _argc, char **_argv){
   // Load gazebo as a client
 #if GAZEBO_MAJOR_VERSION < 6
   gazebo::setupClient(_argc, _argv);
@@ -26,7 +25,7 @@ int main(int _argc, char **_argv)
 
   // Publish to the  velodyne topic
   gazebo::transport::PublisherPtr pub =
-  node->Advertise<gazebo::msgs::Vector3d>("~/my_velodyne/vel_cmd");
+    node->Advertise<gazebo::msgs::Vector3d>("~/my_velodyne/vel_cmd");
 
   // Wait for a subscriber to connect to this publisher
   pub->WaitForConnection();

@@ -5,6 +5,7 @@
     <include>
       <uri>model://sun</uri>
     </include>
+
     <!-- A ground plane -->
     <include>
       <uri>model://ground_plane</uri>
@@ -16,12 +17,9 @@
         <uri>model://velodyne_hdl32</uri>
       </include>
 
-      <!-- Attach the plugin to this model -->
-      <plugin name="velodyne_control" filename="libvelodyne_plugin.so"/>
-
-      <!-- Plugin Configuration: Adds a velocity element to the <plugin> -->
-      <velocity>25</velocity>
+      <plugin name="velodyne_control" filename="libvelodyne_plugin.so">
+      <velocity>1.0</velocity>
+      </plugin>
     </model>
-
-  </world>
+</world>
 </sdf>
