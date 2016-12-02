@@ -75,5 +75,58 @@ Link to tutorial - http://gazebosim.org/tutorials?tut=topics_subscribed&cat=tran
     iterations: 1105055
     ```
 
+###Code Explained
+
+    ```c++
+    #include <gazebo/transport/transport.hh>
+    #include <gazebo/msgs/msgs.hh>
+    #include <gazebo/gazebo_client.hh>
+
+    #include <iostream>
+
+    // Callback function that will print the messages to the console, which we called cb in gazebo::transport::NodePtr
+    void cb(ConstWorldStatisticsPtr &_msg){
+      // Dump the message contents to stdout.
+      std::cout << _msg->DebugString();
+    }
+
+    
+    int main(int _argc, char **_argv)
+    {
+      // Load gazebo and run the transport system
+      gazebo::client::setup(_argc, _argv);
+
+      // Create a nodem which provides functions to create publishers and subscribers
+      gazebo::transport::NodePtr node(new gazebo::transport::Node());
+      node->Init();
+
+      // Create a subscriber on the 'world_stats' topic. Gazebo publishes a stream of stats on this topic
+      gazebo::transport::SubscriberPtr sub = node->Subscribe("~/world_stats", cb);
+
+      // Wait loop while messages come in
+      while (true)
+        gazebo::common::Time::MSleep(10);
+
+      // Finalize the transport system by shutting it down
+      gazebo::client::shutdown();
+    }
+    ```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
