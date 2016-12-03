@@ -2,7 +2,7 @@
 
 Link to documenation - http://wiki.ros.org/Topics
 
-- are [named](http://wiki.ros.org/Names) buses over which [nodes](http://wiki.ros.org/Nodes) exchange [messages](http://wiki.ros.org/Messages
+- are [named](http://wiki.ros.org/Names) buses over which [nodes](http://wiki.ros.org/Nodes) exchange [messages](http://wiki.ros.org/Messages)
 - have anonymous publish/subscibe semantics, which decouples the production of information from its consumption
 - are intended for unidirectional, streaming communication
 
