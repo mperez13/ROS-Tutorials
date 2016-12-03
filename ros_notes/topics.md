@@ -54,7 +54,7 @@ Link to documenation - http://wiki.ros.org/Topics
 
 ##Topic statistics
 
--  [roscpp](http://wiki.ros.org/roscpp) & [rospy](http://wiki.ros.org/rospy) offer integrated measurement of the following parameters for every connection:
+-  [roscpp](https://github.com/mperez13/ROS-Tutorials/blob/master/ros_notes/roscpp.md) & [rospy](http://wiki.ros.org/rospy) offer integrated measurement of the following parameters for every connection:
   - period messages by all publishers (avg., max, standard deviation)
   - age of messages, based on header timestamp (avg, min, standard deviation)
   - # of dropped messages
