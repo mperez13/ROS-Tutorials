@@ -10,4 +10,4 @@ Code for ROS tutorials to be used for the Ground System of UAS
 ####List of Notes I took
 
 - [Gazebo Notes](https://github.com/mperez13/ROS-Tutorials/tree/master/NotesList.md)
-- [ROS Notes](https://github.com/mperez13/ROS-Tutorials/tree/master/ros_notes)
+- [ROS Notes](https://github.com/mperez13/ROS-Tutorials/blob/master/ros_notes.md)
