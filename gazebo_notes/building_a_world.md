@@ -4,10 +4,15 @@
 
 ## Terminology
 
-- **World:** desribes a collection of robots and objects(tables, building, etc.) and global parameters(sky, ambient light, physical properties) 
-- **Static:** Entities marked as static (those having `<static>true</static>` in SDF) are objects which only have collision geometry
+World 
+: describes a collection of robots and objects(tables, building, etc.) and global parameters(sky, ambient light, physical properties) 
+
+**Static** 
+
+: Entities marked as static (those having `<static>true</static>` in SDF) are objects which only have collision geometry
     - all objects not meant to move should be marked as static
-- **Dynamic:** Entities marked as dynamic (either missing `<static>` or setting false in SDF) are objects which have both inertia and a collision geometry
+**Dynamic** 
+: Entities marked as dynamic (either missing `<static>` or setting false in SDF) are objects which have both inertia and a collision geometry
 
 ## Setup
 
@@ -20,8 +25,8 @@
     ```
     
     > in my setup:
-    >   $ mkdir ~/ROS-Tutorials/build_world_tutorial
-    >   $ cd ~/ROS-Tutorials/build_world_tutorial
+    > > $ mkdir ~/ROS-Tutorials/build_world_tutorial
+    > > $ cd ~/ROS-Tutorials/build_world_tutorial
 
 
 
