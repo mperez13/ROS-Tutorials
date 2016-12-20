@@ -2,7 +2,7 @@
 
 |Title|Description|
 |-----|-----|
-|[Add model from model database](https://github.com/mperez13/ROS-Tutorials/blob/master/gazebo_notes/add_model_from_model_database.md)|Add model to Gazebo from Gazebo's online database|
+|[Add model from model database][1]|Add model to Gazebo from Gazebo's online database|
 |[Add a sensor to a Robot](https://github.com/mperez13/ROS-Tutorials/blob/master/gazebo_notes/add_sensor_to_robot.md)|create composite models directly from other models in the Gazebo Model Database by using \<include> tags and \<joint> to connect different components of a composite model.|
 |[Attach a Mesh as a Visual](https://github.com/mperez13/ROS-Tutorials/blob/master/gazebo_notes/attach_meshes_notes.md)|Meshes can add realism to a model both visually and for sensors. The most common use case for a mesh is to create a realistic looking visual|
 |[Make a Mobile Robot](https://github.com/mperez13/ROS-Tutorials/blob/master/gazebo_notes/make_a_mobile_robot.md)|Tutorial demonstrates Gazebo's basic model management & basic model representation inside the model databse by taking the user through the process of creating a two wheeled mobile robot that uses a differential drive mechanism for movement|
@@ -14,3 +14,10 @@
 |[Control Plugin](https://github.com/mperez13/ROS-Tutorials/blob/master/gazebo_notes/control_plugin.md)|Create a plugin in a new directory. The contents of this directory will include the plugin source code, and CMake build script|
 |[Connect to ROS](https://github.com/mperez13/ROS-Tutorials/blob/master/gazebo_notes/connect_to_ROS.md)|Use the plugin to connect to ROS. Plugin will be loaded as usual and will listen on ROS topic for incoming float messages, that will be used to set Velodyne's rotational speed|
 |[Topic Subscription](https://github.com/mperez13/ROS-Tutorials/blob/master/gazebo_notes/topics_subscription.md)|Simple listener example involving Gazebo|
+
+
+[1]: gazebo_notes/add_model_from_model_database.md
+[]:
+[]:
+[]:
+[]:
