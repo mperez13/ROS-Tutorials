@@ -20,7 +20,7 @@
     $ cd ~/build_world_tutorial
     ```
     
-    - in my setup:
+    - Notes: in my setup
         
         ```
         $ mkdir ~/ROS-Tutorials/build_world_tutorial
@@ -34,12 +34,44 @@
     
     - Should see a world w/ just a ground plane
     
-As Kanye West said:
+## Adding Objects
 
-> We're living the future so
-> the present is our past.
+There are two ways you can add objects to Gazebo
 
+1. Simple shapes (located above the render window)
+    
+    ![simple shapes][2]
+
+2. [Model Database][3] 
+
+    ![model database][4]
+
+## Adding Simple Shapes
+
+Add shapes by simply clicking on the appropriate icon.
+Each shape is of unit size:
+
+- Box: 1 x 1 x 1 meter
+- Sphere: 1 meter diameter
+- Cylinder: 1 meter diameter, 1 meter length
+
+To add:
+
+1. Select the box icon and move mouse onto the render window. You should see a box that moves with your mouse. Left click to place in the position you want.
+    - Repeat with sphere and cylinder
+
+    ![adding a shape to gazebo][5]
+
+## Adding Model from the Model Database
+
+Gazebo's model database is a repository of all types of models including robots, tables, and building.
+
+1. 
 
 
 
 [1]: http://gazebosim.org/tutorials?cat=install
+[2]: images/empty_world_simple_shapes_highlighted.png 
+[3]: https://bitbucket.org/osrf/gazebo_models
+[4]: images/adding-model-database.png
+[5]: images/add-shape-to-gazebo.png
