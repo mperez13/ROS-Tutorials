@@ -1,6 +1,6 @@
 #Add a Sensor to a Robot
 
-Link to Tutorial - http://gazebosim.org/tutorials/?tut=add_laser
+**Link to Tutorial:** http://gazebosim.org/tutorials/?tut=add_laser
 
 **Description**: This tutorial demonstrates how the user can create composite models directly from other models in the [Gazebo Model Database](https://bitbucket.org/osrf/gazebo_models/src) by using \<include> tags and \<joint> to connect different components of a composite model.
 
