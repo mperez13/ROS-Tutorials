@@ -26,7 +26,11 @@ In `World` tab, select `physics` item.
     
     - `enable physics`
     
+
+<p style='color:red'>This is some red text.</p>
 <font color="red">This is some text!</font>
+These are <b style='color:red'>red words</b>.
+
     
 
 [1]: images/scene_prop.png
