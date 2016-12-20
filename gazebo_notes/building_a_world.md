@@ -20,9 +20,24 @@
     $ cd ~/build_world_tutorial
     ```
     
-> in my setup:
-> > $ mkdir ~/ROS-Tutorials/build_world_tutorial
-    $ cd ~/ROS-Tutorials/build_world_tutorial
+    - in my setup:
+        
+        ```
+        $ mkdir ~/ROS-Tutorials/build_world_tutorial
+        $ cd ~/ROS-Tutorials/build_world_tutorial
+        ```
+3. Start Gazebo (make sure your inside the `build_world_tutorial` directory)
+        
+    ```
+    $ gazebo
+    ```
+    
+    - Should see a world w/ just a ground plane
+    
+As Kanye West said:
+
+> We're living the future so
+> the present is our past.
 
 
 
