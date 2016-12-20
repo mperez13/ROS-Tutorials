@@ -46,7 +46,7 @@ There are two ways you can add objects to Gazebo
 
     ![model database][4]
 
-## Adding Simple Shapes
+### Adding Simple Shapes
 
 Add shapes by simply clicking on the appropriate icon.
 Each shape is of unit size:
@@ -62,16 +62,44 @@ To add:
 
     ![adding a shape to gazebo][5]
 
-## Adding Model from the Model Database
+### [Adding Model from the Model Database][6]
 
-Gazebo's model database is a repository of all types of models including robots, tables, and building.
+## Position Models
 
-1. 
+The pose of each model can be altered through the translate and rotate tools:
+
+![position controls][7]
+
+### Translation
+
+Translation tools(1st of the three in the above image) allows you to move objects along the x, y, z axes.
+
+1. Select the tool now and click on the object you want to move,
+    - a three axes visual marker will appear over the object. Now you can move the object in the x, y, z directions
+    - can also click on the object and drag it
+    - can control which axis the object moves along by pressing and holding the x, y, or z key while dragging the object
+
+    ![translation visual markers][8]
+    
+### Rotation
+
+
+### Scale
+
+## Delete Models
+
+
+## Saving a World
+
+## Loading a world
 
 
 
 [1]: http://gazebosim.org/tutorials?cat=install
 [2]: images/empty_world_simple_shapes_highlighted.png 
 [3]: https://bitbucket.org/osrf/gazebo_models
-[4]: images/adding-model-database.png
+[4]: images/adding_model_database.png
 [5]: images/add-shape-to-gazebo.png
+[6]: add_model_from_model_database.md 
+[7]: images/position_models.png 
+[8]: images/translation_model.png 
