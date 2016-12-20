@@ -83,17 +83,44 @@ Translation tools(1st of the three in the above image) allows you to move object
     
 ### Rotation
 
+The rotate tool (middle of the three in the above image) allows you to orient a model around the x, y, z axes
+
+1. Select the tool and click on the object you want to move.
+    - three ring-shaped visual marker will appear over the object, which allows you to rotate the object around the x, y, and z axes.
+    
+    ![rotation model][9]
 
 ### Scale
 
+The scale tool (left most in the above image) to resize a model in the x, y, z directions.  Currently scale tool only works w/ simple shapes (box, cylinder, sphere).
+
+1. Select this tool now and click on a simple shape.
+    - a three axes visual marker will appear over the object, which allows you to scale the x, y, and z dimensions of the object
+    
+    ![scale_position][10]
+
+
 ## Delete Models
 
+Models can be deleted by selecting them and hitting the `Delete` key or by clicking the model and selecting `Delete`
 
 ## Saving a World
 
+A world can be saved through `File` menu
+
+1. Select `File` menu and choose `Save As`
+    - a pop-up will appear you to enter a new filename.
+    - Enter `my_world.sdf` and click okay
+
 ## Loading a world
 
+A saved world may be loaded on the command line:
 
+```
+gazebo my_world.sdf
+```
+
+> You must be in current working direcotry or you must specify the complete path
 
 [1]: http://gazebosim.org/tutorials?cat=install
 [2]: images/empty_world_simple_shapes_highlighted.png 
@@ -103,3 +130,5 @@ Translation tools(1st of the three in the above image) allows you to move object
 [6]: add_model_from_model_database.md 
 [7]: images/position_models.png 
 [8]: images/translation_model.png 
+[9]: images/rotation_model.png
+[10]: images/scale_position.png
