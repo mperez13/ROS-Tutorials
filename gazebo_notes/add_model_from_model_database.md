@@ -11,4 +11,4 @@ Gazebo's model database is a repository of all types of models including robots,
 2. Try Adding various models to the world.
 3. Your world should be similar to this based on what you add.
 
-  ![world with objects][images/object_empty_world.png]
+  ![world with objects](images/object_empty_world.png )
