@@ -1,5 +1,6 @@
 #Adding Model from the Model Database
-http://gazebosim.org/tutorials?tut=build_world&cat=build_world#AddingModelfromtheModelDatabase
+
+**Link to Tutorial:** http://gazebosim.org/tutorials?tut=build_world&cat=build_world#AddingModelfromtheModelDatabase
 
 Gazebo's model database is a repository of all types of models including robots, tables, and building.
 
