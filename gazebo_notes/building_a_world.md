@@ -22,7 +22,7 @@
     
 > in my setup:
 > > $ mkdir ~/ROS-Tutorials/build_world_tutorial
-> > > $ cd ~/ROS-Tutorials/build_world_tutorial
+    $ cd ~/ROS-Tutorials/build_world_tutorial
 
 
 
