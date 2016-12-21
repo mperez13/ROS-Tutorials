@@ -1,6 +1,8 @@
 #List of Notes from Tutorials
+|Title|Description|Notes|
+|-----|----|----|
+|[Add model from model database][1]|Add model to Gazebo from Gazebo's online database||
 
-- [Add model from model database][1]: Add model to Gazebo from Gazebo's online database
 - [Add a sensor to a Robot][2]: Create composite models directly from other models in the Gazebo Model Database by using \<include> tags and \<joint> to connect different components of a composite model.
 - [Attach a Mesh as a Visual][3]: Meshes can add realism to a model both visually and for sensors. The most common use case for a mesh is to create a realistic looking visual
 - [Make a Mobile Robot][4]: Tutorial demonstrates Gazebo's basic model management & basic model representation inside the model databse by taking the user through the process of creating a two wheeled mobile robot that uses a differential drive mechanism for movement
@@ -19,6 +21,7 @@
         - save/load world
         - delete models
 - [Modifying a World][14]: how to modify global properties including scene and physics properties.
+|[Digital Elevation Models][15]|||
 
 
 [1]: gazebo_notes/add_model_from_model_database.md
@@ -35,3 +38,4 @@
 [12]: gazebo_notes/topics_subscription.md
 [13]: gazebo_notes/building-a-world.md
 [14]: gazebo_notes/modifying-world.md
+[15]: gazebo_notes/digital_elevation_models.md 
