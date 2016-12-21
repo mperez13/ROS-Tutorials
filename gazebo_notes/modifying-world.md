@@ -12,7 +12,7 @@ $ gazebo
 
 In `World` tab, select `scene` item. A list of scene properties will be displayed in the list below. Click triangle to expand the properties.
 
-![scene][1]
+    ![scene][1]
 
 These properties allow you to change the ambient light. Note: backgrounf color will not change if the Sky is enabled.
 
