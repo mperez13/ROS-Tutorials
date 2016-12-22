@@ -9,6 +9,10 @@ include_directories(${std_msgs_INCLUDE_DIRS})
 find_package(gazebo REQUIRED) 
 include_directories(${GAZEBO_INCLUDE_DIRS})
 link_directories(${GAZEBO_LIBRARY_DIRS})
+
+####ADEDD FOR CONTACT TO PLUGIN
+list(APPEND CMAKE_CXX_FLAGS "${GAZEBO_CXX_FLAGS}")
+
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${GAZEBO_CXX_FLAGS}")
 
 # Build our plugin
