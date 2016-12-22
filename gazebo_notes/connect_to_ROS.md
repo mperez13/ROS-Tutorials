@@ -2,7 +2,7 @@
 
 Link to Tutorial - http://gazebosim.org/tutorials?cat=guided_i&tut=guided_i6
 
-##Add ROS transport
+## Add ROS transport
 
 Will need to modify our current plugin to include the ROS transport mechanism, like in the previous tutorial.
 
@@ -112,7 +112,7 @@ Will need to modify our current plugin to include the ROS transport mechanism, l
   make
   ```
 
-##Control Velodyne from ROS
+## Control Velodyne from ROS
 
 Now we can load Gazebo plugin as usual & it will listen on ROS topic for incoming float messages,
 These messages  will then be used to set the Velodyne's rotational speed.
@@ -130,6 +130,3 @@ These messages  will then be used to set the Velodyne's rotational speed.
   rostopic pub /my_velodyne/vel_cmd std_msgs/Float32 1.0
   ```
 3. Change the last # of the above command to set different velocities.
-
-
-
