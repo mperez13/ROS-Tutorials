@@ -120,7 +120,7 @@ A saved world may be loaded on the command line:
 gazebo my_world.sdf
 ```
 
-> You must be in current working direcotry or you must specify the complete path
+> You must be in current working directory or you must specify the complete path
 
 [1]: http://gazebosim.org/tutorials?cat=install
 [2]: images/empty_world_simple_shapes_highlighted.png 
@@ -131,4 +131,4 @@ gazebo my_world.sdf
 [7]: images/position_models.png 
 [8]: images/translation_model.png 
 [9]: images/rotation_model.png
-[10]: images/scale_position.png
+[10]: images/scale_model.png
