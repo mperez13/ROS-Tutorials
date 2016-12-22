@@ -28,4 +28,4 @@ gedit contact.world
 
 
     
-[1]:  ../../gazebo_contact_tutorial/contact.world 
+[1]:  ../gazebo_contact_tutorial/contact.world 
