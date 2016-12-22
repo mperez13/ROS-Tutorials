@@ -12,7 +12,7 @@
 
 ## Setup
 
-1. Make sure is [installed][1]
+1. Make sure Gazebo is [installed][1]
 2. Create a working directory for this tutorial
     
     ```
