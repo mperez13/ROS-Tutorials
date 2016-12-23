@@ -397,7 +397,7 @@ A plugin created for the contact sensor can get the collision data, manipulate i
 
 ## Compiling the code
 
-1. Create `CMakeLists.txt` file:
+1. Create [`CMakeLists.txt`][6] file:
     ```
     cd ~/gazebo_contact_tutorial; gedit CMakeLists.txt
     ```
@@ -409,6 +409,7 @@ A plugin created for the contact sensor can get the collision data, manipulate i
         ```
         
 2. Add the following to the `CMakeLists.txt` file:
+
     ```
     cmake_minimum_required(VERSION 2.8 FATAL_ERROR)
 
@@ -421,6 +422,7 @@ A plugin created for the contact sensor can get the collision data, manipulate i
     add_library(contact SHARED ContactPlugin.cc)
     target_link_libraries(contact ${GAZEBO_libraries})
     ```
+    
 3. Create a build directory and make plugin:
 
     ```
@@ -444,9 +446,16 @@ A plugin created for the contact sensor can get the collision data, manipulate i
     gzserver ../contact.world
     ```
     
+    - The data that I got back was:
+        
+        ![collision contacts][7]
+    
 
 [1]: ../gazebo_contact_tutorial/contact.world 
 [2]: images/contact_values.png
 [3]: http://gazebosim.org/tutorials?cat=install
-[4]:
+[4]: ../gazebo_contact_tutorial/ContactPlugin.hh
+[5]: ../gazebo_contact_tutorial/ContactPlugin.cc
+[6]: ../gazebo_contact_tutorial/CMakeLists.txt
+[7]: images/collision_values.png
 
