@@ -449,7 +449,8 @@ A plugin created for the contact sensor can get the collision data, manipulate i
     - The data that I got back was:
         
         ![collision contacts][7]
-    
+        
+  **Gazebo API** - [ContactSensor Class Reference][8]
 
 [1]: ../gazebo_contact_tutorial/contact.world 
 [2]: images/contact_values.png
@@ -457,5 +458,5 @@ A plugin created for the contact sensor can get the collision data, manipulate i
 [4]: ../gazebo_contact_tutorial/ContactPlugin.hh
 [5]: ../gazebo_contact_tutorial/ContactPlugin.cc
 [6]: ../gazebo_contact_tutorial/CMakeLists.txt
-[7]: images/collision_values.png
-
+[7]: images/collision_contacts.png
+[8]: https://osrf-distributions.s3.amazonaws.com/gazebo/api/dev/classgazebo_1_1sensors_1_1ContactSensor.html#details
