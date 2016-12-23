@@ -419,7 +419,8 @@ A plugin created for the contact sensor can get the collision data, manipulate i
     add_library(contact SHARED ContactPlugin.cc)
     target_link_libraries(contact ${GAZEBO_libraries})
     ```
-3. Create a build directory and make plugin"
+3. Create a build directory and make plugin:
+
     ```
     $ mkdir build
     $ cd build
