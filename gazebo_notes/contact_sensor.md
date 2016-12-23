@@ -340,7 +340,7 @@ A plugin created for the contact sensor can get the collision data, manipulate i
     /////////////////////////////////////////////////
     void ContactPlugin::Load(sensors::SensorPtr _sensor, sdf::ElementPtr /*_sdf*/){
     ```
-    The following code from the `Load` function gets pointer to the contact sensor through the `_sensor` paramter. 
+    The following code from the `Load` function gets pointer to the contact sensor through the `_sensor` parameter. 
     Then we test to make sure the pointer is valid and create a connection to contact sensor's `updated` event.
     Last line guarantees that the sensor is initialized.
      
