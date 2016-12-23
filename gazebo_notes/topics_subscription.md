@@ -1,4 +1,4 @@
-#Topics Subscription
+# Topics Subscription
 
 Link to tutorial - http://gazebosim.org/tutorials?tut=topics_subscribed&cat=transport),%20and%20[this%20example](https://bitbucket.org/osrf/gazebo/src/8fee9d9628195bf6841c24e8d67a0f6b08faec4a/examples/stand_alone/listener/?at=default
 
@@ -20,7 +20,7 @@ Link to tutorial - http://gazebosim.org/tutorials?tut=topics_subscribed&cat=tran
   gz topic -l
   ```
 
-###Example: Subscribe to a [WorldStatistics message](http://gazebosim.org/api/msgs/dev/world__stats_8proto.html) & assume that you can link against Gazebo.
+### Example: Subscribe to a [WorldStatistics message](http://gazebosim.org/api/msgs/dev/world__stats_8proto.html) & assume that you can link against Gazebo.
 
 1. Download `listener.cc` & `CMakeLists.txt` from above link. Compile the example:
 
@@ -75,7 +75,7 @@ Link to tutorial - http://gazebosim.org/tutorials?tut=topics_subscribed&cat=tran
     iterations: 1105055
     ```
 
-###Code Explained
+### Code Explained
 
     ```c++
     #include <gazebo/transport/transport.hh>
