@@ -1,4 +1,4 @@
-#Model structure and requirements
+# Model structure and requirements
 
 Link to tutorial: http://gazebosim.org/tutorials?tut=model_structure&cat=build_robot
 
@@ -13,14 +13,14 @@ Link to tutorial: http://gazebosim.org/tutorials?tut=model_structure&cat=build_r
 hg clone https://bitbucket.org/osrf/gazebo_models
 ```
 
-##Model Database Structure
+## Model Database Structure
 
 - **root** of a model database contains one directory for each model and a `database.config` file w/ info about the model database
 - **model directory**: 
   - has a `model.config` file that contains meta data about the model
   - also contains the SDF for the model and any materials, meshes, and plugins
 
-####structure example:
+#### structure example:
 
 - Database
   - *database.config*: Meta data about the database (is populated automatically from CMakeLists.txt)
@@ -34,12 +34,12 @@ hg clone https://bitbucket.org/osrf/gazebo_models
       - *scripts*: directory for OGRE material scripts
     - *plugins*: directory for plugin source and header files
 
-###Database Config
+### Database Config
 
 - contains license info for models, a name for the database and a listt of all valid models
 - NOTE: only required for online repositories
 
-#####format of this 'database.config':
+##### format of this 'database.config':
 
     ```
     <?xml version='1.0'?>
