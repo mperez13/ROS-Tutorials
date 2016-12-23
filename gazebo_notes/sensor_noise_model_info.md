@@ -1,15 +1,15 @@
-#Sensor Noise Model
+# Sensor Noise Model
 
 Link to tutorial - http://gazebosim.org/tutorials?tut=sensor_noise&cat=sensors
 
-##Intro
+## Intro
 
 - Gazebo can add noise to the following types of sensors:
   - Ray (e.g. lasers)
   - Camera
   - IMU
   
-##Ray (laser) noise
+## Ray (laser) noise
 
 - For ray sensors, we add Gaussian noise to the range of each beam.
 - can set mean and standard deviation of the Gaussian distribution from which noise values will be sampled
