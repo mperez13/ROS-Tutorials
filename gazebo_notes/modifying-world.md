@@ -1,6 +1,6 @@
 # Modifying a World
 
-**Link to tutorial**: http://gazebosim.org/tutorials/?tut=modifying_world
+**Link to tutorial:** http://gazebosim.org/tutorials/?tut=modifying_world
 
 Start Gazebo:
 
