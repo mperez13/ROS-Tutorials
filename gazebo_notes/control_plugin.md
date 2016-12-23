@@ -1,4 +1,4 @@
-#Control Plugin 
+# Control Plugin 
 
 Link to tutorial - http://gazebosim.org/tutorials?cat=guided_i&tut=guided_i5
 
@@ -7,13 +7,13 @@ Link to tutorial - http://gazebosim.org/tutorials?cat=guided_i&tut=guided_i5
   - has access to Gazebo's API, which allows a plugin to perform tasks inlcuding moving objects, adding/removing objects & accessing sensor data
   - [Tutorials on plugins](http://gazebosim.org/tutorials?cat=write_plugin)
 
-##Write a plugin
+## Write a plugin
 
 **Overview**: will craete the plugin in a new directory.  The contents of this directory will include the plugin source code, and CMake build script.
 
-####Step 1: Create a [velodyne_plugin](https://github.com/mperez13/ROS-Tutorials/tree/master/velodyne_plugin) workspace
+#### Step 1: Create a [velodyne_plugin](https://github.com/mperez13/ROS-Tutorials/tree/master/velodyne_plugin) workspace
 
-####Step 2: Create the plugin source file
+#### Step 2: Create the plugin source file
 
 1. Create [velodyne_plugin.cc](https://github.com/mperez13/ROS-Tutorials/tree/master/velodyne_plugin/velodyne_plugin.cc)
 
@@ -43,7 +43,7 @@ Link to tutorial - http://gazebosim.org/tutorials?cat=guided_i&tut=guided_i5
     #endif
     ```
 
-####Step 3: Create CMake build script
+#### Step 3: Create CMake build script
 
 1. Create [CMakeLists.txt](https://github.com/mperez13/ROS-Tutorials/tree/master/velodyne_plugin/CMakeLists.txt)
 
@@ -61,7 +61,7 @@ Link to tutorial - http://gazebosim.org/tutorials?cat=guided_i&tut=guided_i5
     target_link_libraries(velodyne_plugin ${GAZEBO_libraries})
     ```
 
-####Step 4: Attach the plugin to the Velodyne sensor
+#### Step 4: Attach the plugin to the Velodyne sensor
 
 - use SDF's `\<inlcude>` capability to test out plugin w/out touching the main Velodyne SDF file
 
@@ -94,7 +94,7 @@ Link to tutorial - http://gazebosim.org/tutorials?cat=guided_i&tut=guided_i5
 </sdf>
     ```
 
-####Step 5: Build and test
+#### Step 5: Build and test
 
 1. W/in your workspace, create build directory and compile the plugin:
 
@@ -120,7 +120,7 @@ Link to tutorial - http://gazebosim.org/tutorials?cat=guided_i&tut=guided_i5
     ```
     The velodyne plugin is attached to model[my_velodyne]
     ```
-##Move the Velodyne
+## Move the Velodyne
 
 - Next add code that controls the Velodyne's joint
 - We will use simple PID controller to control the velocity of the Velodyne's joint
@@ -181,7 +181,7 @@ Link to tutorial - http://gazebosim.org/tutorials?cat=guided_i&tut=guided_i5
     ```
     The Velodyne should be spinning.
 
-##Plugin Configuration
+## Plugin Configuration
 
 - In this section, we'll modify plugin to read a custom SDF parameter that is the target velocity of the Velodyne
 
@@ -218,7 +218,7 @@ Link to tutorial - http://gazebosim.org/tutorials?cat=guided_i&tut=guided_i5
     ```
 Adjust `<velocity>` SDF value & restart simulation to see the effects.
 
-##Create an API
+## Create an API
 
 - Adding an API that other programs can use to change the velocity value will allow us to make dynamic adjustments to target's velocity.
 
@@ -382,7 +382,7 @@ Since our plugin is simple, it's easy to implement both simultaneously.
     #endif
     ```
 
-##Test the message passing API
+## Test the message passing API
 
 1. Create new source file [vel.cc](https://github.com/mperez13/ROS-Tutorials/blob/master/velodyne_plugin/vel.cc) in your workspace
 
