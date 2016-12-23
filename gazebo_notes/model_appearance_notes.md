@@ -1,4 +1,4 @@
-#Improve Velodyne Model Appearance 
+# Improve Velodyne Model Appearance 
 
 Link to tutorial - http://gazebosim.org/tutorials?cat=guided_i&tut=guided_i2
 
@@ -6,7 +6,7 @@ Link to tutorial - http://gazebosim.org/tutorials?cat=guided_i&tut=guided_i2
 - Velodyne has a [STEP file](https://github.com/mperez13/ROS-Tutorials/blob/master/Downloads/HDL32E_Outline_Model.STEP)
 - Gazebo can only use STL or Collada files, so we'll have to convert this file & then add it to our model.
 
-##Step 1: Mesh Acquisition
+## Step 1: Mesh Acquisition
 
 1. Exported STEP file into [velodyne_base.dae](https://github.com/mperez13/ROS-Tutorials/blob/master/.gazebo/models/velodyne/meshes/velodyne_base.dae)
 2. Modify dae file in [Blender](https://www.blender.org/) to correct units and center mesh on the origin
@@ -28,7 +28,7 @@ Link to tutorial - http://gazebosim.org/tutorials?cat=guided_i&tut=guided_i2
 4. Export the mesh as a Collada file 
   - [velodyne_top.dae](https://github.com/mperez13/ROS-Tutorials/blob/master/.gazebo/models/velodyne/meshes/velodyne_top.dae)
 
-##Step 2: Add meshes to SDF
+## Step 2: Add meshes to SDF
 
 1. Add files velodyne_base.dae & velodyne_top.dae to:
 
@@ -67,7 +67,7 @@ Link to tutorial - http://gazebosim.org/tutorials?cat=guided_i&tut=guided_i2
   </visual>
   ```
 
-##Step 3: Textures
+## Step 3: Textures
 
 - Velodyne website doesn't have texture files for download.
 
