@@ -402,10 +402,12 @@ A plugin created for the contact sensor can get the collision data, manipulate i
     cd ~/gazebo_contact_tutorial; gedit CMakeLists.txt
     ```
     - in my setup:
+    
         ```
         $ cd ~/ROS-Tutorials/gazebo_contact_tutorial
         $ gedit CMakeLists.txt
         ```
+        
 2. Add the following to the `CMakeLists.txt` file:
     ```
     cmake_minimum_required(VERSION 2.8 FATAL_ERROR)
