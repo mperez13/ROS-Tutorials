@@ -1,4 +1,4 @@
-#Create SDF model of the [Velodyne HDL-32 LiDAR](http://velodynelidar.com/hdl-32e.html) sensor
+# Create SDF model of the [Velodyne HDL-32 LiDAR](http://velodynelidar.com/hdl-32e.html) sensor
 
 Link to tutorial - http://gazebosim.org/tutorials?cat=guided_i&tut=guided_i1
 
@@ -7,7 +7,7 @@ Based on the Velodyne documentation, wll create a sensor that has:
 1. a base cylinder & top cylinder, where the top cylinder spins, and
 2. a set of laser rays oriented in the vertical fan
 
-##Step 1: Create a basic SDF model
+## Step 1: Create a basic SDF model
 
 1. Create a new world file
 
@@ -40,7 +40,7 @@ Based on the Velodyne documentation, wll create a sensor that has:
   - mass = 1.3kg 
   - moment of inertia can be computed by using [equations](https://en.wikipedia.org/wiki/List_of_moments_of_inertia)
 
-##Step 3:Add the joint
+## Step 3:Add the joint
 
 - Joints define constraints between links.
 - most common type of joint is `revolute`
@@ -56,7 +56,7 @@ Based on the Velodyne documentation, wll create a sensor that has:
   1. Drag right panel & select Velodyne model
 4. Use `Force` tab to apply 0.001 to the joint. (should see the visualized joint start to spin around the model's Z-axis)
 
-##Step 4: Add the sensor
+## Step 4: Add the sensor
 
 - `ray` sensor in Gazebo consists of one or more beams that generate distance, and potentially intesity data
   - consists of:
