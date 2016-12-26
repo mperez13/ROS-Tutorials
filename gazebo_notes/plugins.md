@@ -52,6 +52,7 @@ A bare bones world plugin contains a class w/ a few member functions.
     $ cd ~/gazebo_plugin_tutorial
     $ gedit hello_world.cc
     ```
+    
 3. Add following code to [hello_world.cc][1]; code below is also located in Gazebo source: [examples/plugins/hello_world/hello_world.cc][2] along w/ CMakeLists.txt file
     1.  The [gazebo/gazebo.hh][3] file includes a core set of basic gazebo functions.
         1. doesn't include: `gazebo/physics/physics.hh`, `gazebo/rendering/rendering.hh`, or `gazebo/sensors/sensors.hh` as those should be included on a case by case basis. All plugins must be in the gazebo namespace
@@ -100,6 +101,7 @@ A bare bones world plugin contains a class w/ a few member functions.
     ```
     $ gedit ~/gazebo_plugin_tutorial/CMakeLists.txt
     ```
+    
 2. Add the code below:
 
     ```
@@ -113,17 +115,20 @@ A bare bones world plugin contains a class w/ a few member functions.
     add_library(hello_world SHARED hello_world.cc)
     target_link_libraries(hello_world ${GAZEBO_LIBRARIES})
     ```
+    
     1. new in `gazebo6`: c++11 flags are now required for all downstream software to compile against gazebo, which is done with:
         
         ```
         set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${GAZEBO_CXX_FLAGS}")
         ```
+        
 3. Create build directory
 
     ```
     $ mkdir ~/gazebo_plugin_tutorial/build
     $ cd ~/gazebo_plugin_tutorial/build
     ```
+    
 4. Compile the code
     1. compiling the code will result in a shared library `~/gazebo_plugin_tutorial/build/libhello_world.so`, that can be inserted in a Gazebo simulation
 
@@ -131,6 +136,7 @@ A bare bones world plugin contains a class w/ a few member functions.
     $ cmake ../
     $ make
     ```
+    
 5. Add your library path to the Gazebo library path to the `GAZEBO_PLUGIN_PATH`:
 
     ```
