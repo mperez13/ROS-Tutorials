@@ -55,30 +55,31 @@ A bare bones world plugin contains a class w/ a few member functions.
     
 3. Add following code to [hello_world.cc][1]; code below is also located in Gazebo source: [examples/plugins/hello_world/hello_world.cc][2] along w/ CMakeLists.txt file
     1.  The [gazebo/gazebo.hh][3] file includes a core set of basic gazebo functions.
-        1. doesn't include: `gazebo/physics/physics.hh`, `gazebo/rendering/rendering.hh`, or `gazebo/sensors/sensors.hh` as those should be included on a case by case basis. All plugins must be in the gazebo namespace
-
-        ```
+        
+        ```c++
         #include <gazebo/gazebo.hh>
 
         namespace gazebo {
         ```
+        
+        - doesn't include: `gazebo/physics/physics.hh`, `gazebo/rendering/rendering.hh`, or `gazebo/sensors/sensors.hh` as those should be included on a case by case basis. All plugins must be in the gazebo namespace
     
     2. Each plugin must inherit from a plugin type; in this case `WorldPlugin` class
     
-    ```
+        ```c++
         class WorldPluginTutorial : public WorldPlugin {
             public: WorldPluginTutorial() : WorldPlugin() {
                   printf("Hello World!\n");
             }
-    ```
+        ```
     
     3. `Load` function is a mandatory function. It receives an SDF element that contains the elements & attributes specified in loaded SDF file    
     
-    ```
-            public: void Load(physics::WorldPtr _world, sdf::ElementPtr _sdf) {
-            
-            }
-        };
+    ```c++
+        public: void Load(physics::WorldPtr _world, sdf::ElementPtr _sdf) {
+
+        }
+    };
     ```
     
     4. Plugin must be registered w/ the simulation using `GZ_REGISTER_WORLD_PLUGIN` macro
@@ -89,7 +90,7 @@ A bare bones world plugin contains a class w/ a few member functions.
             - `GZ_REGISTER_SYSTEM_PLUGIN`
             - `GZ_REGISTER_VISUAL_PLUGIN`
     
-    ``` 
+    ``` c++
         GZ_REGISTER_WORLD_PLUGIN(WorldPluginTutorial)
     }
     ```
@@ -151,7 +152,7 @@ A bare bones world plugin contains a class w/ a few member functions.
 
 - Example [world file][6]
     
-    ```
+    ```html
     <?xml version="1.0"?>
     <sdf version="1.4">
         <world name="default">
