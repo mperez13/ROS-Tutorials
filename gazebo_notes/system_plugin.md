@@ -19,75 +19,75 @@ Create a file `system_gui.cc`:
 
 Add following into `system_gui.cc`:
 
-    ```c++
-    #include <gazebo/math/Rand.hh>
-    #include <gazebo/gui/GuiIface.hh>
-    #include <gazebo/rendering/rendering.hh>
-    #include <gazebo/gazebo.hh>
+  ```c++
+  #include <gazebo/math/Rand.hh>
+  #include <gazebo/gui/GuiIface.hh>
+  #include <gazebo/rendering/rendering.hh>
+  #include <gazebo/gazebo.hh>
 
-    namespace gazebo {
-        class SystemGUI : public SystemPlugin 
-        {
-            // \brief Destructor
-            public: virtual ~SystemGUI() {
-                this->connections.clear();
-                if (this->userCam)
-                    this->userCam->EnableSaveFrame(false);
-                this->userCam.reset();
-            }
-            
-            // Load and Init functions must not block and are called at startup, before Gazebo is loaded
-            
-            // \brief Called after the plugin has been constructed.
-            public: void Load(int /*_argc*/, char ** /*_argv*/) 
-            {
-                this->connections.push_back(
-                    event::Events::ConnectPreRender(boost::bind(&SystemGUI::Update, this)));
-            }
+  namespace gazebo {
+      class SystemGUI : public SystemPlugin 
+      {
+          // \brief Destructor
+          public: virtual ~SystemGUI() {
+              this->connections.clear();
+              if (this->userCam)
+                  this->userCam->EnableSaveFrame(false);
+              this->userCam.reset();
+          }
 
-            // \brief Called once after Load
-            private: void Init() {
-            }
-            
-            /*On first Update, we get a pointer to the user camera and enable saving of frames*/
-            // \brief Called every PreRender event. See the Load function.
-            private: void Update() 
-            {
-                if (!this->userCam) 
-                {
-                    // Get a pointer to the active user camera
-                    this->userCam = gui::get_active_camera();
+          // Load and Init functions must not block and are called at startup, before Gazebo is loaded
 
-                    // Enable saving frames
-                    this->userCam->EnableSaveFrame(true);
+          // \brief Called after the plugin has been constructed.
+          public: void Load(int /*_argc*/, char ** /*_argv*/) 
+          {
+              this->connections.push_back(
+                  event::Events::ConnectPreRender(boost::bind(&SystemGUI::Update, this)));
+          }
 
-                    // Specify the path to save frames into
-                    this->userCam->SetSaveFramePathname("/tmp/gazebo_frames");
-                }
+          // \brief Called once after Load
+          private: void Init() {
+          }
 
-                // Get scene pointer
-                rendering::ScenePtr scene = rendering::get_scene();
+          /*On first Update, we get a pointer to the user camera and enable saving of frames*/
+          // \brief Called every PreRender event. See the Load function.
+          private: void Update() 
+          {
+              if (!this->userCam) 
+              {
+                  // Get a pointer to the active user camera
+                  this->userCam = gui::get_active_camera();
 
-                // Wait until the scene is initialized.
-                if (!scene || !scene->GetInitialized())
-                    return;
+                  // Enable saving frames
+                  this->userCam->EnableSaveFrame(true);
 
-                // Look for a specific visual by name.
-                if (scene->GetVisual("ground_plane"))
-                    std::cout << "Has ground plane visual\n";
-            }
+                  // Specify the path to save frames into
+                  this->userCam->SetSaveFramePathname("/tmp/gazebo_frames");
+              }
 
-            /// Pointer the user camera.
-            private: rendering::UserCameraPtr userCam;
+              // Get scene pointer
+              rendering::ScenePtr scene = rendering::get_scene();
 
-            /// All the event connections.
-            private: std::vector<event::ConnectionPtr> connections;
-        };
+              // Wait until the scene is initialized.
+              if (!scene || !scene->GetInitialized())
+                  return;
 
-        // Register this plugin with the simulator
-        GZ_REGISTER_SYSTEM_PLUGIN(SystemGUI)
-    }
-    ```
+              // Look for a specific visual by name.
+              if (scene->GetVisual("ground_plane"))
+                  std::cout << "Has ground plane visual\n";
+          }
+
+          /// Pointer the user camera.
+          private: rendering::UserCameraPtr userCam;
+
+          /// All the event connections.
+          private: std::vector<event::ConnectionPtr> connections;
+      };
+
+      // Register this plugin with the simulator
+      GZ_REGISTER_SYSTEM_PLUGIN(SystemGUI)
+  }
+  ```
 
 ## Compiling Camera Plugin
 
