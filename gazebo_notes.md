@@ -40,5 +40,5 @@
 [16]: gazebo_notes/contact_sensor.md
 [17]: gazebo_contact_tutorial
 [18]: gazebo_notes/plugins.md
-[19]: gazebo_notes/model_plugins.md
-[20]: gazebo_notes/system_plugins.md
+[19]: gazebo_notes/model_plugin.md
+[20]: gazebo_notes/system_plugin.md
