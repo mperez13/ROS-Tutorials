@@ -75,12 +75,12 @@ A bare bones world plugin contains a class w/ a few member functions.
     
     3. `Load` function is a mandatory function. It receives an SDF element that contains the elements & attributes specified in loaded SDF file    
     
-    ```c++
-        public: void Load(physics::WorldPtr _world, sdf::ElementPtr _sdf) {
+        ```c++
+            public: void Load(physics::WorldPtr _world, sdf::ElementPtr _sdf) {
 
-        }
-    };
-    ```
+            }
+        };
+        ```
     
     4. Plugin must be registered w/ the simulation using `GZ_REGISTER_WORLD_PLUGIN` macro
         1. only parameter to this macro is the name of the plugin class
@@ -90,10 +90,10 @@ A bare bones world plugin contains a class w/ a few member functions.
             - `GZ_REGISTER_SYSTEM_PLUGIN`
             - `GZ_REGISTER_VISUAL_PLUGIN`
     
-    ``` c++
-        GZ_REGISTER_WORLD_PLUGIN(WorldPluginTutorial)
-    }
-    ```
+        ``` c++
+            GZ_REGISTER_WORLD_PLUGIN(WorldPluginTutorial)
+        }
+        ```
 
 ## Compiling the Plugin
 
