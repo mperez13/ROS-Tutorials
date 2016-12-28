@@ -19,6 +19,7 @@
 |[Contact Sensor][16]|Create a contact sensor and get contact data via a plugin or a message. Contact sensor detects collisions between 2 objects & reports location of the contact associated forces.|The model is a simple cube not moving. The file are located [here][17]|
 |[Plugins 101][18]|Overview of Gazebo Plugins||
 |[Model Plugins][19]|Plugins allow complete access to the physical properties of models and their underlying elements (links, joints, collision objects)|- Model is a type of plugin|
+|[System Plugin][20]||System is a type of plugin|
 
 
 [1]: gazebo_notes/add_model_from_model_database.md
@@ -40,3 +41,4 @@
 [17]: gazebo_contact_tutorial
 [18]: gazebo_notes/plugins.md
 [19]: gazebo_notes/model_plugins.md
+[20]: gazebo_notes/system_plugins.md
