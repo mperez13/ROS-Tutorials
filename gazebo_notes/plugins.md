@@ -137,7 +137,11 @@ A bare bones world plugin contains a class w/ a few member functions.
     $ cmake ../
     $ make
     ```
-    
+    - When the code is compiled I got:
+        
+        ![plugin compiled][8]
+        ![plugin compiled 2][9]
+            
 5. Add your library path to the Gazebo library path to the `GAZEBO_PLUGIN_PATH`:
 
     ```
@@ -188,3 +192,5 @@ A bare bones world plugin contains a class w/ a few member functions.
 [5]: http://gazebosim.org/sdf.html
 [6]: https://bitbucket.org/osrf/gazebo/src/gazebo6/examples/plugins/hello_world/hello.world
 [7]: ../gazebo_plugin_tutorial/hello.world  
+[8]: images/plugin_tutorial_compiled.png
+[9]: images/plugin_tutorial_compiled_2.png
