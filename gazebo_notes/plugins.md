@@ -145,7 +145,7 @@ A bare bones world plugin contains a class w/ a few member functions.
 5. Add your library path to the Gazebo library path to the `GAZEBO_PLUGIN_PATH`:
 
     ```
-    $ export GAZEBO_PLUGIN_PATH=${GAZEBO_PLUGIN_PATH}:~/gazebo_plugin_tutorial/build
+    $ export GAZEBO_PLUGIN_PATH=${GAZEBO_PLUGIN_PATH}:~/ROS-Tutorials/gazebo_plugin_tutorial/build
     ```
 
 ## Using a Plugin
