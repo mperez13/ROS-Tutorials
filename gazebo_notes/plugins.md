@@ -168,7 +168,7 @@ A bare bones world plugin contains a class w/ a few member functions.
 1. Make a copy of the `hello.world` in `~/gazebo_plugin_tutorial/hello.world` and open it w/ `gzserver`
     
     ```
-    $ gzserver ~/gazebo_plugin_tutorial/hello.world --verbose
+    $ gzserver ~/ROS-Tutorials/gazebo_plugin_tutorial/hello.world --verbose
     ```
 
 - output should be similar to:
