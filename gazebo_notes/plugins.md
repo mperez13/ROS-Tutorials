@@ -42,7 +42,7 @@ A bare bones world plugin contains a class w/ a few member functions.
 1. If Gazebo is installed from debians, make sure Gazebo development files. If installed from source, ignore this step. 
 
     ```
-    sudo apt-get install libgazebo6-dev
+    sudo apt-get install libgazebo7-dev
     ```
     
 2. Make a directory & .cc file for the new plugin:
