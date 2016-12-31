@@ -20,10 +20,10 @@ Link to Tutorial: http://gazebosim.org/tutorials?tut=plugins_hello_world&cat=wri
 
 6 types of plugins:
 
-1. [World][12]
-2. Model
+1. [World][11]
+2. [Model][12]
 3. Sensor
-4. [System][11]
+4. [System][10]
 5. Visual
 6. GUI
 
@@ -195,4 +195,5 @@ A bare bones world plugin contains a class w/ a few member functions.
 [8]: images/plugin_tutorial_compiled.png
 [9]: images/plugin_tutorial_compiled_2.png
 [10]: system_plugin.md 
-[11]: world_plugin.md
+[11]: world_plugins.md
+[12]: model_plugin.md
