@@ -48,7 +48,7 @@ A bare bones world plugin contains a class w/ a few member functions.
 2. Make a directory & .cc file for the new plugin:
     
     ```
-    $ mkdir ~/gazebo_plugin_tutorial
+    $ mkdir ~/gazebo_plugin_tutorial    // $ mkdir ~/ROS-Tutorials/gazebo_plugin_tutorial
     $ cd ~/gazebo_plugin_tutorial
     $ gedit hello_world.cc
     ```
