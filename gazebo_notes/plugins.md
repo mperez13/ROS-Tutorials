@@ -181,10 +181,10 @@ A bare bones world plugin contains a class w/ a few member functions.
     Hello World!
     ```
 
-[1]: helloworld.cc
+[1]: ../gazebo_plugin_tutorial/hello_world.cc
 [2]: http://bitbucket.org/osrf/gazebo/src/gazebo6/examples/plugins/hello_world
 [3]: https://bitbucket.org/osrf/gazebo/src/gazebo6/gazebo/gazebo_core.hh
-[4]: CMakeLists.txt
+[4]: ../gazebo_plugin_tutorial/CMakeLists.txt
 [5]: http://gazebosim.org/sdf.html
 [6]: https://bitbucket.org/osrf/gazebo/src/gazebo6/examples/plugins/hello_world/hello.world
-[7]: hello.world  
+[7]: ../gazebo_plugin_tutorial/hello.world  
