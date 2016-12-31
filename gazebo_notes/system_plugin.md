@@ -19,75 +19,75 @@ Create a file `system_gui.cc`:
 
 Add following into `system_gui.cc`:
 
-  ```c++
-  #include <gazebo/math/Rand.hh>
-  #include <gazebo/gui/GuiIface.hh>
-  #include <gazebo/rendering/rendering.hh>
-  #include <gazebo/gazebo.hh>
+```c++
+#include <gazebo/math/Rand.hh>
+#include <gazebo/gui/GuiIface.hh>
+#include <gazebo/rendering/rendering.hh>
+#include <gazebo/gazebo.hh>
 
-  namespace gazebo {
-      class SystemGUI : public SystemPlugin 
-      {
-          // \brief Destructor
-          public: virtual ~SystemGUI() {
-              this->connections.clear();
-              if (this->userCam)
-                  this->userCam->EnableSaveFrame(false);
-              this->userCam.reset();
-          }
+namespace gazebo {
+    class SystemGUI : public SystemPlugin 
+    {
+        // \brief Destructor
+        public: virtual ~SystemGUI() {
+            this->connections.clear();
+            if (this->userCam)
+                this->userCam->EnableSaveFrame(false);
+            this->userCam.reset();
+        }
 
-          // Load and Init functions must not block and are called at startup, before Gazebo is loaded
+        // Load and Init functions must not block and are called at startup, before Gazebo is loaded
 
-          // \brief Called after the plugin has been constructed.
-          public: void Load(int /*_argc*/, char ** /*_argv*/) 
-          {
-              this->connections.push_back(
-                  event::Events::ConnectPreRender(boost::bind(&SystemGUI::Update, this)));
-          }
+        // \brief Called after the plugin has been constructed.
+        public: void Load(int /*_argc*/, char ** /*_argv*/) 
+        {
+            this->connections.push_back(
+                event::Events::ConnectPreRender(boost::bind(&SystemGUI::Update, this)));
+        }
 
-          // \brief Called once after Load
-          private: void Init() {
-          }
+        // \brief Called once after Load
+        private: void Init() {
+        }
 
-          /*On first Update, we get a pointer to the user camera and enable saving of frames*/
-          // \brief Called every PreRender event. See the Load function.
-          private: void Update() 
-          {
-              if (!this->userCam) 
-              {
-                  // Get a pointer to the active user camera
-                  this->userCam = gui::get_active_camera();
+        /*On first Update, we get a pointer to the user camera and enable saving of frames*/
+        // \brief Called every PreRender event. See the Load function.
+        private: void Update() 
+        {
+            if (!this->userCam) 
+            {
+                // Get a pointer to the active user camera
+                this->userCam = gui::get_active_camera();
 
-                  // Enable saving frames
-                  this->userCam->EnableSaveFrame(true);
+                // Enable saving frames
+                this->userCam->EnableSaveFrame(true);
 
-                  // Specify the path to save frames into
-                  this->userCam->SetSaveFramePathname("/tmp/gazebo_frames");
-              }
+                // Specify the path to save frames into
+                this->userCam->SetSaveFramePathname("/tmp/gazebo_frames");
+            }
 
-              // Get scene pointer
-              rendering::ScenePtr scene = rendering::get_scene();
+            // Get scene pointer
+            rendering::ScenePtr scene = rendering::get_scene();
 
-              // Wait until the scene is initialized.
-              if (!scene || !scene->GetInitialized())
-                  return;
+            // Wait until the scene is initialized.
+            if (!scene || !scene->GetInitialized())
+                return;
 
-              // Look for a specific visual by name.
-              if (scene->GetVisual("ground_plane"))
-                  std::cout << "Has ground plane visual\n";
-          }
+            // Look for a specific visual by name.
+            if (scene->GetVisual("ground_plane"))
+                std::cout << "Has ground plane visual\n";
+        }
 
-          /// Pointer the user camera.
-          private: rendering::UserCameraPtr userCam;
+        /// Pointer the user camera.
+        private: rendering::UserCameraPtr userCam;
 
-          /// All the event connections.
-          private: std::vector<event::ConnectionPtr> connections;
-      };
+        /// All the event connections.
+        private: std::vector<event::ConnectionPtr> connections;
+    };
 
-      // Register this plugin with the simulator
-      GZ_REGISTER_SYSTEM_PLUGIN(SystemGUI)
-  }
-  ```
+    // Register this plugin with the simulator
+    GZ_REGISTER_SYSTEM_PLUGIN(SystemGUI)
+}
+```
 
 ## Compiling Camera Plugin
 
@@ -110,15 +110,15 @@ Rebuild & you should end up w/ a libsystem_gui.so library
 
 Start gzserver in the background:
     
-    ```
-    $ gzserver &
-    ```
+```
+$ gzserver &
+```
 
 Run the client w/ plugin:
 
-    ```
-    $ gzclient -g libsystem_gui.so
-    ```
+```
+$ gzclient -g libsystem_gui.so
+```
 
 Inside `/tmp/gazebo_frames` you should see many saved images from the current plugin
 
@@ -126,15 +126,15 @@ Inside `/tmp/gazebo_frames` you should see many saved images from the current pl
 
 In the same terminal, bring process to foreground:
     
-    ```
-    $ fg
-    ```
+```
+$ fg
+```
 
 Press `Ctrl-C` to abort the process. Alternatively, just kill `gzserver` process:
     
-    ```
-    $ killall gzserver
-    ```
+```
+$ killall gzserver
+```
 
 [1]: http://gazebosim.org/tutorials?tut=system_plugin&cat=write_plugin
 [2]: gazebo_notes/plugins.md

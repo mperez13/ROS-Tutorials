@@ -20,10 +20,10 @@ Link to Tutorial: http://gazebosim.org/tutorials?tut=plugins_hello_world&cat=wri
 
 6 types of plugins:
 
-1. World
-2. Model
+1. [World][11]
+2. [Model][12]
 3. Sensor
-4. System
+4. [System][10]
 5. Visual
 6. GUI
 
@@ -145,7 +145,7 @@ A bare bones world plugin contains a class w/ a few member functions.
 5. Add your library path to the Gazebo library path to the `GAZEBO_PLUGIN_PATH`:
 
     ```
-    $ export GAZEBO_PLUGIN_PATH=${GAZEBO_PLUGIN_PATH}:~/gazebo_plugin_tutorial/build
+    $ export GAZEBO_PLUGIN_PATH=${GAZEBO_PLUGIN_PATH}:~/ROS-Tutorials/gazebo_plugin_tutorial/build
     ```
 
 ## Using a Plugin
@@ -168,7 +168,7 @@ A bare bones world plugin contains a class w/ a few member functions.
 1. Make a copy of the `hello.world` in `~/gazebo_plugin_tutorial/hello.world` and open it w/ `gzserver`
     
     ```
-    $ gzserver ~/gazebo_plugin_tutorial/hello.world --verbose
+    $ gzserver ~/ROS-Tutorials/gazebo_plugin_tutorial/hello.world --verbose
     ```
 
 - output should be similar to:
@@ -194,3 +194,6 @@ A bare bones world plugin contains a class w/ a few member functions.
 [7]: ../gazebo_plugin_tutorial/hello.world  
 [8]: images/plugin_tutorial_compiled.png
 [9]: images/plugin_tutorial_compiled_2.png
+[10]: system_plugin.md 
+[11]: world_plugins.md
+[12]: model_plugin.md
