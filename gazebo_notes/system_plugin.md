@@ -106,7 +106,7 @@ $ cmake ../
 $ make
 ```
 
-    > When the plugin is build, you might get a warning.
+  > When the plugin is build, you might get a warning.
   
     ![running system plugin][4]
 
@@ -124,9 +124,9 @@ $ export GAZEBO_PLUGIN_PATH=${GAZEBO_PLUGIN_PATH}:~/ROS-Tutorials/gazebo_plugin_
 $ gzserver &
 ```
 
-    > when you run this, you should get something like this:
+> when you run this, you should get something like this:
     
-    ![running gzserver][5]
+![running gzserver][5]
 
 #### Run the client w/ plugin:
 
@@ -136,7 +136,7 @@ $ gzclient -g libsystem_gui.so
 
 #### Inside `/tmp/gazebo_frames` you should see many saved images from the current plugin
 
-    > The saved images are a snapshot of what is done in gazebo while gzserver is running.
+> The saved images are a snapshot of what is done in gazebo while gzserver is running.
 
 
 #### To terminate press `Ctrl-C`.
