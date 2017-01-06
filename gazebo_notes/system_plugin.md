@@ -2,6 +2,8 @@
 
 [**Link to Tutorial**][1]
 
+**Description**: This tutorial will create a source file that is a system plugin for gzclient designed to save images into the directory `/tmp/gazebo_frames`
+
 ## Pre-req
 
 [Overview of Plugins][2]
