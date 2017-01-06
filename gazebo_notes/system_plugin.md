@@ -108,7 +108,7 @@ $ make
 
 > Notes: When the plugin is build, you might get a warning.
   
-  ![running system plugin][]
+  ![running system plugin][4]
 
 ## Run the Plugin
 
