@@ -106,6 +106,10 @@ $ cmake ../
 $ make
 ```
 
+> Notes: When the plugin is build, you might get a warning.
+  
+  ![running system plugin][]
+
 ## Run the Plugin
 
 Start gzserver in the background:
@@ -139,3 +143,4 @@ $ killall gzserver
 [1]: http://gazebosim.org/tutorials?tut=system_plugin&cat=write_plugin
 [2]: gazebo_notes/plugins.md
 [3]: https://bitbucket.org/osrf/gazebo/src/gazebo5/examples/plugins/system_gui_plugin
+[4]: images/run_system_gui_cc.png 
