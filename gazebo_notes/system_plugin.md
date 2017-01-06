@@ -123,6 +123,9 @@ Start gzserver in the background:
 ```
 $ gzserver &
 ```
+- Note: when you run this, you should get something like this:
+    
+    ![running gzserver][5]
 
 Run the client w/ plugin:
 
@@ -150,3 +153,4 @@ $ killall gzserver
 [2]: gazebo_notes/plugins.md
 [3]: https://bitbucket.org/osrf/gazebo/src/gazebo5/examples/plugins/system_gui_plugin
 [4]: images/run_system_gui_cc.png 
+[5]: images/start_gzserver.png
