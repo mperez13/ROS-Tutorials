@@ -10,14 +10,14 @@
 
 [source code][3]
 
-#### Create a file `system_gui.cc`:
+##### Create a file `system_gui.cc`:
 
   ```
   $ cd ~/gazebo_plugin_tutorial
   $ gedit system_gui.cc
   ```
 
-#### Add following into `system_gui.cc`:
+##### Add following into `system_gui.cc`:
 
 ```c++
 #include <gazebo/math/Rand.hh>
@@ -91,14 +91,14 @@ namespace gazebo {
 
 ## Compiling Camera Plugin
 
-#### Add following to `~/gazebo_plugin_tutorial/CMakeLists.txt`
+##### Add following to `~/gazebo_plugin_tutorial/CMakeLists.txt`
 
 ```
 add_library(system_gui SHARED system_gui.cc)
 target_link_libraries(system_gui ${GAZEBO_LIBRARIES})
 ```
 
-#### Rebuild & you should end up w/ a libsystem_gui.so library
+##### Rebuild & you should end up w/ a libsystem_gui.so library
     
 ```
 $ cd ~/gazebo_plugin_tutorial/build
@@ -106,11 +106,11 @@ $ cmake ../
 $ make
 ```
 
-  > When the plugin is build, you might get a warning.
+> When the plugin is build, you might get a warning.
   
-    ![running system plugin][4]
+  ![running system plugin][4]
 
-#### Remember to set your library path to the GAZEBO_PLUGIN_PATH. For my setup:
+##### Remember to set your library path to the GAZEBO_PLUGIN_PATH. For my setup:
 
 ```
 $ export GAZEBO_PLUGIN_PATH=${GAZEBO_PLUGIN_PATH}:~/ROS-Tutorials/gazebo_plugin_tutorial/build
@@ -118,7 +118,7 @@ $ export GAZEBO_PLUGIN_PATH=${GAZEBO_PLUGIN_PATH}:~/ROS-Tutorials/gazebo_plugin_
 
 ## Run the Plugin
 
-#### Start gzserver in the background:
+##### Start gzserver in the background:
     
 ```
 $ gzserver &
@@ -126,22 +126,22 @@ $ gzserver &
 
 > when you run this, you should get something like this:
     
-![running gzserver][5]
+  ![running gzserver][5]
 
-#### Run the client w/ plugin:
+##### Run the client w/ plugin:
 
 ```
 $ gzclient -g libsystem_gui.so
 ```
 
-#### Inside `/tmp/gazebo_frames` you should see many saved images from the current plugin
+##### Inside `/tmp/gazebo_frames` you should see many saved images from the current plugin
 
 > The saved images are a snapshot of what is done in gazebo while gzserver is running.
 
 
-#### To terminate press `Ctrl-C`.
+##### To terminate press `Ctrl-C`.
 
-#### Remember to also terminate the background server process after you quit the client.
+##### Remember to also terminate the background server process after you quit the client.
 
 - In the same terminal, bring last process to foreground:
 
