@@ -93,18 +93,18 @@ namespace gazebo {
 
 Add following to `~/gazebo_plugin_tutorial/CMakeLists.txt`
 
-    ```
-    add_library(system_gui SHARED system_gui.cc)
-    target_link_libraries(system_gui ${GAZEBO_LIBRARIES})
-    ```
+```
+add_library(system_gui SHARED system_gui.cc)
+target_link_libraries(system_gui ${GAZEBO_LIBRARIES})
+```
 
 Rebuild & you should end up w/ a libsystem_gui.so library
     
-    ```
-    $ cd ~/gazebo_plugin_tutorial/build
-    $ cmake ../
-    $ make
-    ```
+```
+$ cd ~/gazebo_plugin_tutorial/build
+$ cmake ../
+$ make
+```
 
 ## Run the Plugin
 
