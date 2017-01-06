@@ -137,7 +137,8 @@ $ gzclient -g libsystem_gui.so
 ##### Inside `/tmp/gazebo_frames` you should see many saved images from the current plugin
 
 > The saved images are a snapshot of what is done in gazebo while gzserver is running.
-> For my setup: I changed /tmp/gazebo_frames to ~/ROS-Tutorials/gazebo_plugin_tutorial/gazebo_frames
+
+> Tried to changed /tmp/gazebo_frames to ~/ROS-Tutorials/gazebo_plugin_tutorial/tmp/gazebo_frames; Did not save images to this folder. Will try later to work around this
 
 
 ##### To terminate press `Ctrl-C`.
