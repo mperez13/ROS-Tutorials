@@ -106,9 +106,15 @@ $ cmake ../
 $ make
 ```
 
-> Notes: When the plugin is build, you might get a warning.
+**Notes**: When the plugin is build, you might get a warning.
   
   ![running system plugin][4]
+
+Remember to set your library path to the GAZEBO_PLUGIN_PATH. For my setup:
+
+```
+$ export GAZEBO_PLUGIN_PATH=${GAZEBO_PLUGIN_PATH}:~/ROS-Tutorials/gazebo_plugin_tutorial/build
+```
 
 ## Run the Plugin
 
