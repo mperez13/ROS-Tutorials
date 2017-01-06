@@ -123,6 +123,7 @@ Start gzserver in the background:
 ```
 $ gzserver &
 ```
+
 - Note: when you run this, you should get something like this:
     
     ![running gzserver][5]
@@ -135,9 +136,9 @@ $ gzclient -g libsystem_gui.so
 
 Inside `/tmp/gazebo_frames` you should see many saved images from the current plugin
 
-- Note: Remember to also terminate the background server process after you quit the client.
+- Remember to also terminate the background server process after you quit the client.
 
-In the same terminal, bring process to foreground:
+In the same terminal, bring last process to foreground:
     
 ```
 $ fg
