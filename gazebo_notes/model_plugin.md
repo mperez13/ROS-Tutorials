@@ -134,6 +134,7 @@ $ gedit model_push.world
 ```
 $ export GAZEBO_PLUGIN_PATH=$HOME/gazebo_plugin_tutorial/build:$GAZEBO_PLUGIN_PATH
 ```
+> For my setup: export GAZEBO_PLUGIN_PATH=$HOME/ROS-Tutorials/gazebo_plugin_tutorial/build:$GAZEBO_PLUGIN_PATH 
 
 ###### Start simulation:
 
