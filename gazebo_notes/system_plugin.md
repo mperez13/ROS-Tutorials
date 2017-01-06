@@ -136,19 +136,21 @@ $ gzclient -g libsystem_gui.so
 
 Inside `/tmp/gazebo_frames` you should see many saved images from the current plugin
 
-- Remember to also terminate the background server process after you quit the client.
+To terminate press `Ctrl-C`.
 
-In the same terminal, bring last process to foreground:
-    
-```
-$ fg
-```
+Remember to also terminate the background server process after you quit the client.
 
-Press `Ctrl-C` to abort the process. Alternatively, just kill `gzserver` process:
+- In the same terminal, bring last process to foreground:
+
+      ```
+      $ fg
+      ```
+  - Press `Ctrl-C` to abort the process. 
+- Alternatively, just kill `gzserver` process:
     
-```
-$ killall gzserver
-```
+    ```
+    $ killall gzserver
+    ```
 
 [1]: http://gazebosim.org/tutorials?tut=system_plugin&cat=write_plugin
 [2]: gazebo_notes/plugins.md
