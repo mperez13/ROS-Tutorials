@@ -10,14 +10,14 @@
 
 [source code][3]
 
-Create a file `system_gui.cc`:
+#### Create a file `system_gui.cc`:
 
   ```
   $ cd ~/gazebo_plugin_tutorial
   $ gedit system_gui.cc
   ```
 
-Add following into `system_gui.cc`:
+#### Add following into `system_gui.cc`:
 
 ```c++
 #include <gazebo/math/Rand.hh>
@@ -91,14 +91,14 @@ namespace gazebo {
 
 ## Compiling Camera Plugin
 
-Add following to `~/gazebo_plugin_tutorial/CMakeLists.txt`
+#### Add following to `~/gazebo_plugin_tutorial/CMakeLists.txt`
 
 ```
 add_library(system_gui SHARED system_gui.cc)
 target_link_libraries(system_gui ${GAZEBO_LIBRARIES})
 ```
 
-Rebuild & you should end up w/ a libsystem_gui.so library
+#### Rebuild & you should end up w/ a libsystem_gui.so library
     
 ```
 $ cd ~/gazebo_plugin_tutorial/build
@@ -106,9 +106,9 @@ $ cmake ../
 $ make
 ```
 
-**Notes**: When the plugin is build, you might get a warning.
+    > When the plugin is build, you might get a warning.
   
-  ![running system plugin][4]
+    ![running system plugin][4]
 
 Remember to set your library path to the GAZEBO_PLUGIN_PATH. For my setup:
 
