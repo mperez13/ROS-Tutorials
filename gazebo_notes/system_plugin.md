@@ -136,7 +136,11 @@ $ gzclient -g libsystem_gui.so
 
 Inside `/tmp/gazebo_frames` you should see many saved images from the current plugin
 
+  > The saved images are a snapshot of what is done in gazebo while gzserver is running.
+
+
 To terminate press `Ctrl-C`.
+
 
 Remember to also terminate the background server process after you quit the client.
 
