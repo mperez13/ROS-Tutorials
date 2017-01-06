@@ -2,7 +2,7 @@
 
 [**Link to Tutorial**][1]
 
-#### Pre-req for this tutorial
+## Pre-req for this tutorial
 
 [Overview of Plugins][2]
 
@@ -12,7 +12,7 @@
 
 Plugins allow complete access to the physical properties of models and their underlying elements (links, joints, collision objects).
 
-The following plugin will apply a linear velocity to its parent model.
+###### The following plugin will apply a linear velocity to its parent model.
 
 ```
 $ cd ~/gazebo_plugin_tutorial
@@ -64,14 +64,14 @@ namespace gazebo
 
 ### Compiling the Plugin
 
-Add the following lines to `~/gazebo_plugin_tutorial/CMakeLists.txt`
+###### Add the following lines to `~/gazebo_plugin_tutorial/CMakeLists.txt`
 
 ```
 add_library(model_push SHARED model_push.cc)
 target_link_libraries(model_push ${GAZEBO_LIBRARIES} ${Boost_LIBRARIES})
 ```
 
-Compiling this code will result in a shared library, `~/gazebo_plugin_tutorial/build/libmodel_push.so` that can be inserted in a Gazebo simulation
+###### Compiling this code will result in a shared library, `~/gazebo_plugin_tutorial/build/libmodel_push.so` that can be inserted in a Gazebo simulation
 
 ```
 $ cd ~/gazebo_plugin_tutorial/build
@@ -81,14 +81,14 @@ $ make
 
 ### Running the Plugin
 
-This plugin is used in the world file `examples/plugins/model_push/model_push.world`
+###### This plugin is used in the world file `examples/plugins/model_push/model_push.world`
 
 ```
 $ cd ~/gazebo_plugin_tutorial
 $ gedit model_push.world
 ```
 
-```html
+```xml
 <?xml version="1.0"?> 
 <sdf version="1.4">
   <world name="default">
@@ -129,13 +129,13 @@ $ gedit model_push.world
 </sdf>
 ```
 
-Add library path to the `GAZEBO_PLUGIN_PATH`:
+###### Add library path to the `GAZEBO_PLUGIN_PATH`:
 
 ```
 $ export GAZEBO_PLUGIN_PATH=$HOME/gazebo_plugin_tutorial/build:$GAZEBO_PLUGIN_PATH
 ```
 
-Start simulation:
+###### Start simulation:
 
 ```
 $ cd ~/gazebo_plugin_tutorial/
@@ -144,13 +144,13 @@ $ gzserver -u model_push.world
 
 - `-u` option starts the server in a paused state
 
-In seperate terminal, start the gui:
+###### In seperate terminal, start the gui:
 
 ```
 $ gzclient
 ```
 
-Click on the play button in the gui to unpause the simulation & should see the box move
+###### Click on the play button in the gui to unpause the simulation & should see the box move
 
 [1]: http://gazebosim.org/tutorials?tut=plugins_model&cat=write_plugin
 [2]: gazebo_notes/plugins.md
