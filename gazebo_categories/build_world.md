@@ -1,27 +1,12 @@
-#[][1]
+#[Build a World][1]
 
 
 
 |Title|Description|Notes|
 |----|----|----|
-|[][2]||*NOT DONE*|
-|[][3]||*NOT DONE*|
-|[][4]||*NOT DONE*|
-|[][5]||*NOT DONE*|
-|[][6]||*NOT DONE*|
-|[][7]||*NOT DONE*|
-|[][8]||*NOT DONE*|
-|[][9]||*NOT DONE*|
-|[][10]||*NOT DONE*|
+|[Building a World][13]|Creating a world with both static and dynamic objects|This inlcludes adding objects, position models (translation, rotation, scale), save/load world, delete models|
+|[Modifying a World][14]|How to modify global properties including scene and physics properties||
 
-[1]:
-[2]: ../gazebo_notes/.md
-[3]: ../gazebo_notes/.md
-[4]: ../gazebo_notes/.md
-[5]: ../gazebo_notes/.md
-[6]: ../gazebo_notes/.md
-[7]: ../gazebo_notes/.md
-[8]: ../gazebo_notes/.md
-[9]: ../gazebo_notes/.md
-[10]: ../gazebo_notes/.md
-[11]: ../gazebo_notes/.md
+[1]: http://gazebosim.org/tutorials?cat=build_world
+[13]: gazebo_notes/building-a-world.md
+[14]: gazebo_notes/modifying-world.md
