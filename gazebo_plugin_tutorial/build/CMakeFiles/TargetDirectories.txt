@@ -1,3 +1,7 @@
-/home/marifer/ROS-Tutorials/gazebo_plugin_tutorial/build/CMakeFiles/rebuild_cache.dir
+/home/marifer/ROS-Tutorials/gazebo_plugin_tutorial/build/CMakeFiles/world_edit.dir
 /home/marifer/ROS-Tutorials/gazebo_plugin_tutorial/build/CMakeFiles/edit_cache.dir
 /home/marifer/ROS-Tutorials/gazebo_plugin_tutorial/build/CMakeFiles/hello_world.dir
+/home/marifer/ROS-Tutorials/gazebo_plugin_tutorial/build/CMakeFiles/rebuild_cache.dir
+/home/marifer/ROS-Tutorials/gazebo_plugin_tutorial/build/CMakeFiles/model_push.dir
+/home/marifer/ROS-Tutorials/gazebo_plugin_tutorial/build/CMakeFiles/factory.dir
+/home/marifer/ROS-Tutorials/gazebo_plugin_tutorial/build/CMakeFiles/system_gui.dir

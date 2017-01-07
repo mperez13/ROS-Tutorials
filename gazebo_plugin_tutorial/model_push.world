@@ -30,8 +30,9 @@
           </geometry>
         </visual>
       </link>
-
+      <!------------- This attaches the plugin to a model ------------->
       <plugin name="model_push" filename="libmodel_push.so"/>
+      <!---------------------------------------------------------------->
     </model>        
   </world>
 </sdf>

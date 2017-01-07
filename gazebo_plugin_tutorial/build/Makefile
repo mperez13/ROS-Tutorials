@@ -56,17 +56,6 @@ CMAKE_BINARY_DIR = /home/marifer/ROS-Tutorials/gazebo_plugin_tutorial/build
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
-
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
@@ -77,6 +66,17 @@ edit_cache:
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -111,6 +111,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named world_edit
+
+# Build rule for target.
+world_edit: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 world_edit
+.PHONY : world_edit
+
+# fast build rule for target.
+world_edit/fast:
+	$(MAKE) -f CMakeFiles/world_edit.dir/build.make CMakeFiles/world_edit.dir/build
+.PHONY : world_edit/fast
+
+#=============================================================================
 # Target rules for targets named hello_world
 
 # Build rule for target.
@@ -122,6 +135,72 @@ hello_world: cmake_check_build_system
 hello_world/fast:
 	$(MAKE) -f CMakeFiles/hello_world.dir/build.make CMakeFiles/hello_world.dir/build
 .PHONY : hello_world/fast
+
+#=============================================================================
+# Target rules for targets named model_push
+
+# Build rule for target.
+model_push: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 model_push
+.PHONY : model_push
+
+# fast build rule for target.
+model_push/fast:
+	$(MAKE) -f CMakeFiles/model_push.dir/build.make CMakeFiles/model_push.dir/build
+.PHONY : model_push/fast
+
+#=============================================================================
+# Target rules for targets named factory
+
+# Build rule for target.
+factory: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 factory
+.PHONY : factory
+
+# fast build rule for target.
+factory/fast:
+	$(MAKE) -f CMakeFiles/factory.dir/build.make CMakeFiles/factory.dir/build
+.PHONY : factory/fast
+
+#=============================================================================
+# Target rules for targets named system_gui
+
+# Build rule for target.
+system_gui: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 system_gui
+.PHONY : system_gui
+
+# fast build rule for target.
+system_gui/fast:
+	$(MAKE) -f CMakeFiles/system_gui.dir/build.make CMakeFiles/system_gui.dir/build
+.PHONY : system_gui/fast
+
+factory.o: factory.cc.o
+
+.PHONY : factory.o
+
+# target to build an object file
+factory.cc.o:
+	$(MAKE) -f CMakeFiles/factory.dir/build.make CMakeFiles/factory.dir/factory.cc.o
+.PHONY : factory.cc.o
+
+factory.i: factory.cc.i
+
+.PHONY : factory.i
+
+# target to preprocess a source file
+factory.cc.i:
+	$(MAKE) -f CMakeFiles/factory.dir/build.make CMakeFiles/factory.dir/factory.cc.i
+.PHONY : factory.cc.i
+
+factory.s: factory.cc.s
+
+.PHONY : factory.s
+
+# target to generate assembly for a file
+factory.cc.s:
+	$(MAKE) -f CMakeFiles/factory.dir/build.make CMakeFiles/factory.dir/factory.cc.s
+.PHONY : factory.cc.s
 
 hello_world.o: hello_world.cc.o
 
@@ -150,18 +229,115 @@ hello_world.cc.s:
 	$(MAKE) -f CMakeFiles/hello_world.dir/build.make CMakeFiles/hello_world.dir/hello_world.cc.s
 .PHONY : hello_world.cc.s
 
+model_push.o: model_push.cc.o
+
+.PHONY : model_push.o
+
+# target to build an object file
+model_push.cc.o:
+	$(MAKE) -f CMakeFiles/model_push.dir/build.make CMakeFiles/model_push.dir/model_push.cc.o
+.PHONY : model_push.cc.o
+
+model_push.i: model_push.cc.i
+
+.PHONY : model_push.i
+
+# target to preprocess a source file
+model_push.cc.i:
+	$(MAKE) -f CMakeFiles/model_push.dir/build.make CMakeFiles/model_push.dir/model_push.cc.i
+.PHONY : model_push.cc.i
+
+model_push.s: model_push.cc.s
+
+.PHONY : model_push.s
+
+# target to generate assembly for a file
+model_push.cc.s:
+	$(MAKE) -f CMakeFiles/model_push.dir/build.make CMakeFiles/model_push.dir/model_push.cc.s
+.PHONY : model_push.cc.s
+
+system_gui.o: system_gui.cc.o
+
+.PHONY : system_gui.o
+
+# target to build an object file
+system_gui.cc.o:
+	$(MAKE) -f CMakeFiles/system_gui.dir/build.make CMakeFiles/system_gui.dir/system_gui.cc.o
+.PHONY : system_gui.cc.o
+
+system_gui.i: system_gui.cc.i
+
+.PHONY : system_gui.i
+
+# target to preprocess a source file
+system_gui.cc.i:
+	$(MAKE) -f CMakeFiles/system_gui.dir/build.make CMakeFiles/system_gui.dir/system_gui.cc.i
+.PHONY : system_gui.cc.i
+
+system_gui.s: system_gui.cc.s
+
+.PHONY : system_gui.s
+
+# target to generate assembly for a file
+system_gui.cc.s:
+	$(MAKE) -f CMakeFiles/system_gui.dir/build.make CMakeFiles/system_gui.dir/system_gui.cc.s
+.PHONY : system_gui.cc.s
+
+world_edit.o: world_edit.cc.o
+
+.PHONY : world_edit.o
+
+# target to build an object file
+world_edit.cc.o:
+	$(MAKE) -f CMakeFiles/world_edit.dir/build.make CMakeFiles/world_edit.dir/world_edit.cc.o
+.PHONY : world_edit.cc.o
+
+world_edit.i: world_edit.cc.i
+
+.PHONY : world_edit.i
+
+# target to preprocess a source file
+world_edit.cc.i:
+	$(MAKE) -f CMakeFiles/world_edit.dir/build.make CMakeFiles/world_edit.dir/world_edit.cc.i
+.PHONY : world_edit.cc.i
+
+world_edit.s: world_edit.cc.s
+
+.PHONY : world_edit.s
+
+# target to generate assembly for a file
+world_edit.cc.s:
+	$(MAKE) -f CMakeFiles/world_edit.dir/build.make CMakeFiles/world_edit.dir/world_edit.cc.s
+.PHONY : world_edit.cc.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... rebuild_cache"
+	@echo "... world_edit"
 	@echo "... edit_cache"
 	@echo "... hello_world"
+	@echo "... rebuild_cache"
+	@echo "... model_push"
+	@echo "... factory"
+	@echo "... system_gui"
+	@echo "... factory.o"
+	@echo "... factory.i"
+	@echo "... factory.s"
 	@echo "... hello_world.o"
 	@echo "... hello_world.i"
 	@echo "... hello_world.s"
+	@echo "... model_push.o"
+	@echo "... model_push.i"
+	@echo "... model_push.s"
+	@echo "... system_gui.o"
+	@echo "... system_gui.i"
+	@echo "... system_gui.s"
+	@echo "... world_edit.o"
+	@echo "... world_edit.i"
+	@echo "... world_edit.s"
 .PHONY : help
 
 
