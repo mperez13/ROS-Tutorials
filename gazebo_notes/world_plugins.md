@@ -231,10 +231,10 @@ $ mkdir box cylinder
 #### Make sure your `$GAZEBO_MODEL_PATH` refers to your new models directory:
 
 ```
-$ export GAZEBO_MODEL_PATH=$HOME/gazebo_plugin_tutorial/build:$GAZEBO_MODEL_PATH
+$ export GAZEBO_MODEL_PATH=$HOME/gazebo_plugin_tutorial/models:$GAZEBO_MODEL_PATH
 ```
 
-- in my setup: `$ export GAZEBO_MODEL_PATH=$HOME/ROS-Tutorials/gazebo_plugin_tutorial/build:$GAZEBO_MODEL_PATH`
+- in my setup: `$ export GAZEBO_MODEL_PATH=$HOME/ROS-Tutorials/gazebo_plugin_tutorial/models:$GAZEBO_MODEL_PATH`
 
 #### Add your library path to the `GAZEBO_PLUGIN_PATH`:
 
