@@ -7,7 +7,7 @@
 |Get Started|[Gazebo Architecture][25]||*NOT DONE*|
 |Get Started|[Capture Screenshot][26]||*NOT DONE*|
 |Build a Robot|[Model Structure and Requirements][5]|Tutorial describes Gazebo's model directory structure and the necessary files within a model directory||
-|Build a Robot|[How to Contribute a Model][27] ||*NOT DONE*|
+|Build a Robot|[How to Contribute a Model][27]||*NOT DONE*|
 |Build a Robot|[Make a Model][29]||*NOT DONE*|
 |Build a Robot|[Make a Mobile Robot][4]|Tutorial demonstrates Gazebo's basic model management & basic model representation inside the model databse by taking the user through the process of creating a two wheeled mobile robot that uses a differential drive mechanism for movement||
 |Build a Robot|[Import Meshes][28]||*NOT DONE*|
@@ -21,6 +21,30 @@
 |Build a Robot|[Make an Animated Model(actor)][34]||*NOT DONE*|
 |Build a Robot|[Inertia Parameters of Triangle Meshes][35]||*NOT DONE*|
 |Build a Robot|[Visibility Layers][36]||*NOT DONE*|
+|Model Editor|[Model Editor][32]||*NOT DONE*|
+|Model Editor|[Extrude SVG files][37]||*NOT DONE*|
+|Build a World|[Building a World][13]|Creating a world with both static and dynamic objects|This inlcludes adding objects, position models (translation, rotation, scale), save/load world, delete models|
+|Build a World|[Modifying a World][14]|How to modify global properties including scene and physics properties||
+||[Digital Elevation Models][15]|3D representation of a terrain's surface that does not include any objects like buildings or vegetation|[Have not finished going through tutorial] This might be useful once we have a simulation of a flying drone completed|
+|Build a World|[Population of Models][38]||*NOT DONE*|
+|Build a World|[Building Editor][39]||*NOT DONE*|
+|Tool and Utilities|[][]||*NOT DONE*|
+|Tool and Utilities|[][]||*NOT DONE*|
+|Tool and Utilities|[][]||*NOT DONE*|
+|Tool and Utilities|[][]||*NOT DONE*|
+|Write a Plugin|[][]||*NOT DONE*|
+|Plugins|[][]||*NOT DONE*|
+|Sensors|[][]||*NOT DONE*|
+|Using Math|[][]||*NOT DONE*|
+|Web client (Gzweb)|[][]||*NOT DONE*|
+|Connect to ROS|[][]||*NOT DONE*|
+|Transport Library|[][]||*NOT DONE*|
+|Physics Library|[][]||*NOT DONE*|
+|Rendering Library|[][]||*NOT DONE*|
+|Development|[][]||*NOT DONE*|
+|DRCSim|[][]||*NOT DONE*|
+|Scripting(javascript and NodeJs|[][]||*NOT DONE*|
+|HAPTIX|[][]||*NOT DONE*|
 
 [24]: gazebo_notes/components.md
 [25]: gazebo_notes/architecture.md
@@ -35,6 +59,9 @@
 [34]: gazebo_notes/animated_model.md
 [35]: gazebo_notes/inertia_triangle_meshes.md
 [36]: gazebo_notes/visibility_layers.md
+[37]: gazebo_notes/svg_files.md
+[38]: gazebo_notes/pop_models.md
+[39]: gazebo_notes/building_editor.md
 []: gazebo_notes/.md
 []: gazebo_notes/.md
 []: gazebo_notes/.md
@@ -48,9 +75,8 @@
 ||[Control Plugin][10]| Create a plugin in a new directory. The contents of this directory will include the plugin source code, and CMake build script||
 ||[Connect to ROS][11]| Use the plugin to connect to ROS. Plugin will be loaded as usual and will listen on ROS topic for incoming float messages, that will be used to set Velodyne's rotational speed|Connect ROS w/ Gazebo through the command line|
 ||[Topic Subscription][12]| Simple listener example involving Gazebo||
-||[Building a World][13]| Creating a world with both static and dynamic objects|This inlcludes adding objects, position models (translation, rotation, scale), save/load world, delete models|
-||[Modifying a World][14]|How to modify global properties including scene and physics properties||
-||[Digital Elevation Models][15]|3D representation of a terrain's surface that does not include any objects like buildings or vegetation|[Have not finished going through tutorial] This might be useful once we have a simulation of a flying drone completed|
+
+
 ||[Contact Sensor][16]|Create a contact sensor and get contact data via a plugin or a message. Contact sensor detects collisions between 2 objects & reports location of the contact associated forces.|The model is a simple cube not moving. The file are located [here][17]|
 ||[Plugins 101][18]|Overview of Gazebo Plugins||
 |[Model Plugins][19]|Plugins allow complete access to the physical properties of models and their underlying elements (links, joints, collision objects)|Model is a type of plugin. A world containing a model(box), which moves after play button is pressed in the GUI.|
