@@ -100,7 +100,7 @@ $ cd ~/gazebo_plugin_tutorial
 $ gazebo world_edit.world
 ```
 
-##### Now add a box to the world. The box should float up & away from the camera.
+###### Now add a box to the world. The box should float up & away from the camera.
 
 [1]: http://gazebosim.org/tutorials?tut=plugins_world_properties&cat=write_plugin
 [2]: model_plugin.md
