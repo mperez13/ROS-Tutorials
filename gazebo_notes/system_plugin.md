@@ -140,7 +140,7 @@ $ gzclient -g libsystem_gui.so
 
 > The saved images are a snapshot of what is done in gazebo while gzserver is running.
 
-> Tried to changed /tmp/gazebo_frames to ~/ROS-Tutorials/gazebo_plugin_tutorial/tmp/gazebo_frames; Did not save images to this folder. Will try later to work around this
+> Tried to changed `/tmp/gazebo_frames` to `~/ROS-Tutorials/gazebo_plugin_tutorial/tmp/gazebo_frames`; Did not save images to this folder. Will try later to work around this
 
 
 ##### To terminate press `Ctrl-C`.
