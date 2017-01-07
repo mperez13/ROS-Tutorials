@@ -2,12 +2,19 @@
 Code for ROS tutorials to be used for the Ground System of UAS
 
 
-- [Velodyne_plugin directory](https://github.com/mperez13/ROS-Tutorials/tree/master/velodyne_plugin)
+- [Velodyne_plugin directory][1]
   - Created a plugin that would perform tasks such as moving, adding, removing objects and accessing sensor data. The plugin is able to connect to ROS.
-- [.gazebo/models directory](https://github.com/mperez13/ROS-Tutorials/tree/master/.gazebo/models)
+  - [Tutorials][5]
+- [.gazebo/models directory][2]
   - Some Gazebo models, including their .sdf and .config files
 
-####Notes Taken From Tutorials
+#### Notes Taken From Tutorials
 
-- [Gazebo Notes](https://github.com/mperez13/ROS-Tutorials/blob/master/gazebo_notes.md)
-- [ROS Notes](https://github.com/mperez13/ROS-Tutorials/blob/master/ros_notes.md)
+- [Gazebo Notes][3]
+- [ROS Notes][4]
+
+[1]: velodyne_plugin
+[2]: .gazebo/models
+[3]: gazebo_notes.md
+[4]: ros_notes.md
+[5]: gazebo_categories/velodyne_tutorials.md
