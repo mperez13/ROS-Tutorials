@@ -1,27 +1,14 @@
-#[][1]
-
-
+#[Get Started][1]
 
 |Title|Description|Notes|
 |----|----|----|
-|[][2]||*NOT DONE*|
-|[][3]||*NOT DONE*|
-|[][4]||*NOT DONE*|
-|[][5]||*NOT DONE*|
-|[][6]||*NOT DONE*|
-|[][7]||*NOT DONE*|
-|[][8]||*NOT DONE*|
-|[][9]||*NOT DONE*|
-|[][10]||*NOT DONE*|
+|[Quick Start][2]||*NOT DONE*|
+|[Gazebo Components][3]||*NOT DONE*|
+|[Gazebo Architecture][4]||*NOT DONE*|
+|[Capture Screenshot][5]||*NOT DONE*|
 
-[1]:
-[2]: ../gazebo_notes/.md
-[3]: ../gazebo_notes/.md
-[4]: ../gazebo_notes/.md
-[5]: ../gazebo_notes/.md
-[6]: ../gazebo_notes/.md
-[7]: ../gazebo_notes/.md
-[8]: ../gazebo_notes/.md
-[9]: ../gazebo_notes/.md
-[10]: ../gazebo_notes/.md
-[11]: ../gazebo_notes/.md
+[1]: http://gazebosim.org/tutorials?tut=quick_start&cat=get_started
+[2]: ../gazebo_notes/quick_start.md
+[3]: ../gazebo_notes/components.md
+[4]: ../gazebo_notes/architecture.md
+[5]: ../gazebo_notes/screenshot.md
