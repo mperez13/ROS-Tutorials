@@ -28,8 +28,7 @@ $ gedit model_push.cc
 #include <gazebo/common/common.hh>
 #include <stdio.h>
 
-namespace gazebo
-{
+namespace gazebo {
   class ModelPush : public ModelPlugin
   {
     public: void Load(physics::ModelPtr _parent, sdf::ElementPtr /*_sdf*/)
