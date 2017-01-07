@@ -6,8 +6,8 @@ The following tutorials describe how to build and modify a robot. Included are e
 |----|----|----|
 |[Model Structure and Requirements][5]|Tutorial describes Gazebo's model directory structure and the necessary files within a model directory||
 |[How to Contribute a Model][27]||*NOT DONE*|
-|[Make a Model][]||*NOT DONE*|
-|[Make a Mobile Robot][4]|Tutorial demonstrates Gazebo's basic model management & basic model representation inside the model databse by taking the user through the process of creating a two wheeled mobile robot that uses a differential drive mechanism for movement|*NOT DONE*|
+|[Make a Model][3]||*NOT DONE*|
+|[Make a Mobile Robot][7]|Tutorial demonstrates Gazebo's basic model management & basic model representation inside the model databse by taking the user through the process of creating a two wheeled mobile robot that uses a differential drive mechanism for movement|*NOT DONE*|
 |[Import Meshes][28]||*NOT DONE*|
 |[Attach a Mesh as a Visual][3]| Meshes can add realism to a model both visually and for sensors. The most common use case for a mesh is to create a realistic looking visual||
 |[Add a sensor to a Robot][2]|Create composite models directly from other models in the Gazebo Model Database by using \<include> tags and \<joint> to connect different components of a composite model.||
@@ -23,8 +23,8 @@ The following tutorials describe how to build and modify a robot. Included are e
 [1]: http://gazebosim.org/tutorials?cat=build_robot
 [5]: gazebo_notes/model_structure_and_requirements_notes.md
 [27]: gazebo_notes/contribute_model.md
-[]: gazebo_notes/
-[4]: gazebo_notes/make_a_mobile_robot.md
+[3]: gazebo_notes/make_model.md
+[7]: gazebo_notes/make_a_mobile_robot.md
 [28]: gazebo_notes/import_meshes.md
 [3]: gazebo_notes/attach_meshes_notes.md
 [2]: gazebo_notes/add_sensor_to_robot.md
