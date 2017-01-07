@@ -15,9 +15,7 @@ target_link_libraries(model_push ${GAZEBO_LIBRARIES} ${Boost_LIBRARIES})
 
 #################Added for World Plugin################
 add_library(factory SHARED factory.cc)
-target_link_libraries(factory
-  ${GAZEBO_LIBRARIES}
-)
+target_link_libraries(factory ${GAZEBO_LIBRARIES})
 ########################################################
 
 #################Added for System Plugin################
