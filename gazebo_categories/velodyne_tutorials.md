@@ -8,8 +8,8 @@
 |[Control Plugin][10]| Create a plugin in a new directory. The contents of this directory will include the plugin source code, and CMake build script||
 |[Connect to ROS][11]| Use the plugin to connect to ROS. Plugin will be loaded as usual and will listen on ROS topic for incoming float messages, that will be used to set Velodyne's rotational speed|Connect ROS w/ Gazebo through the command line|
 
-[7]: gazebo_notes/sensor_noise.md
-[8]: gazebo_notes/velodyne_gazebo.md
-[9]: gazebo_notes/model_appearance_notes.md
-[10]: gazebo_notes/control_plugin.md
-[11]: gazebo_notes/connect_to_ROS.md
+[7]: ../gazebo_notes/sensor_noise.md
+[8]: ../gazebo_notes/velodyne_gazebo.md
+[9]: ../gazebo_notes/model_appearance_notes.md
+[10]: ../gazebo_notes/control_plugin.md
+[11]: ../gazebo_notes/connect_to_ROS.md
