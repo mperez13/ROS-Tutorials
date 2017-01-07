@@ -266,7 +266,7 @@ $ export GAZEBO_PLUGIN_PATH=$HOME/gazebo_plugin_tutorial/build:$GAZEBO_PLUGIN_PA
 #### Run Gazebo
 
 ```
-$ gazebo ~/gazebo_plugin_tutorial/factory.world
+$ gazebo ~/ROS-Tutorials/gazebo_plugin_tutorial/factory.world
 ```
 
 #### The Gazebo window should show an environment w/ a sphere, box, and cylinder arranged in a row.
