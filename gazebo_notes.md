@@ -18,7 +18,7 @@
 |[Digital Elevation Models][15]|3D representation of a terrain's surface that does not include any objects like buildings or vegetation|[Have not finished going through tutorial] This might be useful once we have a simulation of a flying drone completed|
 |[Contact Sensor][16]|Create a contact sensor and get contact data via a plugin or a message. Contact sensor detects collisions between 2 objects & reports location of the contact associated forces.|The model is a simple cube not moving. The file are located [here][17]|
 |[Plugins 101][18]|Overview of Gazebo Plugins||
-|[Model Plugins][19]|Plugins allow complete access to the physical properties of models and their underlying elements (links, joints, collision objects)|- Model is a type of plugin|
+|[Model Plugins][19]|Plugins allow complete access to the physical properties of models and their underlying elements (links, joints, collision objects)|Model is a type of plugin. A world containing a model(box), which moves after play button is pressed in the GUI.|
 |[System Plugin][20]|create system plugin for gzclient designed to save images into the directory|System is a type of plugin. Saved images are a snapshot of what is done in gazebo while gzserver is running|
 |[21]|||
 |[22]|||
