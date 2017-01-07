@@ -30,7 +30,7 @@
 </sdf>
 ```
 
-### Create [file][5] called '~/gazebo_plugin_tutorial/world_edit.cc'. Code explained below.
+### Create [file][5] called `~/gazebo_plugin_tutorial/world_edit.cc`. Code explained below.
 
 ###### Creates a new pointer & initialize to using the world name. World name allows node to communicate w/ one specific world
 
