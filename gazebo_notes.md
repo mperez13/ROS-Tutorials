@@ -1,12 +1,13 @@
-#List of Notes from Tutorials
+# List of Notes from Tutorials
+
 |Category|Title|Description|Notes|
-|-----|-----|----|----|
+|----|----|----|----|
 |Get Started|[Quick Start][23]|Shows how to run Gazebo, run Gazebo with a robot, location of the worlds, and client and server separation.|*NOT DONE*|
 |Get Started|[Gazebo Components][24]|This page describes each of the items involved in running a Gazebo simulation|*NOT DONE*|
 |Get Started|[Gazebo Architecture][25]||*NOT DONE*|
 |Get Started|[Capture Screenshot][26]||*NOT DONE*|
 |Build a Robot|[Model Structure and Requirements][5]|Tutorial describes Gazebo's model directory structure and the necessary files within a model directory||
-|Build a Robot|[How to Contribute a Model][27]||*NOT DONE*|
+|Build a Robot|[How to Contribute a Model][27] ||*NOT DONE*|
 |Build a Robot|[Make a Model][29]||*NOT DONE*|
 |Build a Robot|[Make a Mobile Robot][4]|Tutorial demonstrates Gazebo's basic model management & basic model representation inside the model databse by taking the user through the process of creating a two wheeled mobile robot that uses a differential drive mechanism for movement||
 |Build a Robot|[Import Meshes][28]||*NOT DONE*|
