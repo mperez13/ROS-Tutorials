@@ -11,7 +11,7 @@
 
 **Source**: [gazebo/examples/plugins/world_edit][4]
 
-#### Create [file][4] called `~/gazebo_plugin_tutorial/world_edit.world` w/ following contents:
+### Create [file][4] called `~/gazebo_plugin_tutorial/world_edit.world` w/ following contents:
 
 ```xml
 <?xml version ='1.0'?>
@@ -30,7 +30,7 @@
 </sdf>
 ```
 
-#### Create [file][5] called '~/gazebo_plugin_tutorial/world_edit.cc'. Code explained below.
+### Create [file][5] called `~/gazebo_plugin_tutorial/world_edit.cc`. Code explained below.
 
 ###### Creates a new pointer & initialize to using the world name. World name allows node to communicate w/ one specific world
 
@@ -100,7 +100,7 @@ $ cd ~/gazebo_plugin_tutorial
 $ gazebo world_edit.world
 ```
 
-##### Now add a box to the world. The box should float up & away from the camera.
+###### Now add a box to the world. The box should float up & away from the camera.
 
 [1]: http://gazebosim.org/tutorials?tut=plugins_world_properties&cat=write_plugin
 [2]: model_plugin.md
