@@ -1,0 +1,33 @@
+<?xml version="1.0"?> 
+	<sdf version="1.4">
+		<world name="default">
+
+		    <!-- Ground Plane -->
+		    <include>
+		      <uri>model://ground_plane</uri>
+		    </include>
+
+		    <include>
+		      <uri>model://sun</uri>
+		    </include>
+		    <!--
+		    <model name="sphere">
+	            <pose>1 0 0 0 0 0</pose>
+	            <link name ='link'>
+	              <pose>0 0 .5 0 0 0</pose>\
+	              <collision name ='collision'>
+	                <geometry>
+	                  <sphere><radius>0.05</radius></sphere>
+	                </geometry>
+	              </collision>
+	              <visual name ='visual'>
+	                <geometry>
+	                  <sphere><radius>0.05</radius></sphere>
+	                </geometry>
+	              </visual>
+	            </link>
+		          -->
+		      <plugin name="simulation" filename="libsimulation.so"/>
+		    <!--</model>-->        
+		  </world>
+	</sdf>

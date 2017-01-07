@@ -1,4 +1,4 @@
-cdcmake_minimum_required(VERSION 2.8 FATAL_ERROR)
+cmake_minimum_required(VERSION 2.8 FATAL_ERROR)
 
 find_package(gazebo REQUIRED)
 include_directories(${GAZEBO_INCLUDE_DIRS})
@@ -18,7 +18,7 @@ add_library(factory SHARED factory.cc)
 target_link_libraries(factory ${GAZEBO_LIBRARIES})
 ########################################################
 
-#################Added for System Plugin################
+#################Added for System Plugin###############
 add_library(system_gui SHARED system_gui.cc)
 target_link_libraries(system_gui ${GAZEBO_LIBRARIES})
 ########################################################
