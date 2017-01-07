@@ -4,8 +4,8 @@ The following tutorials describe how to build and modify robots using the model 
 
 |Title|Description|Notes|
 |----|----|----|
-|[Model Editor][32]||*NOT DONE*|
-|[Extrude SVG files][37]||*NOT DONE*|
+|[Model Editor][2]||*NOT DONE*|
+|[Extrude SVG files][3]||*NOT DONE*|
 
 [1]: http://gazebosim.org/tutorials?cat=model_editor_top
 [2]: ../gazebo_notes/model_editor.md
