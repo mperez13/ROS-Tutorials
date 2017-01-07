@@ -13,9 +13,11 @@
 
 **Source**: [gazebo/examples/plugins/factory][4]
 
-#### Create source file [factory.cc][5] in `/gazebo_plugin_tutorial`. The code is explained below.
+### Create source file [factory.cc][5] in `/gazebo_plugin_tutorial`. The code is explained below.
 
-```
+##### First part of the code creates a world plugin
+
+```c++
 #include <ignition/math/Pose3.hh>
 #include "gazebo/physics/physics.hh"
 #include "gazebo/common/common.hh"
@@ -27,10 +29,21 @@ class Factory : public WorldPlugin
 {
   public: void Load(physics::WorldPtr _parent, sdf::ElementPtr /*_sdf*/)
   {
+```
+
+##### `Load` function are 3 different methods for model insertion
+
+- 1st method uses a World method to load a model based on a file in the resource path defined by `GAZEBO_MODEL_PATH` environment variable.
+
+```
     // Option 1: Insert model from file via function call.
     // The filename must be in the GAZEBO_MODEL_PATH environment variable.
     _parent->InsertModelFile("model://box");
+```
 
+- 2nd method uses a World method to load a model based on string data
+
+```c++
     // Option 2: Insert model from string via function call.
     // Insert a sphere model from string
     sdf::SDF sphereSDF;
@@ -57,7 +70,12 @@ class Factory : public WorldPlugin
     sdf::ElementPtr model = sphereSDF.Root()->GetElement("model");
     model->GetAttribute("name")->SetFromString("unique_sphere");
     _parent->InsertModelSDF(sphereSDF);
+```
 
+- 3rd method uses the message mechanism to insert model.
+  - most useful for stand alone applications that communicate w/ Gazebo over a network connection.
+
+```c++
     // Option 3: Insert model from file via message passing.
     {
       // Create a new transport node
@@ -84,14 +102,55 @@ class Factory : public WorldPlugin
 
       // Send the message
       factoryPub->Publish(msg);
-    }
-  }
-};
-
-// Register this plugin with the simulator
-GZ_REGISTER_WORLD_PLUGIN(Factory)
-}
 ```
+
+## Compile
+
+#### Add following to [CMakeLists.txt][6] 
+
+#### Compiling this code will result in a shared library, `~/gazebo_plugin_tutorial/build/libfactory.so`, that can be inserted in a Gazebo simulation.
+
+```
+$ cd ~/gazebo_plugin_tutorial/build
+$ cmake ../
+$ make
+```
+
+## Make the shapes
+
+#### Make model directory w/ a box and a cylinder
+
+```
+$ mkdir ~/gazebo_plugin_tutorial/models
+$ cd ~/gazebo_plugin_tutorial/models
+$ mkdir box cylinder
+```
+
+#### Create box [model.sdf][7] w/ following code:
+
+```xml
+<?xml version='1.0'?>
+<sdf version ='1.6'>
+  <model name ='box'>
+    <pose>1 2 0 0 0 0</pose>
+    <link name ='link'>
+      <pose>0 0 .5 0 0 0</pose>
+      <collision name ='collision'>
+        <geometry>
+          <box><size>1 1 1</size></box>
+        </geometry>
+      </collision>
+      <visual name ='visual'>
+        <geometry>
+          <box><size>1 1 1</size></box>
+        </geometry>
+      </visual>
+    </link>
+  </model>
+</sdf>
+```
+
+
 
 
 
@@ -102,3 +161,5 @@ GZ_REGISTER_WORLD_PLUGIN(Factory)
 [3]: plugins.md
 [4]: https://bitbucket.org/osrf/gazebo/src/gazebo7/examples/plugins/factory
 [5]: ../gazebo_plugin_tutorial/factory.cc
+[6]: ../gazebo_plugin_tutorial/CMakeLists.txt
+[7]: ../gazebo_plugin_tutorial/model.sdf
