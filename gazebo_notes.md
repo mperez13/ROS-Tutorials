@@ -7,7 +7,7 @@
 |[Model Editor][3]|||
 |[Build a World][4]|||
 |[Tools and Utilities][5]|||
-|[Write a Plugin][6]|||
+|[Write a Plugin][6]|How to create and load plugins for various purposes|Plugins allow you to control models, sensors, world properties, and even the way Gazebo runs.|
 |[Plugins][7]|||
 |[Sensors][8]|||
 |[Using Math][9]|||
