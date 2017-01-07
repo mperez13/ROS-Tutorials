@@ -13,7 +13,7 @@
 
 **Source**: [gazebo/examples/plugins/factory][4]
 
-### Create source file [factory.cc][5] in `/gazebo_plugin_tutorial`. The code is explained below.
+#### Create source file [factory.cc][5] in `/gazebo_plugin_tutorial`. The code is explained below.
 
 ##### First part of the code creates a world plugin
 
@@ -107,6 +107,13 @@ class Factory : public WorldPlugin
 ## Compile
 
 #### Add following to [CMakeLists.txt][6] 
+
+```
+add_library(factory SHARED factory.cc)
+target_link_libraries(factory
+  ${GAZEBO_LIBRARIES}
+)
+```
 
 #### Compiling this code will result in a shared library, `~/gazebo_plugin_tutorial/build/libfactory.so`, that can be inserted in a Gazebo simulation.
 
