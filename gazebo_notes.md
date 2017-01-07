@@ -2,9 +2,8 @@
 
 |Title|Description|Notes|
 |----|----|----|
-|[Quick Start][1]|Basic Gazebo information|*NOT DONE*|
-|[Build a Robot][2]|
-The following tutorials describe how to build and modify a robot|Included are examples of building a wheeled robot, attaching sensors, attaching actuators, and animating a model|
+|[Quick Start][1]|Basic Gazebo information||
+|[Build a Robot][2]|The following tutorials describe how to build and modify a robot|Included are examples of building a wheeled robot, attaching sensors, attaching actuators, and animating a model|
 |[Model Editor][3]|||
 |[Build a World][4]|||
 |[Tools and Utilities][5]|||
@@ -16,10 +15,10 @@ The following tutorials describe how to build and modify a robot|Included are ex
 |[Connect to Player][11]|||
 |[Web client (Gzweb)][12]|||
 |[Connect to ROS][13]|||
-|[Transport Library][14]|These tutorials describe how to use Gazebo's message passing infrastructure.|*NOT DONE*|
-|[Physics Library][15]|How to use the physics engines in order to acheive desired behavior.|*NOT DONE*|
-|[Rendering Library][16]|Gazebo's rendering library is used to generate sensor data and provide user feedback by rendering the environment state.|*NOT DONE*|
-|[Development][17]|How to contribute your modifications back to Gazebo|*NOT DONE*|
+|[Transport Library][14]|These tutorials describe how to use Gazebo's message passing infrastructure.||
+|[Physics Library][15]|How to use the physics engines in order to acheive desired behavior.||
+|[Rendering Library][16]|Gazebo's rendering library is used to generate sensor data and provide user feedback by rendering the environment state.||
+|[Development][17]|How to contribute your modifications back to Gazebo||
 
 
 [1]: gazebo_categories/get_started.md 
