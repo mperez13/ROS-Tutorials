@@ -35,7 +35,7 @@ class Factory : public WorldPlugin
 
 - 1st method uses a World method to load a model based on a file in the resource path defined by `GAZEBO_MODEL_PATH` environment variable.
 
-```
+```c++
     // Option 1: Insert model from file via function call.
     // The filename must be in the GAZEBO_MODEL_PATH environment variable.
     _parent->InsertModelFile("model://box");
@@ -126,7 +126,9 @@ $ cd ~/gazebo_plugin_tutorial/models
 $ mkdir box cylinder
 ```
 
-#### Create box [model.sdf][7] w/ following code:
+#### In box directory create model.sdf and model.config
+
+###### Create box [model.sdf][7] w/ following code:
 
 ```xml
 <?xml version='1.0'?>
@@ -150,11 +152,113 @@ $ mkdir box cylinder
 </sdf>
 ```
 
+###### Create [model.config][8] file w/ following code:
 
+```xml
+<?xml version='1.0'?>
+<model>
+  <name>box</name>
+  <version>1.0</version>
+  <sdf >model.sdf</sdf>
 
+  <author>
+    <name>me</name>
+    <email>somebody@somewhere.com</email>
+  </author>
 
+  <description>
+    A simple Box.
+  </description>
+</model>
+```
 
+#### In cylinder directory create model.sdf and model.config
 
+###### Create [model.sdf][7] w/ following code:
+
+```xml
+<?xml version='1.0'?>
+<sdf version ='1.6'>
+  <model name ='cylinder'>
+    <pose>1 2 0 0 0 0</pose>
+    <link name ='link'>
+      <pose>0 0 .5 0 0 0</pose>
+      <collision name ='collision'>
+        <geometry>
+          <cylinder><radius>0.5</radius><length>1</length></cylinder>
+        </geometry>
+      </collision>
+      <visual name='visual'>
+        <geometry>
+          <cylinder><radius>0.5</radius><length>1</length></cylinder>
+        </geometry>
+      </visual>
+    </link>
+  </model>
+</sdf>
+```
+
+###### Create [model.config][8] file w/ following code:
+
+```xml
+<?xml version='1.0'?>
+
+<model>
+  <name>cylinder</name>
+  <version>1.0</version>
+  <sdf>model.sdf</sdf>
+
+  <author>
+    <name>me</name>
+    <email>somebody@somewhere.com</email>
+  </author>
+
+  <description>
+    A simple cylinder.
+  </description>
+</model>
+```
+
+## Run the code
+
+#### Make sure your `$GAZEBO_MODEL_PATH` refers to your new models directory:
+
+```
+$ export GAZEBO_MODEL_PATH=$HOME/gazebo_plugin_tutorial/build:$GAZEBO_PLUGIN_PATH
+```
+
+#### Add your library path to the `GAZEBO_PLUGIN_PATH`:
+
+```
+$ export GAZEBO_PLUGIN_PATH=$HOME/gazebo_plugin_tutorial/build:$GAZEBO_PLUGIN_PATH
+```
+
+#### Create [world SDF file][9] called `~/gazebo_plugin_tutorial/factory.world` w/ following code:
+
+```xml
+<?xml version="1.0"?>
+<sdf version="1.4">
+  <world name="default">
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+
+    <include>
+      <uri>model://sun</uri>
+    </include>
+
+    <plugin name="factory" filename="libfactory.so"/>
+  </world>
+</sdf>
+```
+
+#### Run Gazebo
+
+```
+$ gazebo ~/gazebo_plugin_tutorial/factory.world
+```
+
+#### The Gazebo window should show an environment w/ a sphere, box, and cylinder arranged in a row.
 
 [1]: http://gazebosim.org/tutorials?tut=plugins_world&cat=write_plugin
 [2]: model_plugin.md
@@ -163,3 +267,5 @@ $ mkdir box cylinder
 [5]: ../gazebo_plugin_tutorial/factory.cc
 [6]: ../gazebo_plugin_tutorial/CMakeLists.txt
 [7]: ../gazebo_plugin_tutorial/model.sdf
+[8]: ../gazebo_plugin_tutorial/model.config
+[9]: ../gazebo_plugin_tutorial/factory.world
