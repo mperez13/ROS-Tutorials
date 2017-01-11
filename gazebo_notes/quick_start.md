@@ -42,7 +42,7 @@ World files are located in a versioned system directory. (`/usr/share/gazebo-7` 
 
 ### gzclient
 
-- `gzclient` executable runs a GT based user interface
+- `gzclient` executable runs a [QT][3] based user interface
   -  QT provides nice visualization of simulation and convenient controls over various simulation properties.
 
 ### Run these executables
@@ -63,14 +63,4 @@ gzclient
 
 [1]: http://gazebosim.org/tutorials?tut=quick_start&cat=get_started
 [2]: http://gazebosim.org/tutorials?cat=install
-
-
-
-
-
-
-
-
-
-
-
+[3]: http://qt-project.org/
