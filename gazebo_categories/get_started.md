@@ -4,7 +4,7 @@
 |----|----|----|
 |[Overview][6]|Description of Gazebo and its uses.|Includes system requirements and Ubuntu installation instructions|
 |[GUI][7]|Introduction to the Gazebo Graphical User Interface|Interface basics like what the buttons do and how to navigate in the scene|
-|[Quick Start][2]||*NOT DONE*|
+|[Quick Start][2]|Shows how to run Gazebo, run Gazebo with a robot, location of the worlds, and client and server separation.|Short description of client and server executables.  `gzserver` runs physics update-loop and sensor data.  `gzclient` run QT based user interface.|
 |[Gazebo Components][3]||*NOT DONE*|
 |[Gazebo Architecture][4]||*NOT DONE*|
 |[Capture Screenshot][5]||*NOT DONE*|
