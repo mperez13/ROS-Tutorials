@@ -33,16 +33,23 @@
 
 #### List of Variables
 
-###### `GAZEBO_MODEL_PATH`
+`GAZEBO_MODEL_PATH`: colon-separated set of directories where Gazebo will search for models
 
-###### `GAZEBO_RESOURCE_PATH`
+`GAZEBO_RESOURCE_PATH`: colon-separated set of directories where Gazebo will search for other resources such as world and media files
 
-###### `GAZEBO_MASTER_URI`
+`GAZEBO_MASTER_URI`: URI of the Gazebo master; specifies IP and port where server will be started & tells the clients where to connect to
 
-###### `GAZEBO_PLUGIN_PATH`
+`GAZEBO_PLUGIN_PATH`: colon-separated set of directories where Gazebo will search for the plugin shared libraries at runtime
 
-###### `GAZEBO_MODEL_DATABASE_URI`
+`GAZEBO_MODEL_DATABASE_URI`: URI of the online model database where Gazebo will download models from
 
+**These defaults are also included in a shell script**:
+  
+  ```
+  source <install_path>/share/gazebo/setup.sh
+  ```
+
+- To modify Gazebo's behavior, should first source the shell script listed above, then modify the variables that it sets.
 
 ## Gazebo Server
 
@@ -74,3 +81,4 @@
 
 [1]: http://gazebosim.org/tutorials?tut=components&cat=get_started
 [2]: http://gazebosim.org/sdf.html
+[3]: http://bitbucket.org/osrf/gazebo_models
