@@ -29,29 +29,13 @@
 ###### Single master can handle multiple physics simulations, sensor generators, and GUIs.
 
 
-|Library Name ->|Communication|Physics|Rendering|Sensor Generation|GUI|
-|-----|-----|-----|-----|
-|**Dependencies**||||||
-|**External API**||||||
-|**Internal API**||||||
-|**Advertised Topics**||||||
-|**Subscribed Topics**||||||
-|****||||||
-
-
-
-### Communication Library
-
-- **Dependencies**: Protobuf and boost::ASIO
-- **External API**:
-- **Internal API**: None
-- **Advertised Topics**: None 
-- **Subscribed Topics**: None
-
-##### This library is used by almost all subsequent libraries
-
-- acts as the communication & transport mechanism for Gazebo
-- currently supports only publish/subscribe, but it's possible to use [RPC][2] w/ minimal effort
+|Library Name ->|Dependencies|External API|Internal API|Advertised Topics|Subscribed Topics|Notes|
+|-----|-----|-----|-----|-----|-----|||
+|**Communication**|Protobuf and boost::ASIO||None|None|None|Acts as the communication & transport mechanism for Gazebo; currently supports only publish/subscribe, but it's possible to use [RPC][2] w/ minimal effort. This library is used by almost all subsequent libraries|
+|**Physics**|Dynamics engine (with internal collision detection)|provides a simple & generic interface to physics simulation|Defines a fundamental interface to the physics library for 3rd party dynamic engines||||
+|**Rendering**|||||||
+|**Sensor Generation**|||||||
+|**GUI**|||||||
 
 ### Physics Library
 
