@@ -2,6 +2,8 @@
 
 |Title|Description|Notes|
 |----|----|----|
+|[Overview][6]|Description of Gazebo and its uses.|Includes system requirements and Ubuntu installation instructions|
+|[GUI][7]|Introduction to the Gazebo Graphical User Interface|Interface basics like what the buttons do and how to navigate in the scene|
 |[Quick Start][2]||*NOT DONE*|
 |[Gazebo Components][3]||*NOT DONE*|
 |[Gazebo Architecture][4]||*NOT DONE*|
@@ -12,3 +14,5 @@
 [3]: ../gazebo_notes/components.md
 [4]: ../gazebo_notes/architecture.md
 [5]: ../gazebo_notes/screenshot.md
+[6]: http://gazebosim.org/tutorials?cat=guided_b&tut=guided_b1
+[7]: http://gazebosim.org/tutorials?cat=guided_b&tut=guided_b2
