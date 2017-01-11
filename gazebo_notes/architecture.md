@@ -30,8 +30,8 @@
 
 
 |Library Name ->|Dependencies|External API|Internal API|Advertised Topics|Subscribed Topics|Notes|
-|-----|-----|-----|-----|-----|-----|||
-|**Communication**|Protobuf and boost::ASIO||None|None|None|Acts as the communication & transport mechanism for Gazebo; currently supports only publish/subscribe, but it's possible to use [RPC][2] w/ minimal effort. This library is used by almost all subsequent libraries|
+|-----|-----|-----|-----|-----|-----|-----|-----|
+|**Communication**|Protobuf and boost::ASIO||None|None|None|<ul><il>Acts as the communication & transport mechanism for Gazebo</il><il>currently supports only publish/subscribe, but it's possible to use [RPC][2] w/ minimal effort. This library is used by almost all subsequent libraries</il></ul>|
 |**Physics**|Dynamics engine (with internal collision detection)|provides a simple & generic interface to physics simulation|Defines a fundamental interface to the physics library for 3rd party dynamic engines||||
 |**Rendering**|||||||
 |**Sensor Generation**|||||||
