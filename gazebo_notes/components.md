@@ -60,13 +60,13 @@
   gzserver <world_filename>
   ```
   
-`<world_filename>` can be:
+##### `<world_filename>` can be:
 
 1. relative to the current directory
 2. an absolute path
 3. relative to a path component in `GAZEBO_RESOURCE_PATH`
 
-Worlds that are shipped w/ Gazebo are located in `<install_path>/share/gazebo-<version_number>/worlds`
+##### Worlds that are shipped w/ Gazebo are located in `<install_path>/share/gazebo-<version_number>/worlds`
 
 - example: to use `empty.world` (which is shipped w/ Gazebo), use following command:
 
@@ -79,7 +79,7 @@ Worlds that are shipped w/ Gazebo are located in `<install_path>/share/gazebo-<v
 - connects to a running `gzserver` & visualize the elements
 - is a tool that allows you to modify the running simulation
 
-The graphical client is run using:
+##### The graphical client is run using:
 
   ```
   gzclient
@@ -89,7 +89,7 @@ The graphical client is run using:
 
 - `gazebo` command combines server and client in one executable.
 
-Instead of running `gzserver worlds/empty.world` and then `gzclient`, you can:
+##### Instead of running `gzserver worlds/empty.world` and then `gzclient`, you can:
 
   ```
   gazebo worlds/empty.world
@@ -100,23 +100,23 @@ Instead of running `gzserver worlds/empty.world` and then `gzclient`, you can:
 - provides a simple & convenient mechanism to interface w/ Gazebo
 - can either be loaded on the command line, or specified in a world/model file (see the [SDF][2] format)
 
- Plugins specified on the command line are loaded first, then plugins specified in the world/model files are loaded.
+##### Plugins specified on the command line are loaded first, then plugins specified in the world/model files are loaded.
  
- Most plugins are loaded by the server, but can also be loaded by the graphical client to facilitate custom GUI generation.
+##### Most plugins are loaded by the server, but can also be loaded by the graphical client to facilitate custom GUI generation.
 
-Example of loading a plugin on the command line:
+##### Example of loading a plugin on the command line:
 
 ```
 gzserver -s <plugin_filename> <world_file>
 ```
 
-The same mechanism is used by the graphical client:
+##### The same mechanism is used by the graphical client:
 
 ```
 gzclient -g <plugin_filename>
 ```
 
-For more information refer to the [plugins overview][4] page.
+###### For more information refer to the [plugins overview][4] page.
 
 [1]: http://gazebosim.org/tutorials?tut=components&cat=get_started
 [2]: http://gazebosim.org/sdf.html
