@@ -53,32 +53,72 @@
 
 ## Gazebo Server
 
+- parses a world description file given on the command line & then simulates the world using a physics and sensor engine
+- can be started using the following command (Note: server doesn't include any graphics; it's meant to run headless)
 
+  ```
+  gzserver <world_filename>
+  ```
+  
+`<world_filename>` can be:
+
+1. relative to the current directory
+2. an absolute path
+3. relative to a path component in `GAZEBO_RESOURCE_PATH`
+
+Worlds that are shipped w/ Gazebo are located in `<install_path>/share/gazebo-<version_number>/worlds`
+
+- example: to use `empty.world` (which is shipped w/ Gazebo), use following command:
+
+  ```
+  gzserver worlds/empty.world
+  ```
+  
 ## Graphical Client
 
+- connects to a running `gzserver` & visualize the elements
+- is a tool that allows you to modify the running simulation
+
+The graphical client is run using:
+
+  ```
+  gzclient
+  ```
 
 ## Server + Graphical Client in One
 
+- `gazebo` command combines server and client in one executable.
+
+Instead of running `gzserver worlds/empty.world` and then `gzclient`, you can:
+
+  ```
+  gazebo worlds/empty.world
+  ```
+
 ## Plugins
 
+- provides a simple & convenient mechanism to interface w/ Gazebo
+- can either be loaded on the command line, or specified in a world/model file (see the [SDF][2] format)
 
+ Plugins specified on the command line are loaded first, then plugins specified in the world/model files are loaded.
+ 
+ Most plugins are loaded by the server, but can also be loaded by the graphical client to facilitate custom GUI generation.
 
+Example of loading a plugin on the command line:
 
+```
+gzserver -s <plugin_filename> <world_file>
+```
 
+The same mechanism is used by the graphical client:
 
+```
+gzclient -g <plugin_filename>
+```
 
-
-
-
-
-
-
-
-
-
-
-
+For more information refer to the [plugins overview][4] page.
 
 [1]: http://gazebosim.org/tutorials?tut=components&cat=get_started
 [2]: http://gazebosim.org/sdf.html
 [3]: http://bitbucket.org/osrf/gazebo_models
+[4]: plugins.md 
