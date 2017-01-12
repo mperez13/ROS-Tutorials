@@ -122,6 +122,8 @@ gazebo my_world.sdf
 
 > You must be in current working directory or you must specify the complete path
 
+**Return to [Get Started][11]**
+
 [1]: http://gazebosim.org/tutorials?cat=install
 [2]: images/empty_world_simple_shapes_highlighted.png 
 [3]: https://bitbucket.org/osrf/gazebo_models
@@ -132,3 +134,4 @@ gazebo my_world.sdf
 [8]: images/translation_model.png 
 [9]: images/rotation_model.png
 [10]: images/scale_model.png
+[11]: ../gazebo_categories/build_world.md 
