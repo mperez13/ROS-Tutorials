@@ -4,7 +4,7 @@
 |----|----|----|
 |[Quick Start][1]|Basic Gazebo information||
 |[Build a Robot][2]|The following tutorials describe how to build and modify a robot|Included are examples of building a wheeled robot, attaching sensors, attaching actuators, and animating a model|
-|[Model Editor][3]|||
+|[Model Editor][3]|The following tutorials describe how to build and modify robots using the model editor.|Add shapes, meshes in Gazebo. SVG tutorial to create 3D meshes.|
 |[Build a World][4]|||
 |[Tools and Utilities][5]|||
 |[Write a Plugin][6]|How to create and load plugins for various purposes|Plugins allow you to control models, sensors, world properties, and even the way Gazebo runs.|
