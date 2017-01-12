@@ -77,7 +77,7 @@ It is possible to write plugins for the rendering engine
 
 Plugins provide users w/ access to the respective libraries w/out using the communication system.
 
-## Return to [Get Started][7]
+**Return to [Get Started][7]**
 
 [1]: http://gazebosim.org/tutorials?tut=architecture&cat=get_started
 [2]: http://ode.org/
