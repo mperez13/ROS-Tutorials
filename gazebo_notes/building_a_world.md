@@ -122,7 +122,7 @@ gazebo my_world.sdf
 
 > You must be in current working directory or you must specify the complete path
 
-**Return to [Get Started][11]**
+**Return to [Categories: Build a World][11]**
 
 [1]: http://gazebosim.org/tutorials?cat=install
 [2]: images/empty_world_simple_shapes_highlighted.png 
