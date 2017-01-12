@@ -11,7 +11,11 @@
 |[Population of Models][38]||*NOT DONE*|
 |[Building Editor][39]||*NOT DONE*|
 
+**Return to [Categories][2]**
+
+
 [1]: http://gazebosim.org/tutorials?cat=build_world
+[2]: ../gazebo_notes.md
 [13]: ../gazebo_notes/building-a-world.md
 [3]: ../gazebo_notes/add_model_from_model_database.md
 [14]: ../gazebo_notes/modifying-world.md
