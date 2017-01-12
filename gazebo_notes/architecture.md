@@ -40,7 +40,7 @@
 **Communication Library**:
 
 - Acts as the communication and transport mechanism for Gazebo
-- currently supports only publish/subscribe, but it's possible to use [RPC][2] w/ minimal effort. This library is used by almost all subsequent libraries
+- currently supports only publish/subscribe, but it's possible to use [RPC][8] w/ minimal effort. This library is used by almost all subsequent libraries
 
 **Physics Library**:
 
@@ -77,7 +77,7 @@ It is possible to write plugins for the rendering engine
 
 Plugins provide users w/ access to the respective libraries w/out using the communication system.
 
-Return to [Get Started][7]
+## Return to [Get Started][7]
 
 [1]: http://gazebosim.org/tutorials?tut=architecture&cat=get_started
 [2]: http://ode.org/
@@ -85,8 +85,5 @@ Return to [Get Started][7]
 [4]: https://simtk.org/home/simbody
 [5]: http://dartsim.github.io/
 [6]: http://sdformat.org/
-[7]: ../../gazebo_categories/get_started.md 
-
-
-
-[2]: https://en.wikipedia.org/wiki/Remote_procedure_call
+[7]: ../gazebo_categories/get_started.md 
+[8]: https://en.wikipedia.org/wiki/Remote_procedure_call
