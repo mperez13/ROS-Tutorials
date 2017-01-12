@@ -118,7 +118,11 @@ gzclient -g <plugin_filename>
 
 ###### For more information refer to the [plugins overview][4] page.
 
+
+**Return to [Get Started][5]**
+
 [1]: http://gazebosim.org/tutorials?tut=components&cat=get_started
 [2]: http://gazebosim.org/sdf.html
 [3]: http://bitbucket.org/osrf/gazebo_models
 [4]: plugins.md 
+[5]: ../gazebo_categories/get_started.md 
