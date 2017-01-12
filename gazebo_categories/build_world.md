@@ -6,8 +6,8 @@
 |[Add model from model database][4]|Add model to Gazebo from Gazebo's online database||
 |[Modifying a World][5]|How to modify global properties including scene and physics properties||
 |[Digital Elevation Models][6]|3D representation of a terrain's surface that does not include any objects like buildings or vegetation|[Have not finished going through tutorial] This might be useful once we have a simulation of a flying drone completed|
-|[Population of Models][7]||*NOT DONE*|
-|[Building Editor][8]||*NOT DONE*|
+|[Population of Models][7]|Demonstrates how you can create a population of models by using the SDF \<population> tag. A population consists of a collection of identical models.|*NOT DONE*|
+|[Building Editor][8]|Describes the process of creating a building using the Building Editor.|*NOT DONE*|
 
 **Return to [Categories][2]**
 
