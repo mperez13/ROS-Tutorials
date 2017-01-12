@@ -12,7 +12,7 @@ $ gazebo
 
 2. On `Edit` menu, go to `Model Editor` or `Ctrl+M` to open the editor
     
-    [editor][2]
+    ![editor][2]
     
 **Return to [Category: Model Editor][3]**
 
