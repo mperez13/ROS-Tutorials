@@ -37,12 +37,12 @@
 |**Advertised Topics**|None|||||
 |**Subscribed Topics**|None|||||
 
-**Communication Library**:
+#### Communication Library
 
 - Acts as the communication and transport mechanism for Gazebo
 - currently supports only publish/subscribe, but it's possible to use [RPC][8] w/ minimal effort. This library is used by almost all subsequent libraries
 
-**Physics Library**:
+#### Physics Library
 
 - provides simple and generic interface to fundamental simulation components, including rigid bodies, collision shapes and joints for representing articulation constraints
 - interface has been integrated w/ four open-source physics engines:
@@ -53,25 +53,25 @@
   
   Each of these physics engine can load a model described in the [SDF][6] using XML
 
-**Rendering Library**:
+#### Rendering Library
 
 - uses OGRE to provide a simple interface for rendering 3D scenes to both the GUI and sensor libraries
 - includes lighting, textures, and sky simulation
 
 It is possible to write plugins for the rendering engine
 
-**Sensor Generation**:
+#### Sensor Generation
 
 - implements all the various types of sensors, listens to world state updates from physics simulator & produces output specified by the instantiated sensors
 
-**GUI**:
+#### GUI
 
 - uses Qt to create graphical widgets for users to interact w/ the simulation
 - user may control the flow of time by pausing or changing time step size via GUI widgets
 - user may also modify the scene by adding, modifying, or removing models
 - there are some tools for visualizing and logging simulated sensor data
 
-#### Plugins
+### Plugins
 
 - physics, sensor, and rendering libraries support plugins
 
