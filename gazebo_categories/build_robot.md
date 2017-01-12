@@ -20,7 +20,10 @@ The following tutorials describe how to build and modify a robot. Included are e
 |[Inertia Parameters of Triangle Meshes][35]||*NOT DONE*|
 |[Visibility Layers][36]||*NOT DONE*|
 
+**Return to [Categories][2]**
+
 [1]: http://gazebosim.org/tutorials?cat=build_robot
+[2]: ../gazebo_notes.md 
 [5]: gazebo_notes/model_structure_and_requirements_notes.md
 [27]: gazebo_notes/contribute_model.md
 [3]: gazebo_notes/make_model.md
