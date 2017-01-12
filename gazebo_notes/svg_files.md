@@ -1,6 +1,6 @@
 # Extrude SVG Files
 
-**Desription to [Tutorial[1]**: process of extruding SVG files, which are 2D images, to create 3D meshes for your models in Gazebo.
+**Desription to [Tutorial][1]**: process of extruding SVG files, which are 2D images, to create 3D meshes for your models in Gazebo.
 
 **Return to [Category: Model Editor][2]**
 
