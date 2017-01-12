@@ -61,6 +61,9 @@ gzclient
 
 ###### Should see the Gazebo user interface. Restart `gzclient` applicaition as often as you want & even run multiple interfaces.
 
+**Return to [Get Started][4]**
+
 [1]: http://gazebosim.org/tutorials?tut=quick_start&cat=get_started
 [2]: http://gazebosim.org/tutorials?cat=install
 [3]: http://qt-project.org/
+[4]: ../gazebo_categories/get_started.md 
