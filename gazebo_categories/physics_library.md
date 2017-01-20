@@ -14,6 +14,8 @@ A core component of Gazebo are the physics engines. These tutorials describe how
 |[Manage Physics Profiles][9]||*NOT DONE*|
 |[Parallel Physics][10]||*NOT DONE*|
 
+**Return to [Categories][12]**
+
 [1]: http://gazebosim.org/tutorials?cat=physics
 [2]: ../gazebo_notes/.md
 [3]: ../gazebo_notes/.md
@@ -25,3 +27,4 @@ A core component of Gazebo are the physics engines. These tutorials describe how
 [9]: ../gazebo_notes/.md
 [10]: ../gazebo_notes/.md
 [11]: ../gazebo_notes/.md
+[12]: ../gazebo_notes.md

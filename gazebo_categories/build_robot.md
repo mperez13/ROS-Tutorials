@@ -10,7 +10,7 @@ The following tutorials describe how to build and modify a robot. Included are e
 |[Make a Mobile Robot][7]|Tutorial demonstrates Gazebo's basic model management & basic model representation inside the model databse by taking the user through the process of creating a two wheeled mobile robot that uses a differential drive mechanism for movement|*NOT DONE*|
 |[Import Meshes][28]||*NOT DONE*|
 |[Attach a Mesh as a Visual][3]| Meshes can add realism to a model both visually and for sensors. The most common use case for a mesh is to create a realistic looking visual||
-|[Add a sensor to a Robot][2]|Create composite models directly from other models in the Gazebo Model Database by using \<include> tags and \<joint> to connect different components of a composite model.||
+|[Add a sensor to a Robot][44]|Create composite models directly from other models in the Gazebo Model Database by using \<include> tags and \<joint> to connect different components of a composite model.||
 |[Make a Simple Gripper][29]||*NOT DONE*|
 |[Attach Gripper to Robot][30]||*NOT DONE*|
 |[Nested Model][31]||*NOT DONE*|
@@ -20,14 +20,17 @@ The following tutorials describe how to build and modify a robot. Included are e
 |[Inertia Parameters of Triangle Meshes][35]||*NOT DONE*|
 |[Visibility Layers][36]||*NOT DONE*|
 
+**Return to [Categories][2]**
+
 [1]: http://gazebosim.org/tutorials?cat=build_robot
+[2]: ../gazebo_notes.md 
 [5]: gazebo_notes/model_structure_and_requirements_notes.md
 [27]: gazebo_notes/contribute_model.md
 [3]: gazebo_notes/make_model.md
 [7]: gazebo_notes/make_a_mobile_robot.md
 [28]: gazebo_notes/import_meshes.md
 [3]: gazebo_notes/attach_meshes_notes.md
-[2]: gazebo_notes/add_sensor_to_robot.md
+[44]: gazebo_notes/add_sensor_to_robot.md
 [29]: gazebo_notes/simple_gripper.md
 [30]: gazebo_notes/attach_gripper.md
 [31]: gazebo_notes/nested_model.md

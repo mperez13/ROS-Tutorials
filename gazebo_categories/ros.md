@@ -15,6 +15,8 @@
 |[ROS Plugin][10]||*NOT DONE*|
 |[Advanced ROS Integration][11]||*NOT DONE*|
 
+**Return to [Categories][12]**
+
 [1]: http://gazebosim.org/tutorials?cat=connect_ros
 [2]: ../gazebo_notes/ros_overview.md
 [3]: ../gazebo_notes/version_use.md
@@ -26,3 +28,4 @@
 [9]: ../gazebo_notes/ros_communication.md
 [10]: ../gazebo_notes/ros_plugin.md
 [11]: ../gazebo_notes/advance_ros_integration.md
+[12]: ../gazebo_notes.md

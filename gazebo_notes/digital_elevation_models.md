@@ -52,9 +52,11 @@ DEM file in Gazebo is loaded similar to a heightmap image.  Gazebo automatically
     
     ```
 
+**Return to [Categories: Build a World][6]**
 
 [1]: http://en.wikipedia.org/wiki/Digital_elevation_model
 [2]: http://www.gdal.org/
 [3]: https://bitbucket.org/osrf/gazebo_tutorials/raw/default/dem/files/mtsthelens_before.zip
 [4]: https://bitbucket.org/osrf/gazebo_tutorials/raw/default/dem/files/mtsthelens_after.zip
 [5]: http://nationalmap.gov/elevation.html
+[6]: ../gazebo_categories/build_world.md 

@@ -8,7 +8,10 @@ Gazebo's rendering library is used to generate sensor data and provide user feed
 |[Oculus Rift][3]||*NOT DONE*|
 |[Stereo Glasses][4]||*NOT DONE*|
 
+**Return to [Categories][5]**
+
 [1]: http://gazebosim.org/tutorials?cat=rendering
 [2]: ../gazebo_notes/.md
 [3]: ../gazebo_notes/.md
 [4]: ../gazebo_notes/.md
+[5]: ../gazebo_notes.md

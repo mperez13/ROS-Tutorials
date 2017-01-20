@@ -12,7 +12,7 @@ $ gazebo
 
 In `World` tab, select `scene` item. A list of scene properties will be displayed in the list below. Click triangle to expand the properties.
 
-    ![scene][1]
+![scene][1]
 
 These properties allow you to change the ambient light. Note: backgrounf color will not change if the Sky is enabled.
 
@@ -39,7 +39,9 @@ These properties allow you to change the ambient light. Note: backgrounf color w
     - contacts will not bounce if:
         - it penetrates deeper than a depth specified by `surface layer`
         - it has a normal velocity less than `max velocity`
-- [SDF Physics Documentation][7] gives a description of these parameters.    
+- [SDF Physics Documentation][7] gives a description of these parameters.  
+
+**Return to [Categories: Build a World][8]**
 
 [1]: images/scene_prop.png
 [2]: images/physics_prop.png
@@ -48,3 +50,4 @@ These properties allow you to change the ambient light. Note: backgrounf color w
 [5]: http://ode-wiki.org/wiki/index.php?title=Manual:_Concepts#Joint_error_and_the_Error_Reduction_Parameter_.28ERP.29
 [6]: http://ode-wiki.org/wiki/index.php?title=Manual:_Concepts#How_To_Use_ERP_and_CFM
 [7]: http://osrf-distributions.s3.amazonaws.com/sdformat/api/dev.html#physics12
+[8]: ../gazebo_categories/build_world.md 
