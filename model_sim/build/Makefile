@@ -111,45 +111,6 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named world_edit
-
-# Build rule for target.
-world_edit: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 world_edit
-.PHONY : world_edit
-
-# fast build rule for target.
-world_edit/fast:
-	$(MAKE) -f CMakeFiles/world_edit.dir/build.make CMakeFiles/world_edit.dir/build
-.PHONY : world_edit/fast
-
-#=============================================================================
-# Target rules for targets named hello_world
-
-# Build rule for target.
-hello_world: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 hello_world
-.PHONY : hello_world
-
-# fast build rule for target.
-hello_world/fast:
-	$(MAKE) -f CMakeFiles/hello_world.dir/build.make CMakeFiles/hello_world.dir/build
-.PHONY : hello_world/fast
-
-#=============================================================================
-# Target rules for targets named model_push
-
-# Build rule for target.
-model_push: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 model_push
-.PHONY : model_push
-
-# fast build rule for target.
-model_push/fast:
-	$(MAKE) -f CMakeFiles/model_push.dir/build.make CMakeFiles/model_push.dir/build
-.PHONY : model_push/fast
-
-#=============================================================================
 # Target rules for targets named factory
 
 # Build rule for target.
@@ -174,6 +135,19 @@ system_gui: cmake_check_build_system
 system_gui/fast:
 	$(MAKE) -f CMakeFiles/system_gui.dir/build.make CMakeFiles/system_gui.dir/build
 .PHONY : system_gui/fast
+
+#=============================================================================
+# Target rules for targets named model_push
+
+# Build rule for target.
+model_push: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 model_push
+.PHONY : model_push
+
+# fast build rule for target.
+model_push/fast:
+	$(MAKE) -f CMakeFiles/model_push.dir/build.make CMakeFiles/model_push.dir/build
+.PHONY : model_push/fast
 
 factory.o: factory.cc.o
 
@@ -201,33 +175,6 @@ factory.s: factory.cc.s
 factory.cc.s:
 	$(MAKE) -f CMakeFiles/factory.dir/build.make CMakeFiles/factory.dir/factory.cc.s
 .PHONY : factory.cc.s
-
-hello_world.o: hello_world.cc.o
-
-.PHONY : hello_world.o
-
-# target to build an object file
-hello_world.cc.o:
-	$(MAKE) -f CMakeFiles/hello_world.dir/build.make CMakeFiles/hello_world.dir/hello_world.cc.o
-.PHONY : hello_world.cc.o
-
-hello_world.i: hello_world.cc.i
-
-.PHONY : hello_world.i
-
-# target to preprocess a source file
-hello_world.cc.i:
-	$(MAKE) -f CMakeFiles/hello_world.dir/build.make CMakeFiles/hello_world.dir/hello_world.cc.i
-.PHONY : hello_world.cc.i
-
-hello_world.s: hello_world.cc.s
-
-.PHONY : hello_world.s
-
-# target to generate assembly for a file
-hello_world.cc.s:
-	$(MAKE) -f CMakeFiles/hello_world.dir/build.make CMakeFiles/hello_world.dir/hello_world.cc.s
-.PHONY : hello_world.cc.s
 
 model_push.o: model_push.cc.o
 
@@ -283,61 +230,26 @@ system_gui.cc.s:
 	$(MAKE) -f CMakeFiles/system_gui.dir/build.make CMakeFiles/system_gui.dir/system_gui.cc.s
 .PHONY : system_gui.cc.s
 
-world_edit.o: world_edit.cc.o
-
-.PHONY : world_edit.o
-
-# target to build an object file
-world_edit.cc.o:
-	$(MAKE) -f CMakeFiles/world_edit.dir/build.make CMakeFiles/world_edit.dir/world_edit.cc.o
-.PHONY : world_edit.cc.o
-
-world_edit.i: world_edit.cc.i
-
-.PHONY : world_edit.i
-
-# target to preprocess a source file
-world_edit.cc.i:
-	$(MAKE) -f CMakeFiles/world_edit.dir/build.make CMakeFiles/world_edit.dir/world_edit.cc.i
-.PHONY : world_edit.cc.i
-
-world_edit.s: world_edit.cc.s
-
-.PHONY : world_edit.s
-
-# target to generate assembly for a file
-world_edit.cc.s:
-	$(MAKE) -f CMakeFiles/world_edit.dir/build.make CMakeFiles/world_edit.dir/world_edit.cc.s
-.PHONY : world_edit.cc.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... world_edit"
 	@echo "... edit_cache"
-	@echo "... hello_world"
-	@echo "... rebuild_cache"
-	@echo "... model_push"
 	@echo "... factory"
 	@echo "... system_gui"
+	@echo "... model_push"
+	@echo "... rebuild_cache"
 	@echo "... factory.o"
 	@echo "... factory.i"
 	@echo "... factory.s"
-	@echo "... hello_world.o"
-	@echo "... hello_world.i"
-	@echo "... hello_world.s"
 	@echo "... model_push.o"
 	@echo "... model_push.i"
 	@echo "... model_push.s"
 	@echo "... system_gui.o"
 	@echo "... system_gui.i"
 	@echo "... system_gui.s"
-	@echo "... world_edit.o"
-	@echo "... world_edit.i"
-	@echo "... world_edit.s"
 .PHONY : help
 
 

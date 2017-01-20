@@ -1,7 +1,5 @@
-/home/marifer/ROS-Tutorials/model_sim/build/CMakeFiles/world_edit.dir
 /home/marifer/ROS-Tutorials/model_sim/build/CMakeFiles/edit_cache.dir
-/home/marifer/ROS-Tutorials/model_sim/build/CMakeFiles/hello_world.dir
-/home/marifer/ROS-Tutorials/model_sim/build/CMakeFiles/rebuild_cache.dir
-/home/marifer/ROS-Tutorials/model_sim/build/CMakeFiles/model_push.dir
 /home/marifer/ROS-Tutorials/model_sim/build/CMakeFiles/factory.dir
 /home/marifer/ROS-Tutorials/model_sim/build/CMakeFiles/system_gui.dir
+/home/marifer/ROS-Tutorials/model_sim/build/CMakeFiles/model_push.dir
+/home/marifer/ROS-Tutorials/model_sim/build/CMakeFiles/rebuild_cache.dir

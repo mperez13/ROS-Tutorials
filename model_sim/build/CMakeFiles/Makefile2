@@ -60,117 +60,6 @@ CMAKE_SOURCE_DIR = /home/marifer/ROS-Tutorials/model_sim
 CMAKE_BINARY_DIR = /home/marifer/ROS-Tutorials/model_sim/build
 
 #=============================================================================
-# Target rules for target CMakeFiles/world_edit.dir
-
-# All Build rule for target.
-CMakeFiles/world_edit.dir/all:
-	$(MAKE) -f CMakeFiles/world_edit.dir/build.make CMakeFiles/world_edit.dir/depend
-	$(MAKE) -f CMakeFiles/world_edit.dir/build.make CMakeFiles/world_edit.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/marifer/ROS-Tutorials/model_sim/build/CMakeFiles --progress-num=9,10 "Built target world_edit"
-.PHONY : CMakeFiles/world_edit.dir/all
-
-# Include target in all.
-all: CMakeFiles/world_edit.dir/all
-
-.PHONY : all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/world_edit.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/marifer/ROS-Tutorials/model_sim/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/world_edit.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/marifer/ROS-Tutorials/model_sim/build/CMakeFiles 0
-.PHONY : CMakeFiles/world_edit.dir/rule
-
-# Convenience name for target.
-world_edit: CMakeFiles/world_edit.dir/rule
-
-.PHONY : world_edit
-
-# clean rule for target.
-CMakeFiles/world_edit.dir/clean:
-	$(MAKE) -f CMakeFiles/world_edit.dir/build.make CMakeFiles/world_edit.dir/clean
-.PHONY : CMakeFiles/world_edit.dir/clean
-
-# clean rule for target.
-clean: CMakeFiles/world_edit.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/hello_world.dir
-
-# All Build rule for target.
-CMakeFiles/hello_world.dir/all:
-	$(MAKE) -f CMakeFiles/hello_world.dir/build.make CMakeFiles/hello_world.dir/depend
-	$(MAKE) -f CMakeFiles/hello_world.dir/build.make CMakeFiles/hello_world.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/marifer/ROS-Tutorials/model_sim/build/CMakeFiles --progress-num=3,4 "Built target hello_world"
-.PHONY : CMakeFiles/hello_world.dir/all
-
-# Include target in all.
-all: CMakeFiles/hello_world.dir/all
-
-.PHONY : all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/hello_world.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/marifer/ROS-Tutorials/model_sim/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/hello_world.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/marifer/ROS-Tutorials/model_sim/build/CMakeFiles 0
-.PHONY : CMakeFiles/hello_world.dir/rule
-
-# Convenience name for target.
-hello_world: CMakeFiles/hello_world.dir/rule
-
-.PHONY : hello_world
-
-# clean rule for target.
-CMakeFiles/hello_world.dir/clean:
-	$(MAKE) -f CMakeFiles/hello_world.dir/build.make CMakeFiles/hello_world.dir/clean
-.PHONY : CMakeFiles/hello_world.dir/clean
-
-# clean rule for target.
-clean: CMakeFiles/hello_world.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/model_push.dir
-
-# All Build rule for target.
-CMakeFiles/model_push.dir/all:
-	$(MAKE) -f CMakeFiles/model_push.dir/build.make CMakeFiles/model_push.dir/depend
-	$(MAKE) -f CMakeFiles/model_push.dir/build.make CMakeFiles/model_push.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/marifer/ROS-Tutorials/model_sim/build/CMakeFiles --progress-num=5,6 "Built target model_push"
-.PHONY : CMakeFiles/model_push.dir/all
-
-# Include target in all.
-all: CMakeFiles/model_push.dir/all
-
-.PHONY : all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/model_push.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/marifer/ROS-Tutorials/model_sim/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/model_push.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/marifer/ROS-Tutorials/model_sim/build/CMakeFiles 0
-.PHONY : CMakeFiles/model_push.dir/rule
-
-# Convenience name for target.
-model_push: CMakeFiles/model_push.dir/rule
-
-.PHONY : model_push
-
-# clean rule for target.
-CMakeFiles/model_push.dir/clean:
-	$(MAKE) -f CMakeFiles/model_push.dir/build.make CMakeFiles/model_push.dir/clean
-.PHONY : CMakeFiles/model_push.dir/clean
-
-# clean rule for target.
-clean: CMakeFiles/model_push.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
 # Target rules for target CMakeFiles/factory.dir
 
 # All Build rule for target.
@@ -214,7 +103,7 @@ clean: CMakeFiles/factory.dir/clean
 CMakeFiles/system_gui.dir/all:
 	$(MAKE) -f CMakeFiles/system_gui.dir/build.make CMakeFiles/system_gui.dir/depend
 	$(MAKE) -f CMakeFiles/system_gui.dir/build.make CMakeFiles/system_gui.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/marifer/ROS-Tutorials/model_sim/build/CMakeFiles --progress-num=7,8 "Built target system_gui"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/marifer/ROS-Tutorials/model_sim/build/CMakeFiles --progress-num=5,6 "Built target system_gui"
 .PHONY : CMakeFiles/system_gui.dir/all
 
 # Include target in all.
@@ -241,6 +130,43 @@ CMakeFiles/system_gui.dir/clean:
 
 # clean rule for target.
 clean: CMakeFiles/system_gui.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/model_push.dir
+
+# All Build rule for target.
+CMakeFiles/model_push.dir/all:
+	$(MAKE) -f CMakeFiles/model_push.dir/build.make CMakeFiles/model_push.dir/depend
+	$(MAKE) -f CMakeFiles/model_push.dir/build.make CMakeFiles/model_push.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/marifer/ROS-Tutorials/model_sim/build/CMakeFiles --progress-num=3,4 "Built target model_push"
+.PHONY : CMakeFiles/model_push.dir/all
+
+# Include target in all.
+all: CMakeFiles/model_push.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/model_push.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/marifer/ROS-Tutorials/model_sim/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/model_push.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/marifer/ROS-Tutorials/model_sim/build/CMakeFiles 0
+.PHONY : CMakeFiles/model_push.dir/rule
+
+# Convenience name for target.
+model_push: CMakeFiles/model_push.dir/rule
+
+.PHONY : model_push
+
+# clean rule for target.
+CMakeFiles/model_push.dir/clean:
+	$(MAKE) -f CMakeFiles/model_push.dir/build.make CMakeFiles/model_push.dir/clean
+.PHONY : CMakeFiles/model_push.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/model_push.dir/clean
 
 .PHONY : clean
 
