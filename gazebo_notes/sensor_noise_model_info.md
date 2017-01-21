@@ -119,7 +119,7 @@ It can be difficult to apprecite the niose on a high-rate sensor like an IMU. Sh
 To adjust the noise, play w/ mean & standard deviation values in `model.sdf`.
 - Units:
   - rate noise & rate bias are rad/s
-  - accel noise & accel bias are m/s^2 
+  - accel noise & accel bias are m/s<sup>2</sup> 
 
 [1]: http://gazebosim.org/tutorials?tut=sensor_noise&cat=sensors
 [2]: ../.gazebo/models/noisy_laser/model.config
