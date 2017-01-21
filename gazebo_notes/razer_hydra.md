@@ -174,8 +174,8 @@ During execution of `cmake` command, should see this msg confirming that SDK is 
     gazebo worlds/hydra_demo.world
     ```
 
-**Return [Gazebo Categories: User Input][2]
+**Return [Gazebo Categories: User Input][2]**
 
 [1]: http://gazebosim.org/tutorials?tut=hydra&cat=user_input
-[2]: ../gazebo_notes/user_input.md
+[2]: ../gazebo_categories/user_input.md
 [3]: http://en.wikipedia.org/wiki/Razer_Hydra
