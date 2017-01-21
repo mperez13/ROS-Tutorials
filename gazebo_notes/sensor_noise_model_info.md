@@ -182,7 +182,7 @@ To adjust the noise, play w/ mean & standard deviation values in `model.sdf`.
 </linear_acceleration>
 ```
 
-Return to [Categories][13]
+**Return to [Categories][13]**
 
 [1]: http://gazebosim.org/tutorials?tut=sensor_noise&cat=sensors
 [2]: ../.gazebo/models/noisy_laser/model.config
@@ -196,4 +196,4 @@ Return to [Categories][13]
 [10]: ../.gazebo/models/noisy_imu/model.sdf
 [11]: https://en.wikipedia.org/wiki/Probability_density_function
 [12]: https://bitbucket.org/osrf/gazebo_tutorials/raw/default/sensor_noise/files/Noisy_camera_visualizer.png
-[13]: ../gazebo_categories.md
+[13]: ../gazebo_notes.md
