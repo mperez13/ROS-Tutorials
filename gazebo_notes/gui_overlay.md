@@ -102,15 +102,15 @@ Creates a button that spawns a sphere
   ```
   
 7. Make sure Gazebo can find the plugin by appending the `build` directory to the `GAZEBO_PLUGIN_PATH` environment variable:
-  
-  ```
-  cd ~/gazebo_gui_spawn/build
-  export GAZEBO_PLUGIN_PATH=`pwd`:$GAZEBO_PLUGIN_PATH
-  ```
-  
-  - Note: 
-    - this command only works only for the current shell
-    - to make sure the plugin will work when opening new terminals, install plugin into a common search path, such as `/usr/local/lib`, ot into one of the paths specified by the `GAZEBO_PLUGIN_PATH` library
+  - I created [bootgui.sh][] and [gz_setup.sh][] to do this
+    - [remember to allow access w/ `chmod +x file_name`] 
+    - bootgui.sh: source the gz_setup.sh
+      - can also add command to run world file
+    - gz_setup.sh: 
+      - add all environment variables necessary
+  - To run: use commands `./bootgui.sh`
+
+    
     
 8. Need to tell Gazebo that it should load the overlay plugin
   - There are 2 methods to accomplish this:
@@ -268,3 +268,5 @@ Creates a button that spawns a sphere
 [7]: ../gazebo_gui_time/GUIExampleTimeWidget.cc
 [8]: https://bitbucket.org/osrf/gazebo_tutorials/raw/default/gui_overlay/files/time.png
 [9]: ../gazebo_categories/user_input.md
+[10]: 
+[11]:
