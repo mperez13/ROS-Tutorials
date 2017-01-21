@@ -270,5 +270,5 @@ Creates a button that spawns a sphere
 [7]: ../gazebo_gui_time/GUIExampleTimeWidget.cc
 [8]: https://bitbucket.org/osrf/gazebo_tutorials/raw/default/gui_overlay/files/time.png
 [9]: ../gazebo_categories/user_input.md
-[10]: ../gazebo_gui_spawn/run/bootgui.sh
-[11]: ../gazebo_gui_spawn/run/gzsetup.sh
+[10]: ../gazebo_gui_spawn/bootgui.sh
+[11]: ../gazebo_gui_spawn/gz_setup.sh
