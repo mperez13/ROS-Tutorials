@@ -1,8 +1,8 @@
-# Sensor Noise Model
-
-Link to tutorial - http://gazebosim.org/tutorials?tut=sensor_noise&cat=sensors
+# [Sensor Noise Model][1]
 
 ## Intro
+
+Gazebo's sensors observes the world perfectly, so sensor noise is added to get a more realistic environment.  
 
 - Gazebo can add noise to the following types of sensors:
   - Ray (e.g. lasers)
@@ -11,14 +11,14 @@ Link to tutorial - http://gazebosim.org/tutorials?tut=sensor_noise&cat=sensors
   
 ## Ray (laser) noise
 
-- For ray sensors, we add Gaussian noise to the range of each beam.
-- can set mean and standard deviation of the Gaussian distribution from which noise values will be sampled
+- For ray sensors, add Gaussian noise to the range of each beam.
+  - can set mean and standard deviation of the Gaussian distribution from which noise values will be sampled
 - noise value is sampled independently for each beam
 - after adding noise, resulting range is clamped to lie between the sensor's min and max ranges (inclusive)
 
-#####To test the ray noise model:
+#### To test the ray noise model:
 
-1. Create a [model config file](https://github.com/mperez13/ROS-Tutorials/blob/master/.gazebo/models/noisy_laser/model.config):
+1. Create a [model config file][2]:
     
     ```
       gedit ~/.gazebo/models/noisy_laser/model.config
@@ -120,8 +120,9 @@ To adjust the noise, play w/ mean & standard deviation values in `model.sdf`.
   - rate noise & rate bias are rad/s
   - accel noise & accel bias are m/s^2 
 
-
-
+https://github.com/mperez13/ROS-Tutorials/edit/master/gazebo_notes/sensor_noise_model_info.md
+[1]: http://gazebosim.org/tutorials?tut=sensor_noise&cat=sensors
+[2]: ../.gazebo/models/noisy_laser/model.config
 
 
 
