@@ -12,7 +12,7 @@ A simulated sensor analyzes the environment and produces a data stream that clos
 
 [1]: http://gazebosim.org/tutorials?cat=sensors
 [2]: ../gazebo_notes.md
-[3]: gazebo_notes/sensor_noise_model_info.md
-[16]: gazebo_notes/contact_sensor.md
-[17]: gazebo_contact_tutorial
-[48]: gazebo_notes/camera_distortion.md 
+[3]: ../gazebo_notes/sensor_noise_model_info.md
+[16]: ../gazebo_notes/contact_sensor.md
+[17]: ../gazebo_contact_tutorial
+[48]: ../gazebo_notes/camera_distortion.md 
