@@ -40,6 +40,12 @@ Few limitations w/ current implementation that needs to be taken into account:
 
   ![image camera view][7]
 
+The camera image should seem distorted; showing curve edges of the box.
+
+ To adjust distortion, play w/ `k1`, `k2`, `k3`, `p1`, `p2` distortion coeffiecients in the [model.sdf][4]
+  
+**Return to [Gazebo Categories][8]**
+
 [1]: http://gazebosim.org/tutorials?tut=camera_distortion&cat=sensors
 [2]: http://en.wikipedia.org/wiki/Distortion_(optics)#Software_correction
 [3]: ../.gazebo/models/distorted_camera/model.config
@@ -47,3 +53,4 @@ Few limitations w/ current implementation that needs to be taken into account:
 [5]: https://bitbucket.org/osrf/gazebo_tutorials/raw/default/camera_distortion/files/distorted_camera_inserted.png
 [6]: https://bitbucket.org/osrf/gazebo_tutorials/raw/default/camera_distortion/files/distorted_camera_topic_visualizer.png
 [7]: https://bitbucket.org/osrf/gazebo_tutorials/raw/default/camera_distortion/files/distorted_camera_image_visualizer.png
+[8]: ../gazebo_notes.md
