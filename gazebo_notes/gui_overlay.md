@@ -102,11 +102,13 @@ Creates a button that spawns a sphere
   ```
   
 7. Make sure Gazebo can find the plugin by appending the `build` directory to the `GAZEBO_PLUGIN_PATH` environment variable:
-  - I created [bootgui.sh][] and [gz_setup.sh][] to do this
+  - I created [bootgui.sh][10] and [gz_setup.sh][11] to do this
     - [remember to allow access w/ `chmod +x file_name`] 
-    - bootgui.sh: source the gz_setup.sh
-      - can also add command to run world file
-    - gz_setup.sh: 
+  
+  - bootgui.sh: source the gz_setup.sh
+    - can also add command to run world file
+    
+  - gz_setup.sh: 
       - add all environment variables necessary
   - To run: use commands `./bootgui.sh`
 
@@ -268,5 +270,5 @@ Creates a button that spawns a sphere
 [7]: ../gazebo_gui_time/GUIExampleTimeWidget.cc
 [8]: https://bitbucket.org/osrf/gazebo_tutorials/raw/default/gui_overlay/files/time.png
 [9]: ../gazebo_categories/user_input.md
-[10]: 
-[11]:
+[10]: ../gazebo_gui_spawn/bootgui.sh
+[11]: ../gazebo_gui_spawn/gz_setup.sh
