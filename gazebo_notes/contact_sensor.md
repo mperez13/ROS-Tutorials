@@ -1,8 +1,6 @@
-# Contact Sensor
+# [Contact Sensor][9]
 
-- Link To Tutorial - http://gazebosim.org/tutorials?tut=contact_sensor#Introduction
-
-This tutorial demonstrates the process of creating a contact sensor, and getting the contact data via a plugin or a message. A contact sensor detects collisions between two object and reports the location of the contact associated forces.
+**Description of Tutorial**: This tutorial demonstrates the process of creating a contact sensor, and getting the contact data via a plugin or a message. A contact sensor detects collisions between two object and reports the location of the contact associated forces.
 
 ## Setup Tutorial
 
@@ -460,3 +458,4 @@ A plugin created for the contact sensor can get the collision data, manipulate i
 [6]: ../gazebo_contact_tutorial/CMakeLists.txt
 [7]: images/collision_contacts.png
 [8]: https://osrf-distributions.s3.amazonaws.com/gazebo/api/dev/classgazebo_1_1sensors_1_1ContactSensor.html#details
+[9]: http://gazebosim.org/tutorials?tut=contact_sensor#Introduction
