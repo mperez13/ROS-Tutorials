@@ -75,10 +75,9 @@ Gazebo's sensors observes the world perfectly, so sensor noise is added to get a
       <stddev>0.007</stddev>
     </noise>
   ```
+  2. Click on topic: '/gazebo/default/camera/link/camera/image' 
   
-  4. Click on topic: '/gazebo/default/camera/link/camera/image' 
-  
-  ![image camera noise][https://bitbucket.org/osrf/gazebo_tutorials/raw/default/sensor_noise/files/Noisy_camera_visualizer.png]
+      ![image camera noise][12]
 
 ## IMU noise
 
@@ -139,3 +138,4 @@ To adjust the noise, play w/ mean & standard deviation values in `model.sdf`.
 [9]: ../.gazebo/models/noisy_imu/model.config
 [10]: ../.gazebo/models/noisy_imu/model.sdf
 [11]: https://en.wikipedia.org/wiki/Probability_density_function
+[12]: https://bitbucket.org/osrf/gazebo_tutorials/raw/default/sensor_noise/files/Noisy_camera_visualizer.png
