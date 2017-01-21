@@ -9,5 +9,5 @@
 
 [1]: http://gazebosim.org/tutorials?cat=user_input
 [2]: ../gazebo_notes.md
-[4]: gazebo_notes/razer_hydra.md
-[5]: gazebo_notes/gui_overlay.md
+[3]: gazebo_notes/razer_hydra.md
+[4]: gazebo_notes/gui_overlay.md
