@@ -12,7 +12,8 @@ Gazebo's sensors observes the world perfectly, so sensor noise is added to get a
 ## Ray (laser) noise
 
 - For ray sensors, add Gaussian noise to the range of each beam.
-  - can set mean and standard deviation of the Gaussian distribution from which noise values will be sampled
+    - Gaussian noise is a statistical noise having a [probability density function (PDF)][11] equal to that of the normal distribution
+- can set mean and standard deviation of the Gaussian distribution from which noise values will be sampled
 - noise value is sampled independently for each beam
 - after adding noise, resulting range is clamped to lie between the sensor's min and max ranges (inclusive)
 
@@ -46,7 +47,9 @@ Gazebo's sensors observes the world perfectly, so sensor noise is added to get a
 - For camera sensors, we model [output amplifier noise][5], which adds a Gaussian-sampled disturbance independently to each pixel
 - can set mean and standard deviation of the Gaussian distribution from which noise values will be sampled.
 - noise value is sampled independently for each pixel, then noise value is added independently for each color channel for that pixel.
-- after adding noise, resulting color channel value is clamped to lie between 0.0 and 1.0 (floating pt. color value end up as unsigned integer in the image, usually between 0 and 255(using 8 bits per channel))
+- after adding noise, 
+    - resulting color channel value: between 0.0 and 1.0 
+    - floating pt. color value: unsigned integer in the image (usually between 0 and 255(using 8 bits per channel))
 
 - noise model is implemented in a [GLSL][6] shader & requires a GPU to run.
 
@@ -131,3 +134,4 @@ To adjust the noise, play w/ mean & standard deviation values in `model.sdf`.
 [8]: ../.gazebo/models/noisy_camera/model.sdf
 [9]: ../.gazebo/models/noisy_imu/model.config
 [10]: ../.gazebo/models/noisy_imu/model.sdf
+[11]: https://en.wikipedia.org/wiki/Probability_density_function
