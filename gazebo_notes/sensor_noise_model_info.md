@@ -20,14 +20,15 @@ Gazebo's sensors observes the world perfectly, so sensor noise is added to get a
 
 1. Create a [model config file][2]:
     
-    ```
-      gedit ~/.gazebo/models/noisy_laser/model.config
-    ```
-2. Create a [model.sdf](https://github.com/mperez13/ROS-Tutorials/blob/master/.gazebo/models/noisy_laser/model.sdf)
+```
+  gedit ~/.gazebo/models/noisy_laser/model.config
+```
+    
+2. Create a [model.sdf][3]
 3. Insert a noisy laser and visualize it
 4. Select the topic `/gazebo/default/hokuyo/link/laser/scan`
   - Laser View window that shows you the laser data.
-      ![image of noisy laser data](https://bitbucket.org/osrf/gazebo_tutorials/raw/default/sensor_noise/files/Noisy_laser_visualizer.png)
+      ![image of noisy laser data][4]
   1. As you can see, scan is noisy. 
     1. to adjust the noise, play w/ the mean & standard deviation values in `model.sdf`, where units are meters:
     
@@ -42,21 +43,21 @@ Gazebo's sensors observes the world perfectly, so sensor noise is added to get a
 
 ##Camera noise
 
-- For camera sensors, we model [output amplifier noise](http://en.wikipedia.org/wiki/Image_noise#Amplifier_noise_.28Gaussian_noise.29), which adds a Gaussian-sampled disturbance independently to each pixel
+- For camera sensors, we model [output amplifier noise][5], which adds a Gaussian-sampled disturbance independently to each pixel
 - can set mean and standard deviation of the Gaussian distribution from which noise values will be sampled.
 - noise value is sampled independently for each pixel, then noise value is added independently for each color channel for that pixel.
 - after adding noise, resulting color channel value is clamped to lie between 0.0 and 1.0 (floating pt. color value end up as unsigned integer in the image, usually between 0 and 255(using 8 bits per channel))
 
-- noise model is implemented in a [GLSL](http://www.opengl.org/documentation/glsl/) shader & requires a GPU to run.
+- noise model is implemented in a [GLSL][6] shader & requires a GPU to run.
 
-#####To test the camera noise model:
+#### To test the camera noise model:
 
-1. Create a [model config file](https://github.com/mperez13/ROS-Tutorials/blob/master/.gazebo/models/noisy_camera/model.config):
+1. Create a [model config file][7]:
   
   ```
     gedit ~/.gazebo/models/noisy_camera/model.config
   ```
-2. Create a [model.sdf](https://github.com/mperez13/ROS-Tutorials/blob/master/.gazebo/models/noisy_camera/model.sdf):
+2. Create a [model.sdf][8]: 
   
   ```
     gedit ~/.gazebo/models/noisy_camera/model.sdf
@@ -72,12 +73,12 @@ Gazebo's sensors observes the world perfectly, so sensor noise is added to get a
     </noise>
   ```
 
-##IMU noise
+## IMU noise
 
 - For IMU sensor, we model 2 kinds of disturbance to angular rates & linear accelerations:
   - noise
   - bias
-- Angular rates & linear accelrations are considered seperately, which lead to 4 sets of parameters for the model:
+- Angular rates & linear accelerations are considered seperately, which lead to 4 sets of parameters for the model:
   - rate noise
   - rate bias
   - accel noise
@@ -97,14 +98,14 @@ Gazebo's sensors observes the world perfectly, so sensor noise is added to get a
   - then with equal probability negated; the assumption is that the provided mean indicates the magnitude of the bias and that it's equal likely to be biased in either direction
   - after that bias is a fixed value, added to each component (x, y, z) of each sample
 
-##### To test IMU noise model:
+#### To test IMU noise model:
 
-1. Create [model config file](https://github.com/mperez13/ROS-Tutorials/tree/master/.gazebo/models/noisy_imu/model.config):
+1. Create [model config file][9]: 
   
     ```
     gedit ~/.gazebo/models/noisy_imu/moodel.config
     ```
-2. Create [model.sdf](https://github.com/mperez13/ROS-Tutorials/tree/master/.gazebo/models/noisy_imu/model.sdf) file:
+2. Create [model.sdf][10] file:
 
     ```
     gedit ~/.gazebo/models/noisy_imu/model.sdf
@@ -120,10 +121,13 @@ To adjust the noise, play w/ mean & standard deviation values in `model.sdf`.
   - rate noise & rate bias are rad/s
   - accel noise & accel bias are m/s^2 
 
-https://github.com/mperez13/ROS-Tutorials/edit/master/gazebo_notes/sensor_noise_model_info.md
 [1]: http://gazebosim.org/tutorials?tut=sensor_noise&cat=sensors
 [2]: ../.gazebo/models/noisy_laser/model.config
-
-
-
-
+[3]: ../.gazebo/models/noisy_laser/model.sdf
+[4]: https://bitbucket.org/osrf/gazebo_tutorials/raw/default/sensor_noise/files/Noisy_laser_visualizer.png
+[5]: http://en.wikipedia.org/wiki/Image_noise#Amplifier_noise_.28Gaussian_noise.29
+[6]: http://www.opengl.org/documentation/glsl/
+[7]: ../.gazebo/models/noisy_camera/model.config
+[8]: ../.gazebo/models/noisy_camera/model.sdf
+[9]: ../.gazebo/models/noisy_imu/model.config
+[10]: ../.gazebo/models/noisy_imu/model.sdf
