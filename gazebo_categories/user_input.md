@@ -7,9 +7,9 @@ User input can take many forms, including interactions from the graphical interf
 |[Razer Hydra][3]||*NOT DONE*|
 |[GUI Overlay][4]||*NOT DONE*|
 
-**Return to [Categories][2]**
+**Return to [Gazebo Categories][2]**
 
 [1]: http://gazebosim.org/tutorials?cat=user_input
 [2]: ../gazebo_notes.md
-[3]: gazebo_notes/razer_hydra.md
-[4]: gazebo_notes/gui_overlay.md
+[3]: ../gazebo_notes/razer_hydra.md
+[4]: ../gazebo_notes/gui_overlay.md
