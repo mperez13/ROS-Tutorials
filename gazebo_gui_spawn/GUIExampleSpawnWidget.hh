@@ -26,28 +26,31 @@
 
 namespace gazebo
 {
+	/*GUI overlay plugin must inherit from the GUIPlugin class and use Qt's Q_OBJECT macro*/
     class GAZEBO_VISIBLE GUIExampleSpawnWidget : public GUIPlugin
     {
       Q_OBJECT
 
-      /// \brief Constructor
-      /// \param[in] _parent Parent widget
+      // \brief Constructor
+      // \param[in] _parent Parent widget
       public: GUIExampleSpawnWidget();
 
-      /// \brief Destructor
+      // \brief Destructor
       public: virtual ~GUIExampleSpawnWidget();
 
-      /// \brief Callback trigged when the button is pressed.
+      // \brief Callback trigged when the button is pressed.
       protected slots: void OnButton();
 
-      /// \brief Counter used to create unique model names
+      // \brief Counter used to create unique model names
       private: unsigned int counter;
 
-      /// \brief Node used to establish communication with gzserver.
+      /* use Gazebo's factory functionality to send SDF spawn w/ gzserver*/
+      // \brief Node used to establish communication with gzserver.
       private: transport::NodePtr node;
 
-      /// \brief Publisher of factory messages.
+      // \brief Publisher of factory messages.
       private: transport::PublisherPtr factoryPub;
+      /*****************************************************************/
     };
 }
 #endif

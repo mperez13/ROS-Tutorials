@@ -1,0 +1,1 @@
+source ~/ROS-Tutorials/gazebo_gui_spawn/gz_setup.sh

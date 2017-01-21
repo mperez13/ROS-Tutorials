@@ -1,0 +1,3 @@
+/home/marifer/ROS-Tutorials/gazebo_gui_spawn/build/CMakeFiles/edit_cache.dir
+/home/marifer/ROS-Tutorials/gazebo_gui_spawn/build/CMakeFiles/rebuild_cache.dir
+/home/marifer/ROS-Tutorials/gazebo_gui_spawn/build/CMakeFiles/gui_example_spawn_widget.dir
