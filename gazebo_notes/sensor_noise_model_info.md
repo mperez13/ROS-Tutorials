@@ -127,6 +127,61 @@ To adjust the noise, play w/ mean & standard deviation values in `model.sdf`.
   - rate noise & rate bias are rad/s
   - accel noise & accel bias are m/s<sup>2</sup> 
 
+```xml
+<angular_velocity>
+  <x>
+    <noise type="gaussian">
+      <mean>0.0</mean>
+      <stddev>2e-4</stddev>
+      <bias_mean>0.0000075</bias_mean>
+      <bias_stddev>0.0000008</bias_stddev>
+    </noise>
+  </x>
+  <y>
+    <noise type="gaussian">
+      <mean>0.0</mean>
+      <stddev>2e-4</stddev>
+      <bias_mean>0.0000075</bias_mean>
+      <bias_stddev>0.0000008</bias_stddev>
+    </noise>
+  </y>
+  <z>
+    <noise type="gaussian">
+      <mean>0.0</mean>
+      <stddev>2e-4</stddev>
+      <bias_mean>0.0000075</bias_mean>
+      <bias_stddev>0.0000008</bias_stddev>
+    </noise>
+  </z>
+</angular_velocity>
+<linear_acceleration>
+  <x>
+    <noise type="gaussian">
+      <mean>0.0</mean>
+      <stddev>1.7e-2</stddev>
+      <bias_mean>0.1</bias_mean>
+      <bias_stddev>0.001</bias_stddev>
+    </noise>
+  </x>
+  <y>
+    <noise type="gaussian">
+      <mean>0.0</mean>
+      <stddev>1.7e-2</stddev>
+      <bias_mean>0.1</bias_mean>
+      <bias_stddev>0.001</bias_stddev>
+    </noise>
+  </y>
+  <z>
+    <noise type="gaussian">
+      <mean>0.0</mean>
+      <stddev>1.7e-2</stddev>
+      <bias_mean>0.1</bias_mean>
+      <bias_stddev>0.001</bias_stddev>
+    </noise>
+  </z>
+</linear_acceleration>
+```
+
 [1]: http://gazebosim.org/tutorials?tut=sensor_noise&cat=sensors
 [2]: ../.gazebo/models/noisy_laser/model.config
 [3]: ../.gazebo/models/noisy_laser/model.sdf
