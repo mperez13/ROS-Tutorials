@@ -1,5 +1,7 @@
 #[User Input][1]
 
+User input can take many forms, including interactions from the graphical interface and hardware devices such as joysticks.
+
 |Title|Description|Notes|
 |----|----|----|
 |[Razer Hydra][3]||*NOT DONE*|
