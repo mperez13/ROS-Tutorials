@@ -1,13 +1,15 @@
 #[User Input][1]
 
+User input can take many forms, including interactions from the graphical interface and hardware devices such as joysticks.
+
 |Title|Description|Notes|
 |----|----|----|
-|[Razer Hydra][50]||*NOT DONE*|
-|[GUI Overlay][51]||*NOT DONE*|
+|[Razer Hydra][3]|Gazebo supports the Razer Hydra controller. You will be able to use this motion and orientation detection controller to interact with your models in Gazebo.|You will need a Razer Hydra controller to get this to work. [Did not test it]|
+|[GUI Overlay][4]| This tutorial describes how to create and use GUI overlay plugins to create custom interfaces for Gazebo.||
 
-**Return to [Categories][2]**
+**Return to [Gazebo Categories][2]**
 
-[1]: ../gazebo_notes
+[1]: http://gazebosim.org/tutorials?cat=user_input
 [2]: ../gazebo_notes.md
-[50]: gazebo_notes/razer_hydra.md
-[51]: gazebo_notes/gui_overlay.md
+[3]: ../gazebo_notes/razer_hydra.md
+[4]: ../gazebo_notes/gui_overlay.md

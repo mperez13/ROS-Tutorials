@@ -1,8 +1,6 @@
-# Contact Sensor
+# [Contact Sensor][9]
 
-- Link To Tutorial - http://gazebosim.org/tutorials?tut=contact_sensor#Introduction
-
-This tutorial demonstrates the process of creating a contact sensor, and getting the contact data via a plugin or a message. A contact sensor detects collisions between two object and reports the location of the contact associated forces.
+**Description of Tutorial**: This tutorial demonstrates the process of creating a contact sensor, and getting the contact data via a plugin or a message. A contact sensor detects collisions between two object and reports the location of the contact associated forces.
 
 ## Setup Tutorial
 
@@ -15,10 +13,10 @@ $ cd ~/gazebo_contact_tutorial
 
 - for my setup:
   
-    ```
-    $ mkdir ~/ROS-Tutorials/gazebo_contact_tutorial
-    $ cd ~/ROS-Tutorials/gazebo_contact_tutorial
-    ```
+```
+$ mkdir ~/ROS-Tutorials/gazebo_contact_tutorial
+$ cd ~/ROS-Tutorials/gazebo_contact_tutorial
+```
 
 Make a [SDF world file][1] w/ a box that has a contact sensor. 
 
@@ -278,135 +276,139 @@ A plugin created for the contact sensor can get the collision data, manipulate i
 
 1. Modify `contact.world` SDF file.  Add following line directly below `<sensor name='my_contact' type=`contact`>`:
 
-    ```
-    <plugin name="my_plugin" filename="libcontact.so"/>
-    ```
+```c++
+<plugin name="my_plugin" filename="libcontact.so"/>
+```
 
     - This line tell Gazebo to load `libcontact.so` sensor plugin.
 2. Create a header file for the plugin, [ContactPlugin.hh][4], and paste following:
 
-    ```
-    #ifndef _GAZEBO_CONTACT_PLUGIN_HH_
-    #define _GAZEBO_CONTACT_PLUGIN_HH_
+```c++
+#ifndef _GAZEBO_CONTACT_PLUGIN_HH_
+#define _GAZEBO_CONTACT_PLUGIN_HH_
 
-    #include <string>
+#include <string>
 
-    #include <gazebo/gazebo.hh>
-    #include <gazebo/sensors/sensors.hh>
+#include <gazebo/gazebo.hh>
+#include <gazebo/sensors/sensors.hh>
 
-    namespace gazebo{
-        /// \brief An example plugin for a contact sensor.
-        class ContactPlugin : public SensorPlugin {
-            /// \brief Constructor.
-            public: ContactPlugin();
+namespace gazebo{
+    /// \brief An example plugin for a contact sensor.
+    class ContactPlugin : public SensorPlugin {
+        /// \brief Constructor.
+        public: ContactPlugin();
 
-            /// \brief Destructor.
-            public: virtual ~ContactPlugin();
+        /// \brief Destructor.
+        public: virtual ~ContactPlugin();
 
-            /// \brief Load the sensor plugin.
-            /// \param[in] _sensor Pointer to the sensor that loaded this plugin.
-            /// \param[in] _sdf SDF element that describes the plugin.
-            public: virtual void Load(sensors::SensorPtr _sensor, sdf::ElementPtr _sdf);
+        /// \brief Load the sensor plugin.
+        /// \param[in] _sensor Pointer to the sensor that loaded this plugin.
+        /// \param[in] _sdf SDF element that describes the plugin.
+        public: virtual void Load(sensors::SensorPtr _sensor, sdf::ElementPtr _sdf);
 
-            /// \brief Callback that receives the contact sensor's update signal.
-            private: virtual void OnUpdate();
+        /// \brief Callback that receives the contact sensor's update signal.
+        private: virtual void OnUpdate();
 
-            /// \brief Pointer to the contact sensor
-            private: sensors::ContactSensorPtr parentSensor;
+        /// \brief Pointer to the contact sensor
+        private: sensors::ContactSensorPtr parentSensor;
 
-            /// \brief Connection that maintains a link between the contact sensor's
-            /// updated signal and the OnUpdate callback.
-            private: event::ConnectionPtr updateConnection;
-        };
-    }
-    #endif
-    ```
+        /// \brief Connection that maintains a link between the contact sensor's
+        /// updated signal and the OnUpdate callback.
+        private: event::ConnectionPtr updateConnection;
+    };
+}
+#endif
+```
+
 3. Create source file, [ContactPlugin.cc][5] with the following:
 
-    ```
-    #include "ContactPlugin.hh"
+```c++
+#include "ContactPlugin.hh"
 
-    using namespace gazebo;
-    GZ_REGISTER_SENSOR_PLUGIN(ContactPlugin)
+using namespace gazebo;
+GZ_REGISTER_SENSOR_PLUGIN(ContactPlugin)
 
-    /////////////////////////////////////////////////
-    ContactPlugin::ContactPlugin() : SensorPlugin(){
-    }
+/////////////////////////////////////////////////
+ContactPlugin::ContactPlugin() : SensorPlugin(){
+}
 
-    /////////////////////////////////////////////////
-    ContactPlugin::~ContactPlugin(){
-    }
+/////////////////////////////////////////////////
+ContactPlugin::~ContactPlugin(){
+}
 
-    /////////////////////////////////////////////////
-    void ContactPlugin::Load(sensors::SensorPtr _sensor, sdf::ElementPtr /*_sdf*/){
-    ```
-    The following code from the `Load` function gets pointer to the contact sensor through the `_sensor` parameter. 
-    Then we test to make sure the pointer is valid and create a connection to contact sensor's `updated` event.
-    Last line guarantees that the sensor is initialized.
+/////////////////////////////////////////////////
+void ContactPlugin::Load(sensors::SensorPtr _sensor, sdf::ElementPtr /*_sdf*/){
+```
+
+The following code from the `Load` function gets pointer to the contact sensor through the `_sensor` parameter. 
+Then we test to make sure the pointer is valid and create a connection to contact sensor's `updated` event.
+Last line guarantees that the sensor is initialized.
      
-    ```
-        // Get the parent sensor.
-        this->parentSensor =
-        std::dynamic_pointer_cast<sensors::ContactSensor>(_sensor);
+```c++
+  // Get the parent sensor.
+  this->parentSensor =
+  std::dynamic_pointer_cast<sensors::ContactSensor>(_sensor);
 
-        // Make sure the parent sensor is valid.
-        if (!this->parentSensor) {
-        gzerr << "ContactPlugin requires a ContactSensor.\n";
-        return;
-        }
+  // Make sure the parent sensor is valid.
+  if (!this->parentSensor) {
+  gzerr << "ContactPlugin requires a ContactSensor.\n";
+  return;
+  }
 
-        // Connect to the sensor update event.
-        this->updateConnection = this->parentSensor->ConnectUpdated(std::bind(&ContactPlugin::OnUpdate, this));
+  // Connect to the sensor update event.
+  this->updateConnection = this->parentSensor->ConnectUpdated(std::bind(&ContactPlugin::OnUpdate, this));
 
-        // Make sure the parent sensor is active.
-        this->parentSensor->SetActive(true);
-    ```
-    
-    ```
-    }
-    ```
-    
-    The `OnUpdate` function is called whenever the contact sensor is updated. This print out the contact values.
-    ```
-    /////////////////////////////////////////////////
-    void ContactPlugin::OnUpdate()
-    {
-      // Get all the contacts.
-      msgs::Contacts contacts;
-      contacts = this->parentSensor->Contacts();
-      for (unsigned int i = 0; i < contacts.contact_size(); ++i)
-      {
-        std::cout << "Collision between[" << contacts.contact(i).collision1()
-                  << "] and [" << contacts.contact(i).collision2() << "]\n";
+  // Make sure the parent sensor is active.
+  this->parentSensor->SetActive(true);
+```
 
-        for (unsigned int j = 0; j < contacts.contact(i).position_size(); ++j)
-        {
-          std::cout << j << "  Position:"
-                    << contacts.contact(i).position(j).x() << " "
-                    << contacts.contact(i).position(j).y() << " "
-                    << contacts.contact(i).position(j).z() << "\n";
-          std::cout << "   Normal:"
-                    << contacts.contact(i).normal(j).x() << " "
-                    << contacts.contact(i).normal(j).y() << " "
-                    << contacts.contact(i).normal(j).z() << "\n";
-          std::cout << "   Depth:" << contacts.contact(i).depth(j) << "\n";
-        }
-      }
-    }
-    ```
+```
+}
+```
+
+The `OnUpdate` function is called whenever the contact sensor is updated. This print out the contact values.
+
+```c++
+/////////////////////////////////////////////////
+void ContactPlugin::OnUpdate()
+{
+// Get all the contacts.
+msgs::Contacts contacts;
+contacts = this->parentSensor->Contacts();
+for (unsigned int i = 0; i < contacts.contact_size(); ++i)
+{
+  std::cout << "Collision between[" << contacts.contact(i).collision1() << "] and [" << contacts.contact(i).collision2() << "]\n";
+
+  for (unsigned int j = 0; j < contacts.contact(i).position_size(); ++j)
+  {
+    std::cout << j << "  Position:"
+              << contacts.contact(i).position(j).x() << " "
+              << contacts.contact(i).position(j).y() << " "
+              << contacts.contact(i).position(j).z() << "\n";
+    std::cout << "   Normal:"
+              << contacts.contact(i).normal(j).x() << " "
+              << contacts.contact(i).normal(j).y() << " "
+              << contacts.contact(i).normal(j).z() << "\n";
+    std::cout << "   Depth:" << contacts.contact(i).depth(j) << "\n";
+  }
+}
+}
+```
 
 ## Compiling the code
 
 1. Create [`CMakeLists.txt`][6] file:
-    ```
-    cd ~/gazebo_contact_tutorial; gedit CMakeLists.txt
-    ```
-    - in my setup:
+
+```
+cd ~/gazebo_contact_tutorial; gedit CMakeLists.txt
+```
     
-        ```
-        $ cd ~/ROS-Tutorials/gazebo_contact_tutorial
-        $ gedit CMakeLists.txt
-        ```
+  - in my setup:
+
+    ```
+    $ cd ~/ROS-Tutorials/gazebo_contact_tutorial
+    $ gedit CMakeLists.txt
+    ```
         
 2. Add the following to the `CMakeLists.txt` file:
 
@@ -425,32 +427,34 @@ A plugin created for the contact sensor can get the collision data, manipulate i
     
 3. Create a build directory and make plugin:
 
-    ```
-    $ mkdir build
-    $ cd build
-    $ cmake ../
-    $ make
-    ```
+  ```
+  $ mkdir build
+  $ cd build
+  $ cmake ../
+  $ make
+  ```
 
 ## Running the code
 
 1. Modify `LD_LIBRARY_PATH` so the library loader can find your library:
     
-    ```
-    $ export LD_LIBRARY_PATH=~/gazebo_contact_tutorial/build:$LD_LIBRARY_PATH
-    ```
+  ```
+  $ export LD_LIBRARY_PATH=~/gazebo_contact_tutorial/build:$LD_LIBRARY_PATH
+  ```
     
 2. In the build directory (`cd ~/ROS-Tutorials/gazebo_contact_tutorial/build`) run `gzserver`:
     
-    ```
-    gzserver ../contact.world
-    ```
+  ```
+  gzserver ../contact.world
+  ```
     
-    - The data that I got back was:
+  - The data that I got back was:
         
-        ![collision contacts][7]
+    ![collision contacts][7]
         
-  **Gazebo API** - [ContactSensor Class Reference][8]
+**Gazebo API** - [ContactSensor Class Reference][8]
+
+Return to [Gazebo Categories][10]
 
 [1]: ../gazebo_contact_tutorial/contact.world 
 [2]: images/contact_values.png
@@ -460,3 +464,5 @@ A plugin created for the contact sensor can get the collision data, manipulate i
 [6]: ../gazebo_contact_tutorial/CMakeLists.txt
 [7]: images/collision_contacts.png
 [8]: https://osrf-distributions.s3.amazonaws.com/gazebo/api/dev/classgazebo_1_1sensors_1_1ContactSensor.html#details
+[9]: http://gazebosim.org/tutorials?tut=contact_sensor#Introduction
+[10]: ../gazebo_notes.md

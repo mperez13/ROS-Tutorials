@@ -9,9 +9,9 @@
 |[Tools and Utilities][5]|||
 |[Write a Plugin][6]|How to create and load plugins for various purposes|Plugins allow you to control models, sensors, world properties, and even the way Gazebo runs.|
 |[Plugins][7]|||
-|[Sensors][8]|||
+|[Sensors][8]|A simulated sensor analyzes the environment and produces a data stream that closely matches the sensor's physical counterpart. These tutorials describe how to use and modify sensors.||
 |[Using Math][9]|||
-|[User Input][10]|||
+|[User Input][10]|User input can take many forms, including interactions from the graphical interface and hardware devices such as joysticks.||
 |[Connect to Player][11]|||
 |[Web client (Gzweb)][12]|||
 |[Connect to ROS][13]|||
