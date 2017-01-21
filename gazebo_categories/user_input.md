@@ -5,7 +5,7 @@ User input can take many forms, including interactions from the graphical interf
 |Title|Description|Notes|
 |----|----|----|
 |[Razer Hydra][3]|Gazebo supports the Razer Hydra controller. You will be able to use this motion and orientation detection controller to interact with your models in Gazebo.|You will need a Razer Hydra controller to get this to work. [Did not test it]|
-|[GUI Overlay][4]||*NOT DONE*|
+|[GUI Overlay][4]| This tutorial describes how to create and use GUI overlay plugins to create custom interfaces for Gazebo.||
 
 **Return to [Gazebo Categories][2]**
 
