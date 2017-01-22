@@ -7,6 +7,10 @@ Gazebo GUI overlay is like a transparent 2D layer that sits on top of the render
 - QT widgets can be added to this layer through a plugin interface. 
 - can show or hide all GUI overlays by clicking `View->GUI Overlays` on the main Gazebo menu bar
 
+The first example shows how to create a button that adds a model with one click by using plugin.
+
+The 2nd example shows how to add a timer to Gazebo.
+
 ## Example 1: Spawn spheres
 
 Creates a button that spawns a sphere 
