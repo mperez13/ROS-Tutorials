@@ -1,0 +1,1 @@
+export GAZEBO_PLUGIN_PATH=~/ROS-Tutorials/gazebo_gui_time/build:$GAZEBO_PLUGIN_PATH

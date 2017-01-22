@@ -42,7 +42,6 @@ GUIExampleTimeWidget::GUIExampleTimeWidget()
 
   QLabel *label = new QLabel(tr("Sim Time:"));
 
-  /* construction: creates QLabel to display the time & connect it to the SetSimTime signal*/
   // Create a time label
   QLabel *timeLabel = new QLabel(tr("00:00:00.00"));
 
@@ -51,7 +50,6 @@ GUIExampleTimeWidget::GUIExampleTimeWidget()
   frameLayout->addWidget(timeLabel);
   connect(this, SIGNAL(SetSimTime(QString)),
       timeLabel, SLOT(setText(QString)), Qt::QueuedConnection);
-  /*****************************************************************************************/
 
   // Add frameLayout to the frame
   mainFrame->setLayout(frameLayout);
@@ -69,28 +67,25 @@ GUIExampleTimeWidget::GUIExampleTimeWidget()
   this->move(200, 10);
   this->resize(200, 30);
 
-  /*constructor: connects to Gazebo's ~/world_stats topic*/
   // Create a node for transportation
   this->node = transport::NodePtr(new transport::Node());
   this->node->Init("default");
   this->statsSub = this->node->Subscribe("~/world_stats",
       &GUIExampleTimeWidget::OnStats, this);
-  /*****************************************************/
 }
 
 /////////////////////////////////////////////////
 GUIExampleTimeWidget::~GUIExampleTimeWidget()
 {
 }
-/////////////////////////////////////////////////
 
-/* a msg is received, OnStats function is called & displayed time is updated*/
+/////////////////////////////////////////////////
 void GUIExampleTimeWidget::OnStats(ConstWorldStatisticsPtr &_msg)
 {
   this->SetSimTime(QString::fromStdString(
         this->FormatTime(_msg->sim_time())));
 }
-/***************************************************************/
+
 /////////////////////////////////////////////////
 std::string GUIExampleTimeWidget::FormatTime(const msgs::Time &_msg) const
 {
