@@ -37,30 +37,6 @@ Creates a button that spawns a sphere
   ```
 
 4. Look at the header file - [GUIExampleSpawnWidget.hh][2]: 
-  - GUI overlay plugin must inherit from the GUIPlugin class and use Qt's `Q_OBJECT` macro
-    
-    ```c++
-    class GAZEBO_VISIBLE GUIExampleSpawnWidget : public GUIPlugin
-    {
-      Q_OBJECT
-    ```
-  
-  - rest of the plugin may contain any code that is requires to make the plugin meet your needs. In htis example we will use a QT slot to receive button presses:
-  
-    ```c++
-    // Callback trigged when the button is pressed.
-    protected slots: void OnButton()
-    ```
-
-  - Use Gazebo's factory functionality to send SDF spawn w/ gzserver:
-    
-    ```c++
-    // Node used to establish communication w/ gzserver
-    private: transport::NodePtr node;
-    
-    // Publisher of factory messages
-    private: transport::PublisherPtr factoryPub
-    ```
 
 5. Look at source file - [GUIExampleSpawnWidget.cc][3]
   - constructor in this file uses QT to create a button and attach it to our `OnButton` callback:
