@@ -37,63 +37,8 @@ Creates a button that spawns a sphere
   ```
 
 4. Look at the header file - [GUIExampleSpawnWidget.hh][2]: 
-  - GUI overlay plugin must inherit from the GUIPlugin class and use Qt's `Q_OBJECT` macro
-    
-    ```c++
-    class GAZEBO_VISIBLE GUIExampleSpawnWidget : public GUIPlugin
-    {
-      Q_OBJECT
-    ```
-  
-  - rest of the plugin may contain any code that is requires to make the plugin meet your needs. In htis example we will use a QT slot to receive button presses:
-  
-    ```c++
-    // Callback trigged when the button is pressed.
-    protected slots: void OnButton()
-    ```
-
-  - Use Gazebo's factory functionality to send SDF spawn w/ gzserver:
-    
-    ```c++
-    // Node used to establish communication w/ gzserver
-    private: transport::NodePtr node;
-    
-    // Publisher of factory messages
-    private: transport::PublisherPtr factoryPub
-    ```
 
 5. Look at source file - [GUIExampleSpawnWidget.cc][3]
-  - constructor in this file uses QT to create a button and attach it to our `OnButton` callback:
-    
-    ```c++
-    // Create a push button & connect it to the OnButton function
-    QPushButton *button = new QPushButton(tr("Spawn Sphere"));
-    connect(button, SIGNAL(clicked()), this, SLOT(OnButton()));
-    ```
-  
-  - constructor also connects to Gazebo's transport mechanism and creates a factory publisher:
-    
-    ```
-    // Create node for transportation
-    this->node = transport::NodePtr(new transport::Node());
-    this->node->Init();
-    this->factoryPub = this->node->Advertise<msgs::Factory>("~/factory");
-    ```
-  
-  - `OnButton` callback creates a new sphere SDF string:
-    
-    ```
-    std::ostringstream newModelStr;
-    newModelStr << "<sdf version='" << SDF_VERSION << "'>" << msgs::ModelToSDF(model)->ToString("") << "</sdf>";
-    ```
-  
-  - and sends the string to Gazebo:
-    
-    ```
-    msgs::Factory msg;
-    msg.set_sdf(newModelStr.str());
-    this->factoryPub->Publish(msg);
-    ```
 
 6. Compile the plugin
   
