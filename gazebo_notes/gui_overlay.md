@@ -51,6 +51,13 @@ Creates a button that spawns a sphere
   ```
   
 7. Make sure Gazebo can find the plugin by appending the `build` directory to the `GAZEBO_PLUGIN_PATH` environment variable:
+
+  ```
+  cd ~/gazebo_gui_spawn/build
+  export GAZEBO_PLUGIN_PATH=`pwd`:$GAZEBO_PLUGIN_PATH
+  ```
+  Previous command will only work in current shell, so you will have to export it everytime you run it.  Can be helpful to create a shell script file.
+  
   - I created [bootgui.sh][10] and [gz_setup.sh][11] to do this( remember to allow access w/ `chmod +x file_name`) 
   
   - bootgui.sh: 
