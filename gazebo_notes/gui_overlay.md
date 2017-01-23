@@ -139,3 +139,4 @@ Creates a button that spawns a sphere
 [10]: ../gazebo_gui_spawn/boot_spawn.sh
 [11]: ../gazebo_gui_spawn/gz_setup.sh
 [12]: ../gazebo_gui_spawn/CMakeLists.txt
+[13]: ../gazebo_gui_time/CMakeLists.txt
