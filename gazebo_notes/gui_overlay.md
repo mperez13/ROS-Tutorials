@@ -21,26 +21,12 @@ Creates a button that spawns a sphere
   sudo apt-get install libgazebo7-dev
   ```
 
-2. Create a working directory
-  
-  ```
-  mkdir ~/gazebo_gui_spawn
-  cd ~/gazebo_gui_spawn
-  ```
+2. Create a working directory and add following file:
+  - header file - [GUIExampleSpawnWidget.hh][2]
+  - source file - [GUIExampleSpawnWidget.cc][3]
+  - [CMakeList.txt][]
 
-3. Download source code for the GUI overlay plugin
-
-  ```
-  wget https://bitbucket.org/osrf/gazebo/raw/gazebo7/examples/plugins/gui_overlay_plugin_spawn/GUIExampleSpawnWidget.hh
-  wget https://bitbucket.org/osrf/gazebo/raw/gazebo7/examples/plugins/gui_overlay_plugin_spawn/GUIExampleSpawnWidget.cc
-  wget https://bitbucket.org/osrf/gazebo/raw/gazebo7/examples/plugins/gui_overlay_plugin_spawn/CMakeLists.txt
-  ```
-
-4. Look at the header file - [GUIExampleSpawnWidget.hh][2]: 
-
-5. Look at source file - [GUIExampleSpawnWidget.cc][3]
-
-6. Compile the plugin
+3. Compile the plugin
   
   ```
   cd ~/gazebo_gui_spawn
@@ -50,7 +36,7 @@ Creates a button that spawns a sphere
   make
   ```
   
-7. Make sure Gazebo can find the plugin by appending the `build` directory to the `GAZEBO_PLUGIN_PATH` environment variable:
+4. Make sure Gazebo can find the plugin by appending the `build` directory to the `GAZEBO_PLUGIN_PATH` environment variable:
 
   ```
   cd ~/gazebo_gui_spawn/build
@@ -69,7 +55,7 @@ Creates a button that spawns a sphere
   
   - To run: use commands `./bootgui.sh` inside the `gazebo_gui_spawn` directory
     
-8. Need to tell Gazebo that it should load the overlay plugin
+5. Need to tell Gazebo that it should load the overlay plugin
   - There are 2 methods to accomplish this:
     - **SDF world file:** modify a world SDF file to contain GUI plugin
       
@@ -101,7 +87,7 @@ Creates a button that spawns a sphere
       filenames=libgui_example_spawn_widget.so
       ```
 
-9. When Gazebo is running, a button should appear in the upper left if the render window
+6. When Gazebo is running, a button should appear in the upper left if the render window
   - If a SDF world file w/ GUI plugin:
     
     ```
@@ -116,7 +102,7 @@ Creates a button that spawns a sphere
     
     ![image gui overlay][4]
 
-10. Click on the button to spawn spheres.
+7. Click on the button to spawn spheres.
 
   ![image gui overlay 2][5]
 
