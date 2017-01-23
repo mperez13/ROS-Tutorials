@@ -44,7 +44,7 @@ Creates a button that spawns a sphere
   ```
   Previous command will only work in current shell, so you will have to export it everytime you run it.  Can be helpful to create a shell script file.
   
-  - I created [bootgui.sh][10] and [gz_setup.sh][11] to do this( remember to allow access w/ `chmod +x file_name`) 
+  - I created [boot_spawn.sh][10] and [gz_setup.sh][11] to do this( remember to allow access w/ `chmod +x file_name`) 
   
   - bootgui.sh: 
     - source the gz_setup.sh
@@ -53,7 +53,7 @@ Creates a button that spawns a sphere
   - gz_setup.sh: 
       - add all environment variables necessary
   
-  - To run: use commands `./bootgui.sh` inside the `gazebo_gui_spawn` directory
+  - To run: use commands `./boot_spawn.sh` inside the `gazebo_gui_spawn` directory
     
 5. Need to tell Gazebo that it should load the overlay plugin
   - There are 2 methods to accomplish this:
@@ -211,5 +211,6 @@ Creates a button that spawns a sphere
 [7]: ../gazebo_gui_time/GUIExampleTimeWidget.cc
 [8]: https://bitbucket.org/osrf/gazebo_tutorials/raw/default/gui_overlay/files/time.png
 [9]: ../gazebo_categories/user_input.md
-[10]: ../gazebo_gui_spawn/bootgui.sh
+[10]: ../gazebo_gui_spawn/boot_spawn.sh
 [11]: ../gazebo_gui_spawn/gz_setup.sh
+[12]: ../gazebo_gui_spawn/CMakeLists.txt
