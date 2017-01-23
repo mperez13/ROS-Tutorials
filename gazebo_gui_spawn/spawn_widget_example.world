@@ -4,7 +4,6 @@
 
     <gui>
       <plugin name="sample" filename="libgui_example_spawn_widget.so"/>
-      
     </gui>
 
     <!-- A global light source -->

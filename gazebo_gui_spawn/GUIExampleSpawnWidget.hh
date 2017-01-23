@@ -27,11 +27,11 @@
 
 namespace gazebo
 {
-	// GUI overlay plugin must inherit from the GUIPlugin class & Qr's Q_OBJECT macro
+  // GUI overlay plugin must inherit from the GUIPlugin class & Qr's Q_OBJECT macro
     class GAZEBO_VISIBLE GUIExampleSpawnWidget : public GUIPlugin
     {
       Q_OBJECT
-  	/////////////////////////////////////////////////////////////////////////////////
+    /////////////////////////////////////////////////////////////////////////////////
 
       // \brief Constructor
       // \param[in] _parent Parent widget
