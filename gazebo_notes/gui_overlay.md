@@ -127,6 +127,8 @@ Creates a button that spawns a sphere
   
       ![image ex 2][8]
 
+**Return to Gazebo Category: [User Input][9]**
+
 [1]: http://gazebosim.org/tutorials?tut=gui_overlay&cat=user_input
 [2]: ../gazebo_gui_spawn/GUIExampleSpawnWidget.hh
 [3]: ../gazebo_gui_spawn/GUIExampleSpawnWidget.cc
