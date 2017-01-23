@@ -1,20 +1,20 @@
 Determining if the Q_WS_WIN exist failed with the following output:
 Change Dir: /home/marifer/ROS-Tutorials/gazebo_gui_spawn/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_5bddb/fast"
-/usr/bin/make -f CMakeFiles/cmTC_5bddb.dir/build.make CMakeFiles/cmTC_5bddb.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_c4efd/fast"
+/usr/bin/make -f CMakeFiles/cmTC_c4efd.dir/build.make CMakeFiles/cmTC_c4efd.dir/build
 make[1]: Entering directory '/home/marifer/ROS-Tutorials/gazebo_gui_spawn/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_5bddb.dir/CheckSymbolExists.cxx.o
-/usr/bin/c++    -I/usr/include/qt4   -o CMakeFiles/cmTC_5bddb.dir/CheckSymbolExists.cxx.o -c /home/marifer/ROS-Tutorials/gazebo_gui_spawn/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
+Building CXX object CMakeFiles/cmTC_c4efd.dir/CheckSymbolExists.cxx.o
+/usr/bin/c++    -I/usr/include/qt4   -o CMakeFiles/cmTC_c4efd.dir/CheckSymbolExists.cxx.o -c /home/marifer/ROS-Tutorials/gazebo_gui_spawn/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
 /home/marifer/ROS-Tutorials/gazebo_gui_spawn/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx: In function ‘int main(int, char**)’:
 /home/marifer/ROS-Tutorials/gazebo_gui_spawn/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:19: error: ‘Q_WS_WIN’ was not declared in this scope
    return ((int*)(&Q_WS_WIN))[argc];
                    ^
-CMakeFiles/cmTC_5bddb.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_5bddb.dir/CheckSymbolExists.cxx.o' failed
-make[1]: *** [CMakeFiles/cmTC_5bddb.dir/CheckSymbolExists.cxx.o] Error 1
+CMakeFiles/cmTC_c4efd.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_c4efd.dir/CheckSymbolExists.cxx.o' failed
+make[1]: *** [CMakeFiles/cmTC_c4efd.dir/CheckSymbolExists.cxx.o] Error 1
 make[1]: Leaving directory '/home/marifer/ROS-Tutorials/gazebo_gui_spawn/build/CMakeFiles/CMakeTmp'
-Makefile:126: recipe for target 'cmTC_5bddb/fast' failed
-make: *** [cmTC_5bddb/fast] Error 2
+Makefile:126: recipe for target 'cmTC_c4efd/fast' failed
+make: *** [cmTC_c4efd/fast] Error 2
 
 File /home/marifer/ROS-Tutorials/gazebo_gui_spawn/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
 /* */
@@ -34,20 +34,20 @@ int main(int argc, char** argv)
 Determining if the Q_WS_QWS exist failed with the following output:
 Change Dir: /home/marifer/ROS-Tutorials/gazebo_gui_spawn/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_5e908/fast"
-/usr/bin/make -f CMakeFiles/cmTC_5e908.dir/build.make CMakeFiles/cmTC_5e908.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_76d38/fast"
+/usr/bin/make -f CMakeFiles/cmTC_76d38.dir/build.make CMakeFiles/cmTC_76d38.dir/build
 make[1]: Entering directory '/home/marifer/ROS-Tutorials/gazebo_gui_spawn/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_5e908.dir/CheckSymbolExists.cxx.o
-/usr/bin/c++    -I/usr/include/qt4   -o CMakeFiles/cmTC_5e908.dir/CheckSymbolExists.cxx.o -c /home/marifer/ROS-Tutorials/gazebo_gui_spawn/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
+Building CXX object CMakeFiles/cmTC_76d38.dir/CheckSymbolExists.cxx.o
+/usr/bin/c++    -I/usr/include/qt4   -o CMakeFiles/cmTC_76d38.dir/CheckSymbolExists.cxx.o -c /home/marifer/ROS-Tutorials/gazebo_gui_spawn/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
 /home/marifer/ROS-Tutorials/gazebo_gui_spawn/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx: In function ‘int main(int, char**)’:
 /home/marifer/ROS-Tutorials/gazebo_gui_spawn/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:19: error: ‘Q_WS_QWS’ was not declared in this scope
    return ((int*)(&Q_WS_QWS))[argc];
                    ^
-CMakeFiles/cmTC_5e908.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_5e908.dir/CheckSymbolExists.cxx.o' failed
-make[1]: *** [CMakeFiles/cmTC_5e908.dir/CheckSymbolExists.cxx.o] Error 1
+CMakeFiles/cmTC_76d38.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_76d38.dir/CheckSymbolExists.cxx.o' failed
+make[1]: *** [CMakeFiles/cmTC_76d38.dir/CheckSymbolExists.cxx.o] Error 1
 make[1]: Leaving directory '/home/marifer/ROS-Tutorials/gazebo_gui_spawn/build/CMakeFiles/CMakeTmp'
-Makefile:126: recipe for target 'cmTC_5e908/fast' failed
-make: *** [cmTC_5e908/fast] Error 2
+Makefile:126: recipe for target 'cmTC_76d38/fast' failed
+make: *** [cmTC_76d38/fast] Error 2
 
 File /home/marifer/ROS-Tutorials/gazebo_gui_spawn/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
 /* */
@@ -67,20 +67,20 @@ int main(int argc, char** argv)
 Determining if the Q_WS_MAC exist failed with the following output:
 Change Dir: /home/marifer/ROS-Tutorials/gazebo_gui_spawn/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_1f191/fast"
-/usr/bin/make -f CMakeFiles/cmTC_1f191.dir/build.make CMakeFiles/cmTC_1f191.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_6bab1/fast"
+/usr/bin/make -f CMakeFiles/cmTC_6bab1.dir/build.make CMakeFiles/cmTC_6bab1.dir/build
 make[1]: Entering directory '/home/marifer/ROS-Tutorials/gazebo_gui_spawn/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_1f191.dir/CheckSymbolExists.cxx.o
-/usr/bin/c++    -I/usr/include/qt4   -o CMakeFiles/cmTC_1f191.dir/CheckSymbolExists.cxx.o -c /home/marifer/ROS-Tutorials/gazebo_gui_spawn/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
+Building CXX object CMakeFiles/cmTC_6bab1.dir/CheckSymbolExists.cxx.o
+/usr/bin/c++    -I/usr/include/qt4   -o CMakeFiles/cmTC_6bab1.dir/CheckSymbolExists.cxx.o -c /home/marifer/ROS-Tutorials/gazebo_gui_spawn/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
 /home/marifer/ROS-Tutorials/gazebo_gui_spawn/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx: In function ‘int main(int, char**)’:
 /home/marifer/ROS-Tutorials/gazebo_gui_spawn/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:19: error: ‘Q_WS_MAC’ was not declared in this scope
    return ((int*)(&Q_WS_MAC))[argc];
                    ^
-CMakeFiles/cmTC_1f191.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_1f191.dir/CheckSymbolExists.cxx.o' failed
-make[1]: *** [CMakeFiles/cmTC_1f191.dir/CheckSymbolExists.cxx.o] Error 1
+CMakeFiles/cmTC_6bab1.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_6bab1.dir/CheckSymbolExists.cxx.o' failed
+make[1]: *** [CMakeFiles/cmTC_6bab1.dir/CheckSymbolExists.cxx.o] Error 1
 make[1]: Leaving directory '/home/marifer/ROS-Tutorials/gazebo_gui_spawn/build/CMakeFiles/CMakeTmp'
-Makefile:126: recipe for target 'cmTC_1f191/fast' failed
-make: *** [cmTC_1f191/fast] Error 2
+Makefile:126: recipe for target 'cmTC_6bab1/fast' failed
+make: *** [cmTC_6bab1/fast] Error 2
 
 File /home/marifer/ROS-Tutorials/gazebo_gui_spawn/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
 /* */
@@ -100,22 +100,22 @@ int main(int argc, char** argv)
 Determining if the pthread_create exist failed with the following output:
 Change Dir: /home/marifer/ROS-Tutorials/gazebo_gui_spawn/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_2f62b/fast"
-/usr/bin/make -f CMakeFiles/cmTC_2f62b.dir/build.make CMakeFiles/cmTC_2f62b.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_0f07a/fast"
+/usr/bin/make -f CMakeFiles/cmTC_0f07a.dir/build.make CMakeFiles/cmTC_0f07a.dir/build
 make[1]: Entering directory '/home/marifer/ROS-Tutorials/gazebo_gui_spawn/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_2f62b.dir/CheckSymbolExists.c.o
-/usr/bin/cc     -o CMakeFiles/cmTC_2f62b.dir/CheckSymbolExists.c.o   -c /home/marifer/ROS-Tutorials/gazebo_gui_spawn/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
-Linking C executable cmTC_2f62b
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2f62b.dir/link.txt --verbose=1
-/usr/bin/cc       CMakeFiles/cmTC_2f62b.dir/CheckSymbolExists.c.o  -o cmTC_2f62b -rdynamic 
-CMakeFiles/cmTC_2f62b.dir/CheckSymbolExists.c.o: In function `main':
+Building C object CMakeFiles/cmTC_0f07a.dir/CheckSymbolExists.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_0f07a.dir/CheckSymbolExists.c.o   -c /home/marifer/ROS-Tutorials/gazebo_gui_spawn/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_0f07a
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0f07a.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_0f07a.dir/CheckSymbolExists.c.o  -o cmTC_0f07a -rdynamic 
+CMakeFiles/cmTC_0f07a.dir/CheckSymbolExists.c.o: In function `main':
 CheckSymbolExists.c:(.text+0x16): undefined reference to `pthread_create'
 collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_2f62b.dir/build.make:97: recipe for target 'cmTC_2f62b' failed
-make[1]: *** [cmTC_2f62b] Error 1
+CMakeFiles/cmTC_0f07a.dir/build.make:97: recipe for target 'cmTC_0f07a' failed
+make[1]: *** [cmTC_0f07a] Error 1
 make[1]: Leaving directory '/home/marifer/ROS-Tutorials/gazebo_gui_spawn/build/CMakeFiles/CMakeTmp'
-Makefile:126: recipe for target 'cmTC_2f62b/fast' failed
-make: *** [cmTC_2f62b/fast] Error 2
+Makefile:126: recipe for target 'cmTC_0f07a/fast' failed
+make: *** [cmTC_0f07a/fast] Error 2
 
 File /home/marifer/ROS-Tutorials/gazebo_gui_spawn/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
 /* */
@@ -135,20 +135,20 @@ int main(int argc, char** argv)
 Determining if the function pthread_create exists in the pthreads failed with the following output:
 Change Dir: /home/marifer/ROS-Tutorials/gazebo_gui_spawn/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_b668d/fast"
-/usr/bin/make -f CMakeFiles/cmTC_b668d.dir/build.make CMakeFiles/cmTC_b668d.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_e2de3/fast"
+/usr/bin/make -f CMakeFiles/cmTC_e2de3.dir/build.make CMakeFiles/cmTC_e2de3.dir/build
 make[1]: Entering directory '/home/marifer/ROS-Tutorials/gazebo_gui_spawn/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_b668d.dir/CheckFunctionExists.c.o
-/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_b668d.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
-Linking C executable cmTC_b668d
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b668d.dir/link.txt --verbose=1
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_b668d.dir/CheckFunctionExists.c.o  -o cmTC_b668d -rdynamic -lpthreads 
+Building C object CMakeFiles/cmTC_e2de3.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_e2de3.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_e2de3
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e2de3.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_e2de3.dir/CheckFunctionExists.c.o  -o cmTC_e2de3 -rdynamic -lpthreads 
 /usr/bin/ld: cannot find -lpthreads
 collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_b668d.dir/build.make:97: recipe for target 'cmTC_b668d' failed
-make[1]: *** [cmTC_b668d] Error 1
+CMakeFiles/cmTC_e2de3.dir/build.make:97: recipe for target 'cmTC_e2de3' failed
+make[1]: *** [cmTC_e2de3] Error 1
 make[1]: Leaving directory '/home/marifer/ROS-Tutorials/gazebo_gui_spawn/build/CMakeFiles/CMakeTmp'
-Makefile:126: recipe for target 'cmTC_b668d/fast' failed
-make: *** [cmTC_b668d/fast] Error 2
+Makefile:126: recipe for target 'cmTC_e2de3/fast' failed
+make: *** [cmTC_e2de3/fast] Error 2
 
 

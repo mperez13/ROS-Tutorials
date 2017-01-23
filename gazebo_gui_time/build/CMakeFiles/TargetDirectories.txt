@@ -1,3 +1,0 @@
-/home/marifer/ROS-Tutorials/gazebo_gui_time/build/CMakeFiles/edit_cache.dir
-/home/marifer/ROS-Tutorials/gazebo_gui_time/build/CMakeFiles/rebuild_cache.dir
-/home/marifer/ROS-Tutorials/gazebo_gui_time/build/CMakeFiles/gui_example_time_widget.dir

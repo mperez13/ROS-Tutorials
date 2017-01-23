@@ -1,0 +1,12 @@
+Gazebo multi-robot simulator, version 7.5.0
+Copyright (C) 2012 Open Source Robotics Foundation.
+Released under the Apache 2 License.
+http://gazebosim.org
+
+
+(1485131538 123428659) [Msg] Waiting for master.
+(1485131538 124057782) Failed to create connection to remote host[localhost:11345]
+(1485131539 125166057) [Msg] Connected to gazebo master @ http://127.0.0.1:11345
+(1485131539 125370853) [Msg] Publicized address: 192.168.1.77
+(1485131539 125462748) [Err] [GuiIface.cc:237] GAZEBO_GUI_INI_FILE does not exist: "/home/marifer/ROS-Tutorials/.gazebo:"
+(1485131540 347587131) No spacenav daemon found. Spacenav functionality is disabled

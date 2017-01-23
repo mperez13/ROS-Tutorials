@@ -1,3 +1,4 @@
+
 /*
  * Copyright (C) 2014-2016 Open Source Robotics Foundation
  *
@@ -26,10 +27,11 @@
 
 namespace gazebo
 {
-	/*GUI overlay plugin must inherit from the GUIPlugin class and use Qt's Q_OBJECT macro*/
+	// GUI overlay plugin must inherit from the GUIPlugin class & Qr's Q_OBJECT macro
     class GAZEBO_VISIBLE GUIExampleSpawnWidget : public GUIPlugin
     {
       Q_OBJECT
+  	/////////////////////////////////////////////////////////////////////////////////
 
       // \brief Constructor
       // \param[in] _parent Parent widget
@@ -38,19 +40,21 @@ namespace gazebo
       // \brief Destructor
       public: virtual ~GUIExampleSpawnWidget();
 
+      /////////////////QT slot to receive button presses/////////////////////
       // \brief Callback trigged when the button is pressed.
       protected slots: void OnButton();
+      ////////////////////////////////////////////////////////////////////////
 
       // \brief Counter used to create unique model names
       private: unsigned int counter;
 
-      /* use Gazebo's factory functionality to send SDF spawn w/ gzserver*/
+      /////use Gazebo's factory functionality to send SDF spawn msgs to gzserver///
       // \brief Node used to establish communication with gzserver.
       private: transport::NodePtr node;
 
       // \brief Publisher of factory messages.
       private: transport::PublisherPtr factoryPub;
-      /*****************************************************************/
+      ////////////////////////////////////////////////////////////////////////////
     };
 }
 #endif
