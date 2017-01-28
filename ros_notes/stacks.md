@@ -22,9 +22,9 @@
 	- provide ROS-variants of common Unix shell commands
 	- most commonly used is roscd
     
-    ```
-    $ roscd package_name
-    ```
+	    ```
+	    $ roscd package_name
+	    ```
 
 ## Client Library Support
 
