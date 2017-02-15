@@ -101,7 +101,7 @@ sudo apt-get install ros-kinetic-gazebo-ros-pkgs ros-kinetic-gazebo-ros-control
     rosdep install --from-paths . --ignore-src --rosdistro kinetic -y
     ```
 
-##### Build gazebo_ros_pkgs
+###### Build gazebo_ros_pkgs
 
 ```
 cd ~/catkin_ws/
@@ -112,8 +112,62 @@ For issues or questions see [answers.gazebosim.org][4]
 
 #### Testing Gazebo w/ ROS Integration
 
+##### Source the appropriate ROS setup file (might want to add it to your `~./bashrc` file
 
+```
+source /opt/ros/kinetic/setup.bash
+```
 
+- make sure to source `~/catkin_ws/devel/setup.bash` in your `~./bashrc` file
+    
+```
+roscore &
+rosrun gazebo_ros gazebo
+```
+
+- to view available topics
+
+    ```
+    rostopic list
+    ```
+
+- to verify Gazebo seri=vices exist:
+    
+    ```
+    rosservice list
+    ```
+
+## `rosrun` commands for starting Gazebo:
+
+- Launch both the server and client together
+    
+    ```
+    rosrun gazebo_ros gazebo
+    ```
+    
+- Launch the Gazebo server only
+
+    ```
+    rosrun gazebo_ros gzserver
+    ```
+    
+- Launch the Gazebo client only
+
+    ```
+    rosrun gazebo_ros gzclient
+    ```
+    
+- Launches the Gazebo server only, in debug mode using GDB
+    
+    ```
+    rosrun gazebo_ros debug
+    ```
+    
+- Additionally, you can start Gazebo using `roslaunch`
+    
+    ```
+    roslaunch gazebo_ros empty_world.launch
+    ```
 
 
 [1]: http://gazebosim.org/tutorials?tut=ros_installing&cat=connect_ros
