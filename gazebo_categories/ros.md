@@ -6,7 +6,7 @@
 |----|----|----|
 |[ROS Overview][2]|Gives basic description of `gazebo_ros_pkgs`. Guidelines for upgrading Gazebo-dependend packages for use in ROS packages.||
 |[Versions to Use][3]|Gives description of different versions of ROS and Gazebo.|The one we used is Kinetic.|
-|[Installing gazebo_ros_pkgs][4]||*NOT DONE*|
+|[Installing gazebo_ros_pkgs][4]|Set of ROS packages for interfacing w/ Gazebo are contained w/in a new meta package (catkin's version of stacks) named gazebo_ros_pkgs. `rosrun` commands for starting Gazebo.||
 |[Using roslaunch][5]||*NOT DONE*|
 |[URDF in Gazebo][6]||*NOT DONE*|
 |[Gazebo plugins in ROS][7]||*NOT DONE*|
