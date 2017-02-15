@@ -169,8 +169,10 @@ rosrun gazebo_ros gazebo
     roslaunch gazebo_ros empty_world.launch
     ```
 
+**Return to Gazebo Category: [Connect to ROS][5]**
 
 [1]: http://gazebosim.org/tutorials?tut=ros_installing&cat=connect_ros
 [2]: http://www.ros.org/wiki/catkin/Tutorials/create_a_workspace
 [3]: https://github.com/ros-simulation/gazebo_ros_pkgs
 [4]: http://answers.gazebosim.org/questions/
+[5]: ../gazebo_categories/ros.md
