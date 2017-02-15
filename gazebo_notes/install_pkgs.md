@@ -130,12 +130,20 @@ rosrun gazebo_ros gazebo
     ```
     rostopic list
     ```
+    
+    - sample output:
+        
+        ![rostopic list][6]
 
 - to verify Gazebo seri=vices exist:
     
     ```
     rosservice list
     ```
+
+    - sample output:
+        
+        ![rosservice list][7]
 
 ## `rosrun` commands for starting Gazebo:
 
@@ -176,3 +184,5 @@ rosrun gazebo_ros gazebo
 [3]: https://github.com/ros-simulation/gazebo_ros_pkgs
 [4]: http://answers.gazebosim.org/questions/
 [5]: ../gazebo_categories/ros.md
+[6]: ../gazebo_notes/rostopiclist.png
+[7]: ../gazebo_notes/rosservicelist.png
