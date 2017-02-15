@@ -31,10 +31,33 @@ Example [CMakeLists.txt][7] file
 
 #### package.xml
 
+Add dependency on the new `gazebo_ros` package:
 
+```
+<build_depend>gazebo_ros</build_depend>
+<run_depend>gazebo_ros</run_depend>
+```
 
 #### Running Gazebo
 
+Names of ROS nodes to launch Gazebo have slightly changed slightly for Gazebo executable names:
+
+- `rosrun gazebo_ros gazebo` - launch both Gazebo server & GUI
+- `rosrun gazebo_ros gzclient` - launch Gazebo GUI
+- `rosrun gazebo_ros gzserver` - launch Gazebo server
+
+Available nodes to run:
+
+```
+rosrun gazebo_ros gazebo
+rosrun gazebo_ros gzserver
+rosrun gazebo_ros gzclient
+rosrun gazebo_ros spawn_model
+rosrun gazebo_ros perf
+rosrun gazebo_ros debug
+```
+
+Nodes are better documented in tutorial: [Using roslaunch filed to spawn models in Gazebo][8]
 
 
 **Return to Gazebo Category: [Connect to ROS][2]**
@@ -46,3 +69,4 @@ Example [CMakeLists.txt][7] file
 [5]: http://gazebosim.org/sdf.html
 [6]: https://bitbucket.org/osrf/gazebo_tutorials/raw/default/ros_overview/figs/775px-Gazebo_ros_api.png
 [7]: ../ros_overview/CMakeLists.txt
+[8]: ../gazebo_categories/roslaunch.md
