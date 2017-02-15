@@ -14,7 +14,7 @@
 |[User Input][10]|User input can take many forms, including interactions from the graphical interface and hardware devices such as joysticks.||
 |[Connect to Player][11]|||
 |[Web client (Gzweb)][12]|||
-|[Connect to ROS][13]|||
+|[Connect to ROS][13]|ROS is a robot control framework. These tutorials describe how to interface Gazebo and ROS.||
 |[Transport Library][14]|These tutorials describe how to use Gazebo's message passing infrastructure.||
 |[Physics Library][15]|How to use the physics engines in order to acheive desired behavior.||
 |[Rendering Library][16]|Gazebo's rendering library is used to generate sensor data and provide user feedback by rendering the environment state.||
