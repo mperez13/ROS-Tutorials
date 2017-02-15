@@ -184,5 +184,5 @@ rosrun gazebo_ros gazebo
 [3]: https://github.com/ros-simulation/gazebo_ros_pkgs
 [4]: http://answers.gazebosim.org/questions/
 [5]: ../gazebo_categories/ros.md
-[6]: ../gazebo_notes/rostopiclist.png
-[7]: ../gazebo_notes/rosservicelist.png
+[6]: ../gazebo_notes/images/rostopiclist.png
+[7]: ../gazebo_notes/images/rosservicelist.png
