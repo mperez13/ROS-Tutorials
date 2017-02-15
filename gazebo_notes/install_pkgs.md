@@ -2,7 +2,7 @@
 
 Set of ROS packages for interfacing w/ Gazebo are contained w/in a new meta package (catkin's version of stacks) named `gazebo_ros_pkgs`
 
-Following instructions are for Gazebo integration using ROS Kinetic, ROS Jade, and ROS Indigo.
+Following instructions are for Gazebo integration using ROS Kinetic.
 
 Assuming ROS and Gazebo is already installed.
 
