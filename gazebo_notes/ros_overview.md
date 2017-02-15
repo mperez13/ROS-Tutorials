@@ -14,13 +14,21 @@
 
   ![overview of the gazebo_ros_pkgs inteface][6]
 
-### Upgrade Gazebo-dependent packages from `simulator_gazebo` for use in your ROS packages:
+## Guidelines to Upgrade Gazebo-dependent packages from `simulator_gazebo` for use in your ROS packages:
 
-#### Launch Files
+#### Launch Files 
 
-- 
+- w/in roslaunch files, `pkg="gazebo" needs to be now renamed to `pkg="gazebo_ros`
+- `gazebo_worlds` package has been removed
+  - most world files were rarely used & not maintained w/ chnages in SDF XML formats. So all worlds have been centralized w/in Gazebo project itself, including `empty.world`
+- best way to use launch file is to inherit/include the master `empty_world` launch file located in `gazebo_ros` package
+
+#### 
+
+
 
 **Return to Gazebo Category: [Connect to ROS][2]**
+
 [1]: http://gazebosim.org/tutorials?tut=ros_overview&cat=connect_ros
 [2]: ../gazebo_categories/ros.md
 [3]: http://ros.org/wiki/gazebo_ros_pkgs
