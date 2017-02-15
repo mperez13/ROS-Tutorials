@@ -4,7 +4,7 @@
 
 |Title|Description|Notes|
 |----|----|----|
-|[ROS Overview][2]||*NOT DONE*|
+|[ROS Overview][2]|Gives basic description of `gazebo_ros_pkgs`. Guidelines for upgrading Gazebo-dependend packages for use in ROS packages.||
 |[Versions to Use][3]||*NOT DONE*|
 |[Installing gazebo_ros_pkgs][4]||*NOT DONE*|
 |[Using roslaunch][5]||*NOT DONE*|
