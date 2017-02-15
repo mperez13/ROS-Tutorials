@@ -5,7 +5,7 @@
 |Title|Description|Notes|
 |----|----|----|
 |[ROS Overview][2]|Gives basic description of `gazebo_ros_pkgs`. Guidelines for upgrading Gazebo-dependend packages for use in ROS packages.||
-|[Versions to Use][3]||*NOT DONE*|
+|[Versions to Use][3]|Gives description of different versions of ROS and Gazebo.|The one we used is Kinetic.|
 |[Installing gazebo_ros_pkgs][4]||*NOT DONE*|
 |[Using roslaunch][5]||*NOT DONE*|
 |[URDF in Gazebo][6]||*NOT DONE*|
@@ -19,7 +19,7 @@
 
 [1]: http://gazebosim.org/tutorials?cat=connect_ros
 [2]: ../gazebo_notes/ros_overview.md
-[3]: ../gazebo_notes/version_use.md
+[3]: http://gazebosim.org/tutorials?tut=ros_wrapper_versions&cat=connect_ros
 [4]: ../gazebo_notes/install_pkgs.md
 [5]: ../gazebo_notes/roslaunch.md
 [6]: ../gazebo_notes/urdf.md
