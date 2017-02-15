@@ -49,15 +49,15 @@ sudo apt-get install ros-kinetic-gazebo-ros-pkgs ros-kinetic-gazebo-ros-control
 
 ###### Setup a Catkin Workspace
 
-if you don't have a catkin workspace setup, do:
+    if you don't have a catkin workspace setup, do:
 
-```
-mkdir -p ~/catkin_ws/src
-cd ~/catkin_ws/src
-catkin_init_workspace
-cd ~/catkin_ws
-catkin_make
-```
+    ```
+    mkdir -p ~/catkin_ws/src
+    cd ~/catkin_ws/src
+    catkin_init_workspace
+    cd ~/catkin_ws
+    catkin_make
+    ```
 
 Add `.bashrc` file a source to the setup scripts:
 
