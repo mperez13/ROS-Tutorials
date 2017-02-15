@@ -38,7 +38,22 @@
   
 - example: [mud_world.launch][4]
 
+### World Files
+
+- example: [mud.world][5]
+
+#### Finding World File On Your Computer
+
+- world files are found w/in `/worlds` directory of your Gazebo resource path
+- to find location:
+  
+  ```
+  env | grep GAZEBO_RESOURCE_PATH
+  ```
+
 ## Creating your own Gazebo ROS Package
+
+
 
 
 ## Using `roslaunch` to Spawn URDF Robots
@@ -53,4 +68,5 @@
 [1]: http://gazebosim.org/tutorials?tut=ros_roslaunch&cat=connect_ros
 [2]: ../gazebo_categories/ros.md
 [3]: http://www.ros.org/wiki/roslaunch
-[4]: ../
+[4]: ../ros_overview/mud_world.launch
+[5]: ../ros_overview/mud.world
