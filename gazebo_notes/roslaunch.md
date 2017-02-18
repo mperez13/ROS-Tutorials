@@ -277,7 +277,8 @@
 [1]: http://gazebosim.org/tutorials?tut=ros_roslaunch&cat=connect_ros
 [2]: ../gazebo_categories/ros.md
 [3]: http://www.ros.org/wiki/roslaunch
-[4]: ../ros_overview/mud_world.launch
-[5]: ../ros_overview/mud.world
+[4]: ../controlros_ws/src/mybot_gazebo/launch/mud_world.launch
+[5]: ../controlros_ws/src/mybot_gazebo/world/mud.world
 [6]: https://github.com/RethinkRobotics/baxter_common
 [7]: ../ros_overview/model.config
+
