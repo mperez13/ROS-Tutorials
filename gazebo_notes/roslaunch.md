@@ -36,11 +36,11 @@
   roslaunch gazebo_ros rubble_world.launch
   ```
   
-- example: [mud_world.launch][4]
+- example: [samplebot.launch][4]
 
 ### World Files
 
-- example: [mud.world][5]
+- example: [samplebot.world][5]
 
 #### Finding World File On Your Computer
 
@@ -101,11 +101,12 @@
 - also create `worlds` folder & create [MYROBOT.world][5] file:
 
 - Launch custom world 
-  
-  ```
-  . ~/catkin_ws/devel/setup.bash
-  roslaunch MYROBOT_gazebo MYROBOT.launch
-  ```
+  - I created a script file to launch file
+    - launch file in workspace folder (`~/ROS-Tutorials/controlros_ws`) by running it like:
+    
+      ```
+      ./run_gazebo.sh
+      ```
 
 ### Editing the World File
 
@@ -248,8 +249,8 @@
 [1]: http://gazebosim.org/tutorials?tut=ros_roslaunch&cat=connect_ros
 [2]: ../gazebo_categories/ros.md
 [3]: http://www.ros.org/wiki/roslaunch
-[4]: ../controlros_ws/src/mybot_gazebo/launch/mud_world.launch
-[5]: ../controlros_ws/src/mybot_gazebo/worlds/mud.world
+[4]: ../controlros_ws/src/mybot_gazebo/launch/samplebot.launch
+[5]: ../controlros_ws/src/mybot_gazebo/worlds/samplebot.world
 [6]: https://github.com/RethinkRobotics/baxter_common
 [7]: ../ros_overview/model.config
 
