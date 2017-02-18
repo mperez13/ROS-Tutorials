@@ -36,11 +36,11 @@
   roslaunch gazebo_ros rubble_world.launch
   ```
   
-- example: [mud_world.launch][4]
+- example: [samplebot.launch][4]
 
 ### World Files
 
-- example: [mud.world][5]
+- example: [samplebot.world][5]
 
 #### Finding World File On Your Computer
 
