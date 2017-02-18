@@ -249,7 +249,7 @@
 [2]: ../gazebo_categories/ros.md
 [3]: http://www.ros.org/wiki/roslaunch
 [4]: ../controlros_ws/src/mybot_gazebo/launch/mud_world.launch
-[5]: ../controlros_ws/src/mybot_gazebo/world/mud.world
+[5]: ../controlros_ws/src/mybot_gazebo/worlds/mud.world
 [6]: https://github.com/RethinkRobotics/baxter_common
 [7]: ../ros_overview/model.config
 
