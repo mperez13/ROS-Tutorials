@@ -51,6 +51,12 @@
   env | grep GAZEBO_RESOURCE_PATH
   ```
 
+- you can set your path by adding this to your `.bashrc` file
+  
+  ```
+  export GAZEBO_RESOURCE_PATH=/usr/share/gazebo-7/worlds:$GAZEBO_RESOURCE_PATH
+  ```
+
 ## Creating your own Gazebo ROS Package
 
 - per ROS standards,
