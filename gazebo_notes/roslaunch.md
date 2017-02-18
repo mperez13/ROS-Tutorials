@@ -145,7 +145,7 @@
   - used the following way
     
      ```
-     rosrun gazebo_ros spawn_model -file `rospack find MYROBOT_description`/urdf/MYROBOT.urdf -urdf -x 0 -y 0 -z 1 -model MYROBOT���
+     rosrun gazebo_ros spawn_model -file `rospack find MYROBOT_description`/urdf/MYROBOT.urdf -urdf -x 0 -y 0 -z 1 -model MYROBOT
      ```
 
   - to view available argument for `spawn_model`
@@ -206,9 +206,65 @@
         /cad
     ```
 
+- this hierarchy is specially adapted for use as a Gazebo model database by means of the following:
+  - **/home/user/catkin_workspace/src** - location of a Gazebo Model Database
+  - **/MYROBOT_description** - directory treaed as a single Gazebo model folder 
+  - **model.config** - required configuration file for Gazebo to find this model in its database 
+  - **MYROBOT.urdf** - description file, also used by Rviz, MoveIt!, etc. 
+  - **/meshes** - location for .stl or .dae files 
+
+#### [model.config][7]
+
+- this file contains meta info about the model
+- unlike for SDF's, no version is required for the tag when it is used for URDFs
+
+#### Environment Variable
+
+- Add environment variable to your .bashrc file, which tells Gazebo where to look for model database
+- Check if you have a `GAZEBO_MODEL_PATH` defined
+  - if you already have one, append to it using a semi-colon
+  - if not add the new export
+- path should look like:
+  
+  ```  
+  export GAZEBO_MODEL_PATH=/home/user/catkin_ws/src/
+  ```
+
+#### Viewing in Gazebo - Manually
+
+- start up Gazebo
+  
+  ```
+  gazebo
+  ```
+
+- Insert models 
+  - Click "Insert" tag
+  - find database corresponding to your robot, open a sub folder, click name of your robot and insert it
+
+#### Viewing in Gazebo - `roslaunch` w/ the Model Database
+
+- Advantage of model database method is you can inlcude MYROBOT to your world files, w/out using ROS package path
+- w/in `MYROBOT_description/launch` folder, edit [MYROBOT.world][5]:
+- should now be able to launch custom world file:
+  
+  ```
+  roslaunch MYROBOT_gazebo MYROBOT.launch
+  ```
+
+- disadvantage of this method is that `MYROBOT_description` & `MYROBOT_gazebo` are not easily portable between computers
+  - you first have to set `GAZEBO_MODEL_PATH` on any new system before being able to use these ROS packages
+  
 ## Exporting model paths from a package.xml
 
-
+- useful info would be the format for exporting model paths from a package.xml
+  
+  ```
+  <export>
+    <gazebo_ros gazebo_model_path="${prefix}/models"/>
+    <gazebo_ros gazebo_media_path="${prefix}/models"/>
+  </export>
+  ```
 
 **Return to Gazebo Category: [Connect to ROS][2]**
 
@@ -218,4 +274,4 @@
 [4]: ../ros_overview/mud_world.launch
 [5]: ../ros_overview/mud.world
 [6]: https://github.com/RethinkRobotics/baxter_common
-[7]: 
+[7]: ../ros_overview/model.config
