@@ -1,2 +1,2 @@
-. ~/controlros_ws/devel/setup.bash
-roslaunch mybot_gazebo mud_world.launch
+. ~/ROS-Tutorials/controlros_ws/devel/setup.bash
+roslaunch mybot_gazebo samplebot.launch
