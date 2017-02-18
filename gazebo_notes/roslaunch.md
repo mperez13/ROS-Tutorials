@@ -96,38 +96,9 @@
 ### Create Custom World File
 
 - Create ROS package w/ the convention MYROBOT_gazebo
-  - w/in this package, create a YOUROBOT.launch file w/ the following content (default arguments excluded):
-    
-    ```
-    <launch>
-      <!-- We resume the logic in empty_world.launch, changing only the name of the world to be launched -->
-      <include file="$(find gazebo_ros)/launch/empty_world.launch">
-        <arg name="world_name" value="$(find MYROBOT_gazebo)/worlds/MYROBOT.world"/>
-        <!-- more default parameters can be changed here -->
-      </include>
-    </launch>
-    ```
+  - w/in this package, create a [MYROBOT.launch][4]
  
-  - also create `worlds` folder & create MYROBOT.world file w/ the following content:
-    
-    ```
-    <?xml version="1.0" ?>
-    <sdf version="1.4">
-      <world name="default">
-        <include>
-          <uri>model://ground_plane</uri>
-        </include>
-        <include>
-          <uri>model://sun</uri>
-        </include>
-        <include>
-          <uri>model://gas_station</uri>
-          <name>gas_station</name>
-          <pose>-2.0 7.0 0 0 0 0</pose>
-        </include>
-      </world>
-    </sdf>
-    ```
+- also create `worlds` folder & create [MYROBOT.world][5] file:
 
 - Launch custom world 
   
