@@ -1,0 +1,8 @@
+prefix=/home/marifer/ROS-Tutorials/controlros_ws/install
+
+Name: mybot_gazebo
+Description: Description of mybot_gazebo
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/marifer/ROS-Tutorials/controlros_ws/install/lib 
+Requires: 
