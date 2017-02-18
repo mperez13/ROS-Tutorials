@@ -108,10 +108,6 @@
       ./run_gazebo.sh
       ```
 
-### Editing the World File
-
-- Insert additional model and use `File->Save` to export edited world back into your ROS package
-
 ## Using `roslaunch` to Spawn URDF Robots
 
 ### ROS Service Call Spawn Method
