@@ -232,7 +232,7 @@
 
 #### Viewing in Gazebo - `roslaunch` w/ the Model Database
 
-- Advantage of model database method is you can inlcude MYROBOT to your world files, w/out using ROS package path
+- Advantage of model database method is you can include MYROBOT to your world files, w/out using ROS package path
 - w/in `MYROBOT_description/launch` folder, edit [MYROBOT.world][5]:
 - should now be able to launch custom world file:
   
@@ -262,5 +262,5 @@
 [4]: ../controlros_ws/src/mybot_gazebo/launch/samplebot.launch
 [5]: ../controlros_ws/src/mybot_gazebo/worlds/samplebot.world
 [6]: https://github.com/RethinkRobotics/baxter_common
-[7]: ../ros_overview/model.config
+[7]: ../controlros_ws/src/mybot_description/model.config
 [8]: http://ros.org/wiki/xacro
