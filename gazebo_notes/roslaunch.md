@@ -108,10 +108,6 @@
       ./run_gazebo.sh
       ```
 
-### Editing the World File
-
-- Insert additional model and use `File->Save` to export edited world back into your ROS package
-
 ## Using `roslaunch` to Spawn URDF Robots
 
 ### ROS Service Call Spawn Method
@@ -154,6 +150,20 @@
   ```
   
   > Launching this file should give you the same result as when using `rosrun`
+
+#### Using [XACRO][8] when URDF is not in XML format
+
+- Add this to the launch file:
+  
+  ```
+  <!-- Convert an xacro and put on parameter server -->
+  <param name="robot_description" command="$(find xacro)/xacro.py $(find pr2_description)/robots/pr2.urdf.xacro" />
+
+  <!-- Spawn a robot into Gazebo -->
+  <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-param robot_description -urdf -model pr2" />
+  ```
+
+
 
 ### Model Database Method
 
@@ -222,7 +232,7 @@
 
 #### Viewing in Gazebo - `roslaunch` w/ the Model Database
 
-- Advantage of model database method is you can inlcude MYROBOT to your world files, w/out using ROS package path
+- Advantage of model database method is you can include MYROBOT to your world files, w/out using ROS package path
 - w/in `MYROBOT_description/launch` folder, edit [MYROBOT.world][5]:
 - should now be able to launch custom world file:
   
@@ -252,5 +262,5 @@
 [4]: ../controlros_ws/src/mybot_gazebo/launch/samplebot.launch
 [5]: ../controlros_ws/src/mybot_gazebo/worlds/samplebot.world
 [6]: https://github.com/RethinkRobotics/baxter_common
-[7]: ../ros_overview/model.config
-
+[7]: ../controlros_ws/src/mybot_description/model.config
+[8]: http://ros.org/wiki/xacro
