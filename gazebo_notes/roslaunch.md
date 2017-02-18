@@ -151,6 +151,20 @@
   
   > Launching this file should give you the same result as when using `rosrun`
 
+#### Using [XACRO][8] when URDF is not in XML format
+
+- Add this to the launch file:
+  
+  ```
+  <!-- Convert an xacro and put on parameter server -->
+  <param name="robot_description" command="$(find xacro)/xacro.py $(find pr2_description)/robots/pr2.urdf.xacro" />
+
+  <!-- Spawn a robot into Gazebo -->
+  <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-param robot_description -urdf -model pr2" />
+  ```
+
+
+
 ### Model Database Method
 
 - this method allows you to include your robot w/in the `.world` file
@@ -249,4 +263,4 @@
 [5]: ../controlros_ws/src/mybot_gazebo/worlds/samplebot.world
 [6]: https://github.com/RethinkRobotics/baxter_common
 [7]: ../ros_overview/model.config
-
+[8]: http://ros.org/wiki/xacro
