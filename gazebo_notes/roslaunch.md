@@ -101,11 +101,12 @@
 - also create `worlds` folder & create [MYROBOT.world][5] file:
 
 - Launch custom world 
-  
-  ```
-  . ~/catkin_ws/devel/setup.bash
-  roslaunch MYROBOT_gazebo MYROBOT.launch
-  ```
+  - I created a script file to launch file
+    - launch file in workspace folder (`~/ROS-Tutorials/controlros_ws`) by running it like:
+    
+      ```
+      ./run_gazebo.sh
+      ```
 
 ### Editing the World File
 
