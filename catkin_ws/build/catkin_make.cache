@@ -1,2 +1,2 @@
-beginner_tutorials:foobar
+beginner_tutorials:foobar:gazebo_ros_pkgs/gazebo_msgs:gazebo_ros_pkgs/gazebo_plugins:gazebo_ros_pkgs/gazebo_ros:gazebo_ros_pkgs/gazebo_ros_control:gazebo_ros_pkgs/gazebo_ros_pkgs
 -DCATKIN_DEVEL_PREFIX=/home/marifer/ROS-Tutorials/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/marifer/ROS-Tutorials/catkin_ws/install -G Unix Makefiles

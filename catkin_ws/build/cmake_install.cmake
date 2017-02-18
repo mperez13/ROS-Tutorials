@@ -117,8 +117,13 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/marifer/ROS-Tutorials/catkin_ws/build/gtest/cmake_install.cmake")
+  include("/home/marifer/ROS-Tutorials/catkin_ws/build/gazebo_ros_pkgs/gazebo_ros_pkgs/cmake_install.cmake")
+  include("/home/marifer/ROS-Tutorials/catkin_ws/build/gazebo_ros_pkgs/gazebo_msgs/cmake_install.cmake")
   include("/home/marifer/ROS-Tutorials/catkin_ws/build/beginner_tutorials/cmake_install.cmake")
   include("/home/marifer/ROS-Tutorials/catkin_ws/build/foobar/cmake_install.cmake")
+  include("/home/marifer/ROS-Tutorials/catkin_ws/build/gazebo_ros_pkgs/gazebo_ros/cmake_install.cmake")
+  include("/home/marifer/ROS-Tutorials/catkin_ws/build/gazebo_ros_pkgs/gazebo_plugins/cmake_install.cmake")
+  include("/home/marifer/ROS-Tutorials/catkin_ws/build/gazebo_ros_pkgs/gazebo_ros_control/cmake_install.cmake")
 
 endif()
 
