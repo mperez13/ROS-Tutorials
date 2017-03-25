@@ -1,6 +1,6 @@
 ##List of ROS Tutorials
 
-|-----|Description||
+|-----|Description|Notes|
 |-----|------|-----|
 |[Topics][1]| Topics are named buses over which nodes exchange messages||
 |[roscpp][2]|roscpp is a C++ implementation of ROS. It provides a client library that enables C++ programmers to quickly interface with ROS Topics, Services, and Parameters||
